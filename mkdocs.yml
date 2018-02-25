@@ -1,3 +1,8 @@
 site_name: Papers
 pages:
     - Home: index.md
+    - Image Classification: imageclassif/index.md
+    - Image Segmentation: imageseg/index.md
+    - Natural Language Processing: nlp/index.md
+    - Reinforcement Learning: rl/index.md
+    - Tracking: tracking/index.md
