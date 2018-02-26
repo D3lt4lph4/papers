@@ -18,17 +18,19 @@ in a single shot (as opposite with the previous networks, Fast R-CNN, Faster R-C
 At the time it was published its scoring was among the best in the PASCAL VOC challenge regarding both 
 the mAP (72.1% mAP) and the number of fps (58) on a  Nvidia Titan X.
 
-## How Does It Work ?
+## How Does It Work
 
 The basic idea is to use grids of various scale to predict the different boxes present in the image.
 The following image, taken from the original paper, describes this:
 
 ![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-classif-how.png?raw=true "SSD grid")
 
+The bigger the grid, the smaller the object detected is, this is how the SSD allows for multiple detection in one shot.
+
 ## In Depth
 
 The SSD uses the VGG-16 as base classifier then adds its own layers to output the boxes. The image
-below shows the architecture of the network : 
+below shows the architecture of the network :
 
 ![SSD network](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-network.png?raw=true "SSD Network")
 
@@ -43,3 +45,7 @@ For each group of boxes, the number are as follow:
 - from conv9_2, 150 boxes for a detection size around 0.56 of the original image size
 - from conv10_2, 36 boxes for a detection size around 0.74 of the original image size
 - from conv11_2, 4 boxes for a detection size around 0.92 of the original image size
+
+The loss function is modified to fit the huge number of boxes. Because of that, there is a lot more of unmatched box than matched box, thus creating an imbalance, that is why the loss function uses a maximum ratio between the matched and unmatched boxes.
+
+An important unspecified point, in the paper the bounding boxes are regressed, but in the implementation they are also divided by some term that is here to account as some kind of variance. One could see this as some kind of normalisation to take into account the difference a person who would tag the data would make if tagging two times the same image.
