@@ -20,11 +20,15 @@ the mAP (72.1% mAP) and the number of fps (58) on a  Nvidia Titan X.
 
 ## How Does It Work ?
 
+The basic idea is to use grids of various scale to predict the different boxes present in the image.
+The following image, taken from the original paper, describes this:
+
+![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-classif-how.png?raw=true "SSD grid")
 
 ## In Depth
 
 The SSD uses the VGG-16 as base classifier then adds its own layers to output the boxes. The image
-below show the architecture of the network : 
+below shows the architecture of the network : 
 
 ![SSD network](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-network.png?raw=true "SSD Network")
 
