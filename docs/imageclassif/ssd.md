@@ -4,12 +4,12 @@
 
 - Title: SSD - Single Shot MultiBox Detector
 - Authors: Wei Liu, Dragomir Anguelov, Dumitru Erhan, Christian Szegedy, Scott Reed
-- Link: https://arxiv.org/abs/1512.02325
+- Link: [article](https://arxiv.org/abs/1512.02325)
 - Date of first submission: 8 Dec 2015
-- Implementations: 
-    - Keras: https://github.com/rykov8/ssd_keras
-    - Caffe: https://github.com/weiliu89/caffe/tree/ssd
-   
+- Implementations:
+  - [Keras](https://github.com/rykov8/ssd_keras)
+  - [Caffe](https://github.com/weiliu89/caffe/tree/ssd)
+
 ## Brief
 
 The SSD output bounding boxes around the selection of objects to detect. It is part of the new
@@ -36,6 +36,7 @@ The network outputs 8732 boxes, we can separate the boxes in 6 groups, one for e
 inferred from. Each group is supposed to detect different size objects, the closer we are from the VGG-16
 the smaller the object.
 For each group of boxes, the number are as follow:
+
 - from conv4_3, 5776 boxes for a detection size around 0.1 of the original image size
 - from conv7, 2166 boxes for a detection size around 0.2 of the original image size
 - from conv8_2, 600 boxes for a detection size around 0.38 of the original image size
