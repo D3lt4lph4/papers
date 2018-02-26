@@ -12,3 +12,4 @@ pages:
       - Introduction: rl/index.md
     - Tracking:
       - Introduction: tracking/index.md
+    - Contributing: contributing.md
