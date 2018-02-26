@@ -1,8 +1,14 @@
 site_name: Papers
 pages:
     - Home: index.md
-    - Image Classification: imageclassif/index.md
-    - Image Segmentation: imageseg/index.md
-    - Natural Language Processing: nlp/index.md
-    - Reinforcement Learning: rl/index.md
-    - Tracking: tracking/index.md
+    - Image Classification:
+      - Introduction: imageclassif/index.md
+      - SSD: imageclassif/ssd.md
+    - Image Segmentation:
+      - Introduction: imageseg/index.md
+    - Natural Language Processing:
+      - Introduction: nlp/index.md
+    - Reinforcement Learning:
+      - Introduction: rl/index.md
+    - Tracking:
+      - Introduction: tracking/index.md
