@@ -15,12 +15,12 @@
 The SSD output bounding boxes around the selection of objects to detect. It is part of the new
 generation of classifiers (with YOLO) and improves the detection workflow by making the detection
 in a single shot (as opposite with the previous networks, Fast R-CNN, Faster R-CNN).
-At the time it was published its scoring was among the best in the PASCAL VOC challenge regarding both 
+At the time it was published its scoring was among the best in the PASCAL VOC challenge regarding both
 the mAP (72.1% mAP) and the number of fps (58) on a  Nvidia Titan X.
 
 ## How Does It Work
 
-The basic idea is to use grids of various scale to predict the different boxes present in the image.
+The basic idea is to use grids of various scale to predict the different boxes present in the image. The SSD outputs boxes for different grids and tells if there is an object in each box.
 The following image, taken from the original paper, describes this:
 
 ![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-classif-how.png?raw=true "SSD grid")
