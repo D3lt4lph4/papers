@@ -7,8 +7,8 @@
 - Link: [article](https://arxiv.org/abs/1512.02325)
 - Date of first submission: 8 Dec 2015
 - Implementations:
-  - [Keras](https://github.com/rykov8/ssd_keras)
-  - [Caffe](https://github.com/weiliu89/caffe/tree/ssd)
+    - [Keras](https://github.com/rykov8/ssd_keras)
+    - [Caffe](https://github.com/weiliu89/caffe/tree/ssd)
 
 ## Brief
 
