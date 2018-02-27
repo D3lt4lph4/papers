@@ -1,4 +1,4 @@
-# Papers Description
+# Papers
 
 This repository aims to regroup summary of many deep learning papers and also provide some
 kind of simple tool to search subjects related papers.
