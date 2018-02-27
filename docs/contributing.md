@@ -9,17 +9,17 @@ Anyone can contribute, please write in proper english and follow this skeleton (
 
 - Title: ...
 - Authors: ...
-- Link: (link to the paper)
+- Link: [article](link to the paper)
 - Date of first submission: (to have some idea on the "age" of the article
 - Implementations: (if any found)
-    - Keras: ...
-    - Caffe: ...
-   
+    - [Keras](http://awesomelink1)
+    - [Caffe](http://awesomelink2)
+
 ## Brief
 
 Very short description of what it does, advantages, etc
 
-## How Does It Work ?
+## How Does It Work
 
 A bit like above but more in details.
 
