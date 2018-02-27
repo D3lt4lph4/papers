@@ -4,6 +4,7 @@ pages:
     - Image Classification:
       - Introduction: imageclassif/index.md
       - SSD: imageclassif/ssd.md
+      - RAM: imageclassif/ram.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Natural Language Processing:
