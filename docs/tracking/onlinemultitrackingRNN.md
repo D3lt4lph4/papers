@@ -18,7 +18,7 @@ The main advantage of this method compared to the others existing ones (at the t
 
 The second advantage of this method is that it does not look at all in the future to make the predictions, making it completely real time.
 
-But on the other hand, it is a bit less performing than the other algorithms and the implementation is for tracking one object at a time (what's with the name ?) even if it could be changed to support multiple objects at once (diy). 
+But on the other hand, it is a bit less performing than the other algorithms and the implementation is for tracking one object at a time even if it could be changed to support multiple objects at once (diy). 
 
 Also they do not perform the detection !
 
