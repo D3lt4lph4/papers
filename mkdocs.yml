@@ -13,4 +13,5 @@ pages:
       - Introduction: rl/index.md
     - Tracking:
       - Introduction: tracking/index.md
+      - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Contributing: contributing.md
