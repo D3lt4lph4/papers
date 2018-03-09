@@ -10,7 +10,7 @@ Anyone can contribute, please write in proper english and follow this skeleton (
 - Title: ...
 - Authors: ...
 - Link: [article](link to the paper)
-- Date of first submission: (to have some idea on the "age" of the article
+- Date of first submission: (to have some idea on the "age" of the article)
 - Implementations: (if any found)
     - [Keras](http://awesomelink1)
     - [Caffe](http://awesomelink2)
