@@ -7,8 +7,8 @@
 - Link: [article](https://arxiv.org/abs/1602.04938)
 - Date of first submission: 16 Feb 2016
 - Implementations: (can be used for other framework)
-  - [python](https://github.com/marcotcr/lime/tree/master/lime)
-  - [R](https://github.com/thomasp85/lime)
+    - [python](https://github.com/marcotcr/lime/tree/master/lime)
+    - [R](https://github.com/thomasp85/lime)
 
 ## Brief
 

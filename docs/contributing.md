@@ -37,29 +37,29 @@ If you want to add a dataset, just follow this example as a guideline.
 
 ```markdown
 - Contains:
-  - Vehicles: Cars, Bus, Van, Other
-  - Weather: cloudy, sunny, rainy, night
-  - Different level of occlusion
-  - ...
+    - Vehicles: Cars, Bus, Van, Other
+    - Weather: cloudy, sunny, rainy, night
+    - Different level of occlusion
+    - ...
 
 - Size:
-  - more than 140 thousand frames
-  - 8250 vehicles manually annotated
-  - 1.21 million labeled bounding boxes of objects
-  - ...
+    - more than 140 thousand frames
+    - 8250 vehicles manually annotated
+    - 1.21 million labeled bounding boxes of objects
+    - ...
 
 - Other details:
-  - location: 24 different locations at Beijing and Tianjin in China
-  - 10 hours of videos captured with a Cannon EOS 550D camera
-  - ...
+    - location: 24 different locations at Beijing and Tianjin in China
+    - 10 hours of videos captured with a Cannon EOS 550D camera
+    - ...
 
 - Article:
-  - Authors: ...
-  - Link: [article](https://mylink)
+    - Authors: ...
+    - Link: [article](https://mylink)
 
 - Book:
-  - Authors: ...
-  - pages: ...
+    - Authors: ...
+    - pages: ...
 
 - Dataset: [here](http://mylink)
 ```

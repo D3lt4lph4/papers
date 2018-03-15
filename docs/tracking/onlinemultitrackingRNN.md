@@ -7,7 +7,7 @@
 - Link: [article](https://arxiv.org/abs/1604.03635)
 - Date of first submission: 13 Apr 2016
 - Implementations:
-  - [Torch/Lua](https://bitbucket.org/amilan/rnntracking)
+    - [Torch/Lua](https://bitbucket.org/amilan/rnntracking)
 
 ## Brief
 

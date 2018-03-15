@@ -7,8 +7,8 @@
 - Link: [article](https://arxiv.org/abs/1406.6247)
 - Date of first submission: 24 Jun 2014
 - Implementations:
-  - [PyTorch](https://github.com/kevinzakka/recurrent-visual-attention)
-  - [Tensorflow](https://github.com/jlindsey15/RAM)
+    - [PyTorch](https://github.com/kevinzakka/recurrent-visual-attention)
+    - [Tensorflow](https://github.com/jlindsey15/RAM)
 
 ## Brief
 
