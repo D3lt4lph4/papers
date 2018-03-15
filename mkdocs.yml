@@ -15,5 +15,11 @@ pages:
       - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Knowing your Network:
-      - Why Should I Trust You ?: whyshoulditrustyou.md
+      - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
+    - Datasets:
+      - Image Classification:
+      - Image Segmentation:
+      - NLP:
+      - RL:
+      - Tracking:
     - Contributing: contributing.md
