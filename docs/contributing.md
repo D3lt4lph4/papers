@@ -1,6 +1,8 @@
 # Contributing
 
-Anyone can contribute, please write in proper english and follow this skeleton (can be modified a bit if needed):
+## Articles
+
+Anyone can contribute, please write in proper english and follow this example(can be modified a bit if needed):
 
 ```markdown
 # Title of the paper/network/...
@@ -27,4 +29,37 @@ A bit like above but more in details.
 
 Here, go full description, tricks and all, keep in mind this is to explain the paper, but still a summary.
 
+```
+
+## Datasets
+
+If you want to add a dataset, just follow this example as a guideline.
+
+```markdown
+- Contains:
+  - Vehicles: Cars, Bus, Van, Other
+  - Weather: cloudy, sunny, rainy, night
+  - Different level of occlusion
+  - ...
+
+- Size:
+  - more than 140 thousand frames
+  - 8250 vehicles manually annotated
+  - 1.21 million labeled bounding boxes of objects
+  - ...
+
+- Other details:
+  - location: 24 different locations at Beijing and Tianjin in China
+  - 10 hours of videos captured with a Cannon EOS 550D camera
+  - ...
+
+- Article:
+  - Authors: ...
+  - Link: [article](https://mylink)
+
+- Book:
+  - Authors: ...
+  - pages: ...
+
+- Dataset: [here](http://mylink)
 ```
