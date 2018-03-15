@@ -17,9 +17,9 @@ pages:
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
     - Datasets:
-      - Image Classification:
-      - Image Segmentation:
-      - NLP:
-      - RL:
-      - Tracking:
+      - Image Classification: datasets/imageclassification.md
+      - Image Segmentation: datasets/imagesegmentation.md
+      - NLP: datasets/nlp.md
+      - RL: datasets/rl.md
+      - Tracking: datasets/tracking.md
     - Contributing: contributing.md
