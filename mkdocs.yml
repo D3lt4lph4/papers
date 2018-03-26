@@ -16,6 +16,9 @@ pages:
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
+    - Optimizers:
+      - Introduction: optimization/index.md
+      - Stochastic gradient descent: optimization/sgd.md
     - Datasets:
       - Image Classification: datasets/imageclassification.md
       - Image Segmentation: datasets/imagesegmentation.md
