@@ -32,6 +32,8 @@ The idea behind this version of the SGD is to mimicate the way a ball could roll
 
 \[
 \nabla w = \alpha \nabla w - \eta \nabla Q(w)
+\]
+\[
 w = w + \nabla w
 \]
 
