@@ -36,6 +36,7 @@ pages:
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
+      - AdaGrad: optimization/adagrad.md
     - Datasets:
       - Image Classification: datasets/imageclassification.md
       - Image Segmentation: datasets/imagesegmentation.md
