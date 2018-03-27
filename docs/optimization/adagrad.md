@@ -27,4 +27,4 @@ Where:
 g_{\tau} = \nabla Q_i (w)    
 \]
 
-As one can see, the more a feature j of g's appears in the vector and should be updated strongly, the greater the division of \[\eta\]
+As one can see, the more a feature j of g's appears in the vector and should be updated strongly, the greater the division of eta
