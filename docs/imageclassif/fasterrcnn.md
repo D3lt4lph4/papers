@@ -1,0 +1,1 @@
+- The first one is the "conv layers", used to extract the features out of the image.

@@ -20,6 +20,7 @@ pages:
     - Home: index.md
     - Image Classification:
       - Introduction: imageclassif/index.md
+      - Faster R-CNN: imageclassif/fasterrcnn.md
       - SSD: imageclassif/ssd.md
       - RAM: imageclassif/ram.md
     - Image Segmentation:
