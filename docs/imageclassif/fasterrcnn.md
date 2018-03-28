@@ -6,7 +6,7 @@
 - Authors: Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun
 - Link: [article](https://arxiv.org/abs/1506.01497)
 - Date of first submission: 4 Jun 2015
-- Implementations:
+- Implementations: (just put a few, there are a lot of implementation even per framework, check on the web to find the best one)
     - [TensorFlow](https://github.com/endernewton/tf-faster-rcnn)
     - [Caffe/Matlab](https://github.com/ShaoqingRen/faster_rcnn)
     - [Pytorch](https://github.com/jwyang/faster-rcnn.pytorch)
