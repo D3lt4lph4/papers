@@ -21,6 +21,7 @@ pages:
     - Image Classification:
       - Introduction: imageclassif/index.md
       - Faster R-CNN: imageclassif/fasterrcnn.md
+      - R-FCN: imageclassif/rfcn.md
       - SSD: imageclassif/ssd.md
       - RAM: imageclassif/ram.md
     - Image Segmentation:
