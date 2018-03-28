@@ -1,6 +1,6 @@
 # Faster R-CNN
 
-## General Information (main fields described, non-exhaustive list)
+## General Information
 
 - Title: Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks
 - Authors: Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun
