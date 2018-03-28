@@ -33,5 +33,4 @@ Also taken from the paper, this diagram describes in details the last part of th
 
 This is almost the same image as before, only with a bit more details on the shapes. From now on, "bins layers" will refer to the colored layer obtained from the feature maps after the convolutions.
 
-The idea is the following, the ROI is cut down into N bins, here k*k, each of this bin correspond to one of the bins layers. For instance, the light blue bins layer correspond to the bottom-right bin of the ROI. This way, to each bin of the ROI a class is assigned (C+1 for the number of classes + background). Finally from those N bins, the final class is extracted with a confidence index. 
-
+The idea is the following, the ROI is cut down into N bins, here k*k, each of this bin correspond to one of the bins layers. For instance, the light blue bins layer correspond to the bottom-right bin of the ROI. This way, to each bin of the ROI a class is assigned (C+1 for the number of classes + background). Finally from those N bins, the final class is extracted with a confidence index.
