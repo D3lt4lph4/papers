@@ -48,8 +48,8 @@ Basically the same pattern as Localization, small difference in the training to 
 
 For Localization and detection it is not specified if the results are for the fast or big architecture.
 
-||Classification (error rate)|Localization (error)|Detection (mAP)|
-||:-------------------------:|:------------------:|:-------------:|
+|Network|Classification (error rate)|Localization (error)|Detection (mAP)|
+|-|:-------------------------:|:------------------:|:-------------:|
 |Fast|13,6%|-|-|
 |Big |14,2%|-|-|
 |Undefined|-|29,9%|24.3%|
