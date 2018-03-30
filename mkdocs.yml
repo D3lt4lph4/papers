@@ -20,6 +20,7 @@ pages:
     - Home: index.md
     - Image Classification:
       - Introduction: imageclassif/index.md
+      - OverFeat: imageclassif/overfeat.md
       - R-CNN: imageclassif/rcnn.md
       - Fast R-CNN: imageclassif/fastrcnn.md
       - Faster R-CNN: imageclassif/fasterrcnn.md
