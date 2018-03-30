@@ -32,6 +32,7 @@ The important part of the network is the last fully connected layer which contai
 The final results take from the article are the following ones:
 
 - VOC 2007
+
 | Network | mAP | Combined | Gain |
 |---------|:---:|:--------:|:----:|
 | Fast R-CNN | 71.8 | - | - |
@@ -41,6 +42,7 @@ The final results take from the article are the following ones:
 | YOLO | 63.4 | 75.0 | 3.2 |
 
 - VOC 2012
+
 | Network | mAP |
 |---------|:---:|
 | Fast R-CNN + YOLO | 70,7 |
