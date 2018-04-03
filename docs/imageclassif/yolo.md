@@ -11,13 +11,11 @@
 
 ## Brief
 
-YOLO is a novel approach for the object detection in images. The main difference with the previous approaches is that it is a one shot detector, meaning you only do one pass to get all of your boxes with labels on the images. The counter part to that approach is the limited number of possible detections on one image (potentially up to 98 boxes on the PASCOL VOC version of the network) but in the trade, the number of fps max is greatly improved (up to 45 fps on a Titan X GPU) and the mAP is good at 63,4% on the PASCAL VOC 2007 dataset. It is also to be noted there is a smaller version of the network which goes up to 150 fps but at the cost of a loss in the mAP (52,7%).
-
-
+YOLO is a novel approach for the object detection in images. The main difference with the previous approaches is that it is a one-shot detector, meaning you only do one pass to get all of your boxes with labels on the images. The counter part to that approach is the limited number of possible detections on one image (potentially up to 98 boxes on the PASCOL VOC version of the network) but in the trade, the number of fps max is greatly improved (up to 45 fps on a Titan X GPU) and the mAP is good at 63,4% on the PASCAL VOC 2007 dataset. It is also to be noted there is a smaller version of the network which goes up to 150 fps but at the cost of a loss in the mAP (52,7%).
 
 ## How Does It Work
 
-The architecture of the network is quite simple even if some details are unclear when it comes to the size of the boxes.
+The architecture of the network is quite simple (some details are unclear when it comes to the size of the boxes).
 
 The following diagram taken from the article shows the layers of the network:
 
@@ -48,6 +46,24 @@ The final results take from the article are the following ones:
 | Fast R-CNN + YOLO | 70,7 |
 | Faster R-CN | 70,4 |
 | YOLO | 57,9 |
+
+- Speed
+
+| Real-Time Detectors | Train | mAP | FPS |
+|---------------------|:-----:|:---:|:---:|
+| 100Hz DPM | 2007 | 16.0 | 100 |
+| 30Hz DPM | 2007 | 26.1 | 30 |
+| Fast YOLO | 2007+2012 | 52.7 | 155 |
+| YOLO | 2007+2012 | 63.4 | 45|
+
+| Less Than Real-Time | Train | mAP | FPS |
+|---------------------|:-----:|:---:|:---:|
+| Fastest DPM | 2007 | 30.4 | 15 |
+| R-CNN Minus R | 2007 | 53.5 | 6 |
+| Fast R-CNN | 2007+2012 | 70.0 | 0.5 |
+| Faster R-CNN VGG-16 | 2007+2012 | 73.2 | 7 |
+| Faster R-CNN ZF | 2007+2012 | 62.1 | 18 |
+| YOLO VGG-16 | 2007+2012 | 66.4 | 21 |
 
 Among the results, one interesting thing is the mixing of their method with others to improve the mAP the two had separately.
 
