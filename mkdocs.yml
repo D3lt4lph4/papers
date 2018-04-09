@@ -44,6 +44,9 @@ pages:
       - Stochastic gradient descent: optimization/sgd.md
       - AdaGrad: optimization/adagrad.md
     - Datasets:
+      - Database: datasets/list.md
+      - Object Counting: datasets/counting.md
+      - Events: datasets/events.md
       - Image Classification: datasets/imageclassification.md
       - Image Segmentation: datasets/imagesegmentation.md
       - NLP: datasets/nlp.md
