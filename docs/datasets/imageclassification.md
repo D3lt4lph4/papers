@@ -30,3 +30,20 @@ This dataset is both for multi-object detection and multi-object tracking.
     - pages: 1--7
 
 - Dataset: [here](http://detrac-db.rit.albany.edu/)
+
+## The KITTI Vision Benchmark Suite
+
+This dataset is both for multi-object detection and multi-object tracking.
+
+- Contains:
+    - Tracking: 8 classes but only 'Car' and 'Pedestrian' have enough instance according to the website
+    - Detection / 2D Objects: Unspecified on website, cars at least
+    - Detection / 3D Objects: Unspecified on website, cars at least
+    - Detection / bird's eye view: Cars (maybe)
+
+- Size:
+    - Tracking: 21 training sequences and 29 test sequences
+    - Detection / 2D Objects: 7481 training images and 7518 test images
+    - Detection / 3D Objects: 7481 training images and 7518 test images
+    - Detection / bird's eye view: 7481 training images and 7518 test images for 80 256 labeled objects
+- Dataset: [here](http://www.cvlibs.net/datasets/kitti/index.php)
