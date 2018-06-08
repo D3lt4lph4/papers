@@ -1,6 +1,6 @@
 # OverFeat
 
-## General Information (main fields described, non-exhaustive list)
+## General Information
 
 - Title: OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks
 - Authors: Pierre Sermanet, David Eigen, Xiang Zhang, Michael Mathieu, Rob Fergus, Yann LeCun
