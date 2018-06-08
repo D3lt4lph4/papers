@@ -27,8 +27,9 @@ The whole architecture is describe in the image thereafter:
 
 ## Results
 
-The results are in that order, PASCAL VOC 2007, 2010 and 2012:
+The results are in that order, PASCAL VOC 2007, 2010 and 2012.
 
+Comparison of results for classification on the VOC 2007:
 
 | Model | train set | mAP |
 |-------|-----------|-----|
@@ -37,8 +38,7 @@ The results are in that order, PASCAL VOC 2007, 2010 and 2012:
 | Fast RCNN | 07 without difficult | 68.1 |
 | Fast RCNN | 07+12 | 70.0 |
 
-Comparison of results for classification on the VOC 2007.
-
+Comparison of results for classification on the VOC 20010:
 
 | Model | train set | mAP |
 |-------|-----------|-----|
@@ -46,9 +46,7 @@ Comparison of results for classification on the VOC 2007.
 | Fast RCNN | 12 | 66.1 |
 | Fast RCNN | 07+12 | 68.8 |
 
-Comparison of results for classification on the VOC 2010.
-
-
+Comparison of results for classification on the VOC 2012.
 
 | Model | train set | mAP |
 |-------|-----------|-----|
@@ -56,30 +54,24 @@ Comparison of results for classification on the VOC 2010.
 | Fast RCNN | 12 | 65.7 |
 | Fast RCNN | 07+12 | 68.4 |
 
-Comparison of results for classification on the VOC 2012.
-
-
-The following table show the speed improvement of the network (S = small, M = medium, L = large):
-
-
-| Model | test rate | test speed up |
-|-------|-----------|-----|
-| Fast RCNN S | 0.10 | 98x |
-| Fast RCNN M | 0.15 | 80x |
-| Fast RCNN L | 0.32 | 146x |
-| RCNN S | 9.8 | 1x |
-| RCNN M | 12.1 \% | 1x |
-| RCNN L | 47.0 \% | 1x |
-
-Comparison of time results for classification.
-
-
 ## In Depth
 
-The workflow is the following, the whole image goes through the feature extractor, then the scaled box is extracted from the feature map, resized to a fix size output using a ROI pooling layer, finally, the pooled map goes through a network with two outputs to get both the class and the box for the proposed region.
+The workflow of the network is the following one:
 
-The main advantage of this method over the R-CNN one is the calculation of the feature map only once. Also since, apart from the region proposal, the whole pipeline is a neural network, the back-propagation can be carried through the whole network at once, accelerating the training process.
+- First RoI are extracted from the image using the region proposal module;
+- Then the input image is fed to the feature extractor module to output a feature map;
+- Using the RoI pooling layer, a fixed length vector is extracted from the feature map for each proposal;
+- Finally, these fixed length vectors go through fully connected layer to give two different outputs, one with the classes and the other one with the coordinates corrected of the bounding box (nms after to remove duplicate predictions).
 
+### The RoI pooling layer
+
+In order to extract fixed size map, let's use (7x7), the same as in the paper, the RoI pooling layer adapts the size of the max pooling used to the size of the proposed region.
+The proposed RoI is divided into a grid of sub-area giving the desired output size. For instance a RoI of size (21x14) would be divided in blocks of size (3x2), each of these blocks is them max-pooled to give the (7x7) map.
+
+### Mini-batch for fast training
+
+To accelerate the training, when processing a batch of size M, rather than using M images with one RoI in each image, they use N image with M/N RoI. The main advantage of this technique is to share the computation of the feature map for M/N data. They claim this technique not to impede the training of the network.
 
 ## Warning
 
+None so far
