@@ -27,6 +27,7 @@ pages:
       - R-FCN: imageclassif/rfcn.md
       - YOLO: imageclassif/yolo.md
       - SSD: imageclassif/ssd.md
+      - FSSD: imageclassif/fssd.md
       - RAM: imageclassif/ram.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
