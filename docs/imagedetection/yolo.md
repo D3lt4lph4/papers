@@ -11,19 +11,17 @@
 
 ## Brief
 
-YOLO is a novel approach for the object detection in images. The main difference with the previous approaches is that it is a one-shot detector, meaning you only do one pass to get all of your boxes with labels on the images. The counter part to that approach is the limited number of possible detections on one image (potentially up to 98 boxes on the PASCOL VOC version of the network) but in the trade, the number of fps max is greatly improved (up to 45 fps on a Titan X GPU) and the mAP is good at 63,4% on the PASCAL VOC 2007 dataset. It is also to be noted there is a smaller version of the network which goes up to 150 fps but at the cost of a loss in the mAP (52,7%).
+YOLO is part of the one shot detectors, meaning that it only does one pass on the images to output all the detections. The obvious advantage in this method is to speed up the computation and to increase the frame being processed by second. The downside of this method is to have mAP a bit under the top classifiers (not always true).
 
 ## How Does It Work
 
-The architecture of the network is quite simple (some details are unclear when it comes to the size of the boxes).
+The architecture of the network is quite simple, it is a series of convolutional layers followed by fully connected layers.
 
-The following diagram taken from the article shows the layers of the network:
+The following diagram shows the layers of the network:
 
 [YOLO architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/yolo/network.png "YOLO")
 
-The network is a classical series of convolutional and pooling layers (pooling not shown on the diagram) followed by two fully connected layers.
-
-The important part of the network is the last fully connected layer which contains all the information. Basically it is of size SxSx(B*5+C), so in the diagram 7x7x30. The S is the granularity of your output, B the number of bounding boxes and C the number of classes.
+The main idea is to have a grid of boxes to cover all the image being processed. The last layer contains all the boxes, coordinates and classes. This way you can cover the whole image with a pre-defined set of boxes.
 
 ## Results
 
@@ -69,4 +67,16 @@ Among the results, one interesting thing is the mixing of their method with othe
 
 ## In Depth
 
-There is a great explanation of the more obscure point of the network [here](http://christopher5106.github.io/object/detectors/2017/08/10/bounding-box-object-detectors-understanding-yolo.html), I greatly recommend to go check it out for more detail on the network.
+We will only detail quickly the way of work of the grid of boxes. For more details, check this [link](http://christopher5106.github.io/object/detectors/2017/08/10/bounding-box-object-detectors-understanding-yolo.html), it explains very clearly all the details of the network.
+
+If we take a look at the image above, we can see the size of the last layer to be 7x7x30, this is the output size for the PASCAL VOC challenge.
+
+The 7X7 is the size of the grid (see image below), the 30 is for the 20 classes of the network + 2 boxes (4 coordinates and confidence). It is important to see that only one class probability is used for two boxes.
+
+![yolo grid](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/yolo/yologrid.png "YOLO grid boxes")
+
+Then, for each two boxes of the grid, the coordinates are regressed, meaning that a box can actually be way bigger than the size of the cell. After that, the usual processing of the boxes to get the output.
+
+# Warning
+
+None so far.
