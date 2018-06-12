@@ -30,7 +30,6 @@ pages:
       - YOLO: imagedetection/yolo.md
       - SSD: imagedetection/ssd.md
       - FSSD: imagedetection/fssd.md
-      - RAM: imagedetection/ram.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Natural Language Processing:
