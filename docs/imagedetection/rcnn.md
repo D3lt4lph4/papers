@@ -23,7 +23,7 @@ This is not an end-to-end classifier as we can see nowadays.
 
 The network is made of three main parts, the region extractor, the feature extractor and finally the classifier. The whole network is shown in the following image:
 
-![RCNN Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/rcnn/rcnn_network.png "RCNN Network")
+![RCNN Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rcnn/rcnn_network.png "RCNN Network")
 
 A region proposal algorithm extract ROI, then each region is fed to a classifier and finally the extracted features are classified.
 

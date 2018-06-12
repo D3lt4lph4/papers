@@ -18,7 +18,7 @@ The FSSD is an improved version of the SSD. The authors try to add semantic info
 
 The FSSD is very close to the SSD, the principle is exactly the same, a cascade of convolutional layers used to predict a set of boxes. The  difference is that the networks makes two passes on some layers to add information on the smaller boxes predicted (see image below):
 
-![SSD/FSSD comparison](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fssd/fssd.png "SSD/FSSD comparison")
+![SSD/FSSD comparison](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/fssd/fssd.png "SSD/FSSD comparison")
 
 ## Results
 

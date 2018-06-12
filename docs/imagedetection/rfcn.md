@@ -19,7 +19,7 @@ According to the paper, they can go 2.5 to 20 times faster than a Faster R-CNN w
 
 As said before, the architecture of the network is kind of the same as the architecture of the Faster R-CNN and can be split in two parts. The image below (taken from the article) shows the architecture of the network with the two parts:
 
-![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/rfcn/network.jpg "R-FCN")
+![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfcn/network.jpg "R-FCN")
 
 The first part is the RPN which is the same network as the one used in the Faster R-CNN.
 
@@ -56,7 +56,7 @@ Now lets go a bit more in to the details of the last part of the network, the RO
 
 Taken from the paper, this diagram describes in details the last part of the network:
 
-![Network details](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/rfcn/networkdetails.png "R-FCN")
+![Network details](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfcn/networkdetails.png "R-FCN")
 
 This is almost the same image as before, only with a bit more details on the shapes. From now on, "cells layers" will refer to the colored layer obtained from the feature maps after the convolutions.
 

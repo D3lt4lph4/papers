@@ -19,7 +19,7 @@ The architecture of the network is quite simple (some details are unclear when i
 
 The following diagram taken from the article shows the layers of the network:
 
-[YOLO architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/yolo/network.png "YOLO")
+[YOLO architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/yolo/network.png "YOLO")
 
 The network is a classical series of convolutional and pooling layers (pooling not shown on the diagram) followed by two fully connected layers.
 

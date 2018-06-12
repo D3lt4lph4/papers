@@ -23,7 +23,7 @@ The region proposal, selects a set of potential boxes, then using the features e
 
 The whole architecture is describe in the image thereafter:
 
-![Fast RCNN Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fastrcnn/fast_rcnn_network.jpeg "Fast RCNN Network")
+![Fast RCNN Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/fastrcnn/fast_rcnn_network.jpeg "Fast RCNN Network")
 
 ## Results
 

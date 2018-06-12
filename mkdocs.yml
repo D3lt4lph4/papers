@@ -21,14 +21,16 @@ pages:
     - Image Classification:
       - Introduction: imageclassif/index.md
       - OverFeat: imageclassif/overfeat.md
-      - R-CNN: imageclassif/rcnn.md
-      - Fast R-CNN: imageclassif/fastrcnn.md
-      - Faster R-CNN: imageclassif/fasterrcnn.md
-      - R-FCN: imageclassif/rfcn.md
-      - YOLO: imageclassif/yolo.md
-      - SSD: imageclassif/ssd.md
-      - FSSD: imageclassif/fssd.md
       - RAM: imageclassif/ram.md
+    - Image Detection:
+      - R-CNN: imagedetection/rcnn.md
+      - Fast R-CNN: imagedetection/fastrcnn.md
+      - Faster R-CNN: imagedetection/fasterrcnn.md
+      - R-FCN: imagedetection/rfcn.md
+      - YOLO: imagedetection/yolo.md
+      - SSD: imagedetection/ssd.md
+      - FSSD: imagedetection/fssd.md
+      - RAM: imagedetection/ram.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Natural Language Processing:

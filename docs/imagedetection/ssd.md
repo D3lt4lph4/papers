@@ -22,7 +22,7 @@ Then, the network uses grids of various scale to predict the different boxes pre
 
 The following image, taken from the original paper, shows two grid and the matching between objects and pre-set boxes:
 
-![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-classif-how.png?raw=true "SSD grid")
+![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-classif-how.png?raw=true "SSD grid")
 
 There are two grids shown, for each of those grids there is a number of pre-set boxes that can match the ground truth boxes (only a few are on the diagrams). The network tells for each box if it matches or not an object in the image (here two matches for the cat and one for the dog). The bigger the grid, the smaller the object detected is, this is how the SSD allows for multiple detection in one shot.
 It is also to be noted that the boxes are regressed at prediction to add in precision.
@@ -55,7 +55,7 @@ It is also to be noted that the boxes are regressed at prediction to add in prec
 
 The SSD can be devided into two main parts, the feature extractor and the regressors/classifiers. For the first part, the VGG-16 is used, then convolutional layers are added to create the grids used for the classifications/predictions. The image below shows the architecture of the network :
 
-![SSD network](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ssd/ssd-network.png?raw=true "SSD Network")
+![SSD network](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-network.png?raw=true "SSD Network")
 
 As can be seen the network outputs 8732 boxes, we can separate the boxes in 6 groups, one per scale for the boxes inferred. Each group is supposed to detect different size objects, the closer we are from the VGG-16 the smaller the object.
 

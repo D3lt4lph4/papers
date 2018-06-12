@@ -19,7 +19,7 @@ The Faster R-CNN is an improved version of the Fast R-CNN. The main amelioration
 
 The network is made up of three parts as shown is the following image (taken from the article).
 
-![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fasterrcnn/network.png "Faster R-CNN")
+![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/fasterrcnn/network.png "Faster R-CNN")
 
 We can see three parts in this image:
 
