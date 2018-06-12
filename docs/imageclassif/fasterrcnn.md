@@ -70,6 +70,16 @@ Finally, the anchors are build on a "pyramid of anchor", that is the anchor are 
 
 # Training the whole network
 
+Since both the RPN and the classifier share layers, the training was modify to help converging faster.
+
+They describe different method in the paper, only the one they used will be described here.
+
+They used a 4 steps training:
+
+- First they train the RPN (section 3.1.3 of the paper);
+- Then they train the classifier using the RPN of the step 1 (no layer shared);
+- The RPN is fine-tuned using the convolutional layers of the step 2;
+- Finally the classifier is fine-tuned in the same way.
 
 
 ## Warnings
