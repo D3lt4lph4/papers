@@ -37,6 +37,12 @@ Comparison of results for classification on the VOC 2007 test set.
 
 ## In Depth
 
+As said before, the main particularity of the network is two reuse computed feature maps to improve the accuracy of the network with out impeding too much the computation speed.
+
+If one takes a look at the diagram in the first section, we can see that three layers are re-used before the the classification part. The selection is limited to those three layers because they think that the smaller layer at the end have too little information to be worth merging.
+
+The merging is done using concatenation of the three layers and by resizing the smallest layers to the correct size using bilinear interpolation. To downsize the number of filers, they use 1x1 convolutions.
+
 
 ## Warning
 
