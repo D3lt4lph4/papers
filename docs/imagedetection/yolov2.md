@@ -36,7 +36,7 @@ PASCAL VOC 2007 detection results:
 | YOLOv2 352x352 | 2007+2012  | 73.7 | 81 |
 | YOLOv2 416x416 | 2007+2012  | 76.8 | 67 |
 | YOLOv2 480x480 | 2007+2012  | 77.8 | 59 |
-| YOLOv2 544x544 | 2007+2012|78.6 40
+| YOLOv2 544x544 | 2007+2012|78.6 | 40 |
  
 PASCAL VOC2012 test detection results:
 
