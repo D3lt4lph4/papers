@@ -13,13 +13,15 @@
 
 ## Brief
 
-This is the last version of the YOLO network, the authors share the new architecture of the network as well as the technical details for the implementation and the training of the network. According to the results, the network gets very good results (close to (but under) the state of the art)
+This is the last version of the YOLO network, the authors share the new architecture of the network as well as the technical details for the implementation and the training of the network. According to the results, the network gets very good results (close to (but under) the state of the art).
 
 ## How Does It Work
 
 The same as the previous YOLO networks, one shot detectors, predicts the bounding boxes. The main difference is the network being a bit bigger.
 
 ## Results
+
+COCO dataset (I think):
 
 | Network | mAP-50 | time (FPS) |
 |:-------:|:------:|:----------:|
