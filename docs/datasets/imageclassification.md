@@ -47,3 +47,28 @@ This dataset is both for multi-object detection and multi-object tracking.
     - Detection / 3D Objects: 7481 training images and 7518 test images
     - Detection / bird's eye view: 7481 training images and 7518 test images for 80 256 labeled objects
 - Dataset: [here](http://www.cvlibs.net/datasets/kitti/index.php)
+
+## The Berkeley BBD100K
+
+- Contains:
+    - Vehicles: Bus, Light, Sign, Person, Bike, Truck, Motor, Car, Train, Rider
+    - Weather: clear, partly cloudy, over-cast, rainy, snowy, foggy, dawn/dusk, daytime, night
+    - Different level of occlusion
+    - Segmentation
+    - Different scenes, such as: residential, highway, city, street, ...
+    - Lane marking
+
+- Size:
+    - 100,000 HD video sequences of over 1,100-hour driving experience;
+    - 2D Bounding Boxes annotated on 100,000 images;
+    - Segmentation over 10,000 diverse images with pixel-level and rich instance-level annotations;
+    - Multiple types of lane marking annotations on 100,000 images.
+
+- Other details:
+    - location: Different location in the USA, New York, Berkeley, San Francisco
+
+- Article:
+    - Authors: Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht Madhavan, Trevor Darrell
+    - Link: [article](https://arxiv.org/pdf/1805.04687.pdf)
+
+- Dataset: [here](http://bdd-data.berkeley.edu/)
