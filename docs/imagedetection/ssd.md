@@ -18,11 +18,13 @@ The SSD is a one-shot detector in the same style as the YOLO. The main advantage
 
 Even if it is a one shot detector, the network can be divided into two parts, a feature extractor, the VGG16, and regressors/classifiers using convolutional layers at different scales. The novel idea is to downsize the feature map output by the VGG16 using convolution and pooling layers to get the different scales.
 
+![Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/ssd/ssd-network.png "SSD network")
+
 Then, the network uses grids of various scale to predict the different boxes present in the image. The SSD outputs pre-defined sets boxes for different grids and tells for each box if there is (or isn't) an object in each box.
 
 The following image, taken from the original paper, shows two grid and the matching between objects and pre-set boxes:
 
-![How Does It Work](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-classif-how.png?raw=true "SSD grid")
+![grid](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-classif-how.png?raw=true "SSD grid")
 
 There are two grids shown, for each of those grids there is a number of pre-set boxes that can match the ground truth boxes (only a few are on the diagrams). The network tells for each box if it matches or not an object in the image (here two matches for the cat and one for the dog). The bigger the grid, the smaller the object detected is, this is how the SSD allows for multiple detection in one shot.
 It is also to be noted that the boxes are regressed at prediction to add in precision.
@@ -53,7 +55,7 @@ It is also to be noted that the boxes are regressed at prediction to add in prec
 
 ### Architecture
 
-The SSD can be devided into two main parts, the feature extractor and the regressors/classifiers. For the first part, the VGG-16 is used, then convolutional layers are added to create the grids used for the classifications/predictions. The image below shows the architecture of the network :
+The SSD can be divided into two main parts, the feature extractor and the regressors/classifiers. For the first part, the VGG-16 is used, then convolutional layers are added to create the grids used for the classifications/predictions. The image below shows the architecture of the network :
 
 ![SSD network](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-network.png?raw=true "SSD Network")
 
