@@ -29,6 +29,7 @@ pages:
       - R-FCN: imagedetection/rfcn.md
       - YOLO: imagedetection/yolo.md
       - YOLOv2: imagedetection/yolov2.md
+      - YOLOv3: imagedetection/yolov3.md
       - SSD: imagedetection/ssd.md
       - FSSD: imagedetection/fssd.md
     - Image Segmentation:
