@@ -25,6 +25,7 @@ The FSSD is very close to the SSD, the principle is exactly the same, a cascade 
 The results shown here are the main results for the networks, some were omitted, look into the paper for more details.
 
 Comparison of results for classification on the VOC 2007 test set :
+
 | Model | train set | mAP | fps | gpu | backbone network |
 |:-----:|:---------:|:---:|:---:|:---:|:----------------:|
 | Faster RCNN | 07+12 | 73.2 | 7 | Titan X | VGGNet |
