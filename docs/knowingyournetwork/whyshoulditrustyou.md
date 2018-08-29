@@ -23,20 +23,22 @@ The image show the reason why the classifier classified this image  (a husky) as
 
 ## How Does It Work
 
-The algorithm will consider the model to be a black box and will look for the data in the input that, if changed will change the result of the classification. The algorithm follows this workflow:
-
-- vectorize the input in some features that a human will understand.
-- hide some part of the vectorized input and look for the change in the output
-- create a linear model to separate and show which part of the vector is used for the classification
-
-To explain a bit more the 3 parts:
-
-The vectorization of the input is to cut the whole input into smaller pieces. For instance, a text in word or group of words, an image in superpixels (groups of pixels).
-
-Then the second part will hide part of the input (one of the word or of the super pixel) and look at the changes in the output. The main idea here is to say, "if I hide this part and the classification changes, then it must be used to make the classification"
-
-Finally some linear explanation is made to explain the classification (see image below)
+The classifier is considered as a black box, then the input is transformed into an understandable representation (super-pixels, bag of word, ...) and, locally an approximation is made with an "explainable model" (see In Depth).
 
 ![Linear Separation](https://github.com/D3lt4lph4/papers/blob/master/docs/images/knowingyournetwork/LIME/separation.png?raw=true "Husky explanation")
 
 As explained in the paper: "The black-box model’s complex decision function f (unknown to LIME) is represented by the blue/pink background, which cannot be approximated well by a linear model.  The bold red cross is the instance being explained. LIME samples instances, gets pre-dictions using f, and weighs them by the proximity to the  instance  being  explained  (represented  here by size).  The dashed line is the learned explanation that is locally (but not globally) faithful.
+
+## Results
+
+Basically limited by the speed of your classifier.
+
+## In Depth
+
+The article revolves around the idea of "explainable model". The explainable models are simpler model such as linear models.
+
+Let's take the following example:
+
+\[ y = 2 * x_1 + (-4) * x_2 + ... + c_l * x_l\]
+
+If we consider the case where a positive y means class 1 and negative y means class 2, then all the positive coefficient are linked to features "helping" the first class and the negative ones are "helping" the second class.
