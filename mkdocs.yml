@@ -41,6 +41,8 @@ pages:
     - Tracking:
       - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
+    - Scene Graph:
+      - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
     - Optimizers:
