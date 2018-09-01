@@ -1,5 +1,7 @@
 # LIME
 
+_last modified : 01-09-2018_
+
 ## General Information (main fields described, non-exhaustive list)
 
 - Title: Why Should I Trust You ? Explaining the Predictions of Any Classifier
