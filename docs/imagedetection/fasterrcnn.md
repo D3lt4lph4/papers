@@ -6,21 +6,20 @@
 - Authors: Shaoqing Ren, Kaiming He, Ross Girshick, and Jian Sun
 - Link: [article](https://arxiv.org/abs/1506.01497)
 - Date of first submission: 4 Jun 2015
-- Implementations: (just put a few, there are a lot of implementation even per framework, check on the web to find the best one)
+- Implementations: (I just put a few, there are a lot of implementation even per framework, check on the web to find the best one)
     - [TensorFlow](https://github.com/endernewton/tf-faster-rcnn)
     - [Caffe/Matlab](https://github.com/ShaoqingRen/faster_rcnn)
     - [Pytorch](https://github.com/jwyang/faster-rcnn.pytorch)
 
 ## Brief
 
-At the time of the publication, most of the object detection networks were in at least two part, one to extract ROI from the image and the second to classify the extracted regions. This was one of the bottlenecks in order to speed up the detections. The Faster R-CNN (which is basically a better version of the Fast R-CNN network) remove this bottleneck by introducing a Region Proposal Network (RPN).
-According to the paper, they achieve a frame rate of 5fps on a GPU with the VGG16 as base network, while have state-of-the-art scores.
+The Faster R-CNN is an improved version of the Fast R-CNN. The main amelioration of the network was to transform the region proposal network into a neural network to integrate it into the whole architecture. They achieve a frame rate of 5fps on a GPU with the VGG16 as base network, while having state-of-the-art scores.
 
 ## How Does It Work
 
 The network is made up of three parts as shown is the following image (taken from the article).
 
-![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fasterrcnn/network.png "Faster R-CNN")
+![Network architecture](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/fasterrcnn/network.png "Faster R-CNN")
 
 We can see three parts in this image:
 
@@ -29,10 +28,6 @@ We can see three parts in this image:
 - The last one is the classifier (Fast R-CNN) which tells for each ROI if there is an object from the target classes in it.
 
 Something important to notice is the fact that both the classifier and the RPN share the same weights for the extraction of the features. This was done to be able to do only a single pass on the image and avoid having two networks for the whole workflow.
-
-This sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two, then the other, then the first, then second and so on until the model converge to som point.
-
-Still, their method use a sliding window in order to get the ROI not making this classifier a one-shot one.
 
 ## Results
 
@@ -59,7 +54,7 @@ More details on the results are given on the paper, these are the main ones.
 
 ## In Depth
 
-Let's describe a bit more each block of the network, first the RPN.
+The main difference for this network with the Fast R-CNN is in the Region Proposal Network. The first thing is that this RPN makes the whole model trainable end-to-end. But, the counter part to this advantage is that the sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two, then the other, then the first, then second and so on until the model converge at some point.
 
 ### Region Proposal Network
 
@@ -67,5 +62,27 @@ The RPN is based upon a sliding window and anchor boxes, for each position of th
 
 ![Network anchors](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fasterrcnn/anchor.png "Faster R-CNN anchor")
 
+This means that for each location on the grid, there is 4k outputs for the k boxes (coordinates for each box) and 2k output for the class (object or not object). 
 
-Their method use convolutional layers to output the anchor boxes, thus making the RPN translation invariant and at the same time reducing the number of weights used for the output. Finally, the anchors are build on a pyramid of anchor thus removing the need to re-scale the image to detect object of different size.
+Their method use convolutional layers to output the anchor boxes, thus making the RPN translation invariant and at the same time reducing the number of weights used for the output.
+
+Finally, the anchors are build on a "pyramid of anchor", that is the anchor are at multiple scale, thus removing the need to re-scale the image to detect object of different size.
+
+# Training the whole network
+
+Since both the RPN and the classifier share layers, the training was modify to help converging faster.
+
+They describe different method in the paper, only the one they used will be described here.
+
+They used a 4 steps training:
+
+- First they train the RPN (section 3.1.3 of the paper);
+- Then they train the classifier using the RPN of the step 1 (no layer shared);
+- The RPN is fine-tuned using the convolutional layers of the step 2;
+- Finally the classifier is fine-tuned in the same way.
+
+
+## Warnings
+
+None so far.
+

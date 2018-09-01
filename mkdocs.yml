@@ -21,13 +21,17 @@ pages:
     - Image Classification:
       - Introduction: imageclassif/index.md
       - OverFeat: imageclassif/overfeat.md
-      - R-CNN: imageclassif/rcnn.md
-      - Fast R-CNN: imageclassif/fastrcnn.md
-      - Faster R-CNN: imageclassif/fasterrcnn.md
-      - R-FCN: imageclassif/rfcn.md
-      - YOLO: imageclassif/yolo.md
-      - SSD: imageclassif/ssd.md
       - RAM: imageclassif/ram.md
+    - Image Detection:
+      - R-CNN: imagedetection/rcnn.md
+      - Fast R-CNN: imagedetection/fastrcnn.md
+      - Faster R-CNN: imagedetection/fasterrcnn.md
+      - R-FCN: imagedetection/rfcn.md
+      - YOLO: imagedetection/yolo.md
+      - YOLOv2: imagedetection/yolov2.md
+      - YOLOv3: imagedetection/yolov3.md
+      - SSD: imagedetection/ssd.md
+      - FSSD: imagedetection/fssd.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Natural Language Processing:
@@ -37,6 +41,8 @@ pages:
     - Tracking:
       - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
+    - Scene Graph:
+      - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
     - Optimizers:
