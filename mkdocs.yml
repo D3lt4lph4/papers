@@ -34,6 +34,8 @@ pages:
       - FSSD: imagedetection/fssd.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
+    - Image Generation:
+      - Photographic Image Synthesis with Cascaded Refinement Networks: imagegeneration/photographicimagesynthesis.md
     - Natural Language Processing:
       - Introduction: nlp/index.md
     - Reinforcement Learning:
