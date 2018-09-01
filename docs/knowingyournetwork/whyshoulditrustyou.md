@@ -42,3 +42,4 @@ Let's take the following example:
 \[ y = 2 * x_1 + (-4) * x_2 + ... + c_l * x_l\]
 
 If we consider the case where a positive y means class 1 and negative y means class 2, then all the positive coefficient are linked to features "helping" the first class and the negative ones are "helping" the second class.
+
