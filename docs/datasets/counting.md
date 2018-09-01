@@ -2,7 +2,6 @@
 
 _last modified :_
 
-
 Here are listed all the datasets that can be used for object counting. Details are provided for each dataset to help find the perfect one.
 
 The article subsection gives the article that is specified as "Citation" on the dataset web-page. No specification for the use of the datasets are provided here, please refer to the website of the dataset for more details.
