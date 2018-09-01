@@ -1,4 +1,4 @@
-#!/bin/bash
+#!C:/cygwin64/bin/bash.exe
 
 date_var=$(date +%d-%m-%Y)
 
