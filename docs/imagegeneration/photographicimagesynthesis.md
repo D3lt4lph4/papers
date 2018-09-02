@@ -1,5 +1,7 @@
 #  Photographic Image Synthesis with Cascaded Refinement Networks
 
+_last modified : 02-09-2018_
+
 ## General Information
 
 - Title: Photographic Image Synthesis with Cascaded Refinement Network
@@ -26,7 +28,30 @@ And to create the set of tones for the images they go from output of (1024x2048x
 
 ## Results
 
+The results were tested using the Amazon Mechanical Turk platform and are summarized in the following graph (from the article):
 
+![Results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagegeneration/photographicimagesynthesis/graph_results.png "Results")
+
+The test were the following, two image from two datasets were shown for a certain amount of time, and the annotator had to choose the most realistic one.
 
 ## In Depth
 
+### Refinement Module
+
+Each Refinement module is made up of 3 layers. 
+
+First the input layer of dimension $w_i x h_i x (d_{i-1} + c)$ which is a concatenation of the previous refinement module and the semantic layout (respectively up and down sampled).
+Then the intermediate and output layers of dimension $w_i x h_i x d_{i-1}$.
+
+The layers are followed by convolutions, normalization and non-linearity functions depending on their position (c.f paper).
+
+### Loss function
+
+The loss function is adapted to let the network generate different images for the same input of segmented image.
+
+The first idea of the loss is to use a network for classification, and to compare the inside layers rather than the output directly (to avoid, for instance, to force the color of object).
+This gives the following : $\mathcal{L}_{I,L}(\theta) \sum_t \lambda_t \| \phi_l(I) - \phi_l(g(L,\theta))|_1$
+
+Then, since the network generate m output image, they take the minimum of the previous function to force the outputs to cover the range of possible outputs.
+
+Finally they do the same, semantic object per semantic object to cover the whole spectrum of possible representation for the objects.
