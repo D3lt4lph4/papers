@@ -1,5 +1,7 @@
 # OverFeat
 
+_last modified : 01-09-2018_
+
 ## General Information
 
 - Title: OverFeat: Integrated Recognition, Localization and Detection using Convolutional Networks

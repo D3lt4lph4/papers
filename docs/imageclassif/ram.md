@@ -1,5 +1,7 @@
 # Recurrent Attention Model
 
+_last modified : 01-09-2018_
+
 ## General Information
 
 - Title: Recurrent Models of Visual Attention
