@@ -19,7 +19,6 @@ extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX
 pages:
     - Home: index.md
     - Image Classification:
-      - Introduction: imageclassif/index.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
     - Image Detection:
