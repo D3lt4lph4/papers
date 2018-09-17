@@ -40,7 +40,6 @@ pages:
     - Reinforcement Learning:
       - Introduction: rl/index.md
     - Tracking:
-      - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Scene Graph:
       - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
