@@ -43,6 +43,8 @@ pages:
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Scene Graph:
       - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
+      - Neural Motifs, Scene Graph Parsing with Global Context: scenegraph/neuralmotifparsingwithglobalcontext.md
+      - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
     - Optimizers:
