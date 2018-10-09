@@ -32,10 +32,6 @@ Here put the results of the network, scores in competitions, ...
 ## In Depth
 
 Here, go full description, tricks and all, keep in mind this is to explain the paper, but still a summary.
-
-## Warning
-
-If anything is not specified in the paper but is in the implementation, or anything worth mentioning.
 ```
 
 ## Datasets
@@ -43,6 +39,8 @@ If anything is not specified in the paper but is in the implementation, or anyth
 If you want to add a dataset, just follow this example as a guideline.
 
 ```markdown
+## Dataset Name
+
 - Contains:
     - Vehicles: Cars, Bus, Van, Other
     - Weather: cloudy, sunny, rainy, night

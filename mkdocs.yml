@@ -19,7 +19,6 @@ extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX
 pages:
     - Home: index.md
     - Image Classification:
-      - Introduction: imageclassif/index.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
     - Image Detection:
@@ -34,13 +33,18 @@ pages:
       - FSSD: imagedetection/fssd.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
+    - Image Generation:
+      - Photographic Image Synthesis with Cascaded Refinement Networks: imagegeneration/photographicimagesynthesis.md
     - Natural Language Processing:
       - Introduction: nlp/index.md
     - Reinforcement Learning:
       - Introduction: rl/index.md
     - Tracking:
-      - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
+    - Scene Graph:
+      - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
+      - Neural Motifs, Scene Graph Parsing with Global Context: scenegraph/neuralmotifparsingwithglobalcontext.md
+      - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
     - Optimizers:

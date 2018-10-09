@@ -1,5 +1,7 @@
 # Adagrad
 
+_last modified : 01-09-2018_
+
 - Title: Adaptive Subgradient Methods for Online Learning and Stochastic Optimization
 - Authors: John Duchi, Elad Hazan, Yoram Singer
 - Link: [article](http://www.jmlr.org/papers/volume12/duchi11a/duchi11a.pdf)

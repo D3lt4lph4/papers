@@ -1,5 +1,7 @@
 # Stochastic gradient descent
 
+_last modified : 01-09-2018_
+
 ## Original Version
 
 This section will describe in details the algorithm of the Stochastic gradient descent (SGD) as well as the intuition behind it. Support for testing the algorithm will soon be available.

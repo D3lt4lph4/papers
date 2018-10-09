@@ -1,0 +1,13 @@
+#!/bin/bash
+
+date_var=$(date +%d-%m-%Y)
+
+staged_file=$(git diff --cached --name-status | awk '$1 != "D" { print $2 }')
+
+for file in $staged_file; do
+    echo $file
+    sed -i "/\_last modified :\_/c\_last modified : $date_var\_" $file
+    sed -i -e "/\_last modified : [0-9]\{2\}-[0-9]\{2\}-[0-9]\{4\}\_/c\_last modified : $date_var\_" $file
+    git add $file
+done
+
