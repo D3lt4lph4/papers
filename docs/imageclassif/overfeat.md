@@ -56,4 +56,16 @@ For Localization and detection it is not specified if the results are for the fa
 
 ## In Depth
 
-To come
+### Model design
+
+Multi-Scale Classification
+
+resolution augmentation
+
+The efficiency of ConvNets for detection
+
+Combining Predictions
+
+## Warning
+
+None so far.
