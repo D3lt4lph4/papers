@@ -29,7 +29,7 @@ The main idea is to have a grid of boxes to cover all the image being processed.
 
 The final results take from the article are the following ones:
 
-- VOC 2007 (Combined is the Fast R-CNN with the network on the line)
+- VOC 2007 (Combined is the Fast R-CNN + the network on the line)
 
 | Network | mAP | Combined | Gain |
 |---------|:---:|:--------:|:----:|
