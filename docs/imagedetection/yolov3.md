@@ -1,6 +1,6 @@
 # YOLOv3
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -23,7 +23,7 @@ The same as the previous YOLO networks, one shot detectors, predicts the boundin
 
 ## Results
 
-COCO dataset (I think):
+COCO dataset:
 
 | Network | mAP-50 | time (FPS) |
 |:-------:|:------:|:----------:|
@@ -43,8 +43,3 @@ COCO dataset (I think):
 ## In Depth
 
 A lot of little stuff described in the paper, the interesting part is in section 4, what didn't work. Apart from that one notable difference is the multi-scale classification through the use of the boxes.
-
-
-## Warning
-
-None so far
