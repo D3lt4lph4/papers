@@ -1,6 +1,6 @@
 # YOLO9000
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -14,7 +14,7 @@ _last modified : 01-09-2018_
 
 ## Brief
 
-This is an improved version of the YOLO network. It was designed to palliate to some defect of the YOLO, that is the precision of the network and the level of recall. On top of that, the new version can now predict up to 9000 classes and predict non seen with no label.
+This is an improved version of the YOLO network. It was designed to palliate to some defect of the YOLO, the precision of the network and the level of recall. On top of that, the new version can now predict up to 9000 classes and predict unseen classes.
 
 ## How Does It Work
 
@@ -61,7 +61,3 @@ The first two methods used are batch normalization and increase in the resolutio
 The other improvements is the use of anchor boxes picked using the k-means algorithm. They use the k-means algorithm to pick anchor boxes fitting best the distribution of their objects to detect in the images.
 
 Finally they changed the dimension of the input images during the training to have their network learn to do multi scale classification.
-
-## Warning
-
-None so far.
