@@ -1,5 +1,7 @@
 site_name: Papers
 
+theme: sphinx_rtd_theme
+
 python:
    version: 2 # for unicode
    setup_py_install: true
