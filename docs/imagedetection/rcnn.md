@@ -1,6 +1,6 @@
 # RCNN
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -15,7 +15,7 @@ _last modified : 01-09-2018_
 
 This network is one of the pioneers for object detection. In its conception it is tightly linked to the OverFeat network, as described in the article : "OverFeat can be seen (roughly) as a special case of R-CNN.".
 
-Even if the architecture of the network is inspired by OverFeat, the RCNN outperformed all of the results at the time og its publication. 
+Even if the architecture of the network is inspired by OverFeat, the RCNN outperformed all of the results at the time of its publication.
 
 One of the main contribution of the paper is to demonstrate the gain obtained when pre-training on large auxiliary dataset and after that training on the target set (usually smaller).
 
@@ -67,22 +67,16 @@ links:
 
 ### At test time
 
-The first part of the network uses the [selective search](https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib) to generate around 2k boxes of possible objects.
+The first part of the network uses the [selective search] algorithm(https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib) to generate around 2k boxes of possible objects.
 
-Then, second part of the network uses the network of the Krizhevsky et al to generate a  4096-dimensional feature vector from each boxes that were proposed. The vector is generated using five the convolutional layers. The input image is a 227x227 mean-subtracted wrapped RGD image.
+Then, second part of the network uses the network of Krizhevsky et al to generate a  4096-dimensional feature vector from each boxes that were proposed. The input image is a 227x227 mean-subtracted wrapped RGB image.
 
 Finally the correct class is extracted using a SVM and Non-Maximum suppression from all the boxes.
 
 ### At training time
 
-The CNN is trained with the fully connected layers at the end modified to match the number of classes in the dataset. 
+The CNN is trained with the fully connected layers at the end modified to match the number of classes in the dataset.
 
 The network is first pre-trained "on a large auxiliary dataset (ILSVRC2012 classification) using image-level annotations only", with all the classes. Then after replacing the fully connected with a smaller one to match the number of class, the network is fine tuned.
 
 Finally, once the CNN part has converged, the SVMs are trained.
-
-The part still unclear to me is why use the SVM extractor instead of the usual fully connected layer. Probably small improvement in the results.
-
-## Warning
-
-None so far.
