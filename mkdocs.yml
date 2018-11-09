@@ -33,6 +33,7 @@ pages:
       - YOLOv3: imagedetection/yolov3.md
       - SSD: imagedetection/ssd.md
       - FSSD: imagedetection/fssd.md
+      - RFB: imagedetection/rfb.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Image Generation:
