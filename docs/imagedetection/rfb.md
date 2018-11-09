@@ -66,8 +66,10 @@ Comparison of results for classification on COCO dataset:
 
 They introduce two different module, the rfb_a and rfb_b. In conception they are both very similar, the internal layer is the only part changing, cf figures.
 
+RFB-a:
 ![RFB module a](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfb/rbf_module_a.png "RFB module a")
 
+RFB-b:
 ![RFB module activation](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfb/rbf_module_b.png "RFB module b")
 
 For each of the two modules, the principal change compared to an inception module is the presence of the dilated convolutions.
