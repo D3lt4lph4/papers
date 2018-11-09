@@ -32,6 +32,7 @@ More region are activated by the module.
 Comparison of results for detection on the VOC 2007:
 
         | Model | mAP | fps |
+        |:-----:|:---:|:---:|
         | Faster RCNN | 73.2 \% | 7 |
         | R-FCN | 80.5 \% | 9 |
         | YOLOv2 544 | 78.6 \% | 40 |
@@ -43,6 +44,7 @@ Comparison of results for detection on the VOC 2007:
 Comparison of results for classification on COCO dataset:
 
        | Method | Backbone | Data | Time | Avg. Precision, IoU: 0.5:0.9 |
+       |:------:|:--------:|:----:|:----:|:----------------------------:|
        | Faster | VGG | trainval |147 ms | 24.2 |
        | Faster+++ | ResNet-101 | trainval | 3.36 s | 34.9 |
        | Faster w FPN | ResNet-101-FPN | trainval35k | 240 ms | 36.2 |
