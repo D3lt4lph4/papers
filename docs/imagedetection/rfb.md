@@ -32,19 +32,19 @@ More region are activated by the module.
 Comparison of results for detection on the VOC 2007:
 
         | Model | mAP | fps |
-        |:-----:|:---:|:---:|
-        | Faster RCNN | 73.2 \% | 7 |
-        | R-FCN | 80.5 \% | 9 |
-        | YOLOv2 544 | 78.6 \% | 40 |
+        |-------|-----|-----|
+        | Faster RCNN | 73.2% | 7 |
+        | R-FCN | 80.5% | 9 |
+        | YOLOv2 544 | 78.6% | 40 |
         | R-FCN w deformable CNN | 82.6 \% | 8 |
-        | SSD300 | 77.2 \% | 46 |
-        | RFB Net300 | 80.5 \% | 43 |
-        | RFB Net512 | 82.2 \% | 18 |
+        | SSD300 | 77.2% | 46 |
+        | RFB Net300 | 80.5% | 43 |
+        | RFB Net512 | 82.2% | 18 |
 
 Comparison of results for classification on COCO dataset:
 
        | Method | Backbone | Data | Time | Avg. Precision, IoU: 0.5:0.9 |
-       |:------:|:--------:|:----:|:----:|:----------------------------:|
+       |--------|----------|------|------|------------------------------|
        | Faster | VGG | trainval |147 ms | 24.2 |
        | Faster+++ | ResNet-101 | trainval | 3.36 s | 34.9 |
        | Faster w FPN | ResNet-101-FPN | trainval35k | 240 ms | 36.2 |
