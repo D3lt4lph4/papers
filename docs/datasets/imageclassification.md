@@ -1,6 +1,6 @@
 # Datasets for image classification
 
-_last modified : 01-09-2018_
+_last modified : 15-11-2018_
 
 Here are listed all the datasets that can be used for image classification. Each dataset should come with a small description of its size, what's in it and who provided it.
 
@@ -74,3 +74,28 @@ This dataset is both for multi-object detection and multi-object tracking.
     - Link: [article](https://arxiv.org/pdf/1805.04687.pdf)
 
 - Dataset: [here](http://bdd-data.berkeley.edu/)
+
+## Cifar-10
+
+- Contains:
+    - airplane 										
+    - automobile 										
+    - bird 										
+    - cat 										
+    - deer 										
+    - dog 										
+    - frog 										
+    - horse 										
+    - ship 										
+    - truck
+
+- Size:
+    - 60000 images divided into 6 batches with one for the tests
+    - images of size 32x32
+
+- Other details:
+
+- Article:
+    - Link: [article](https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf)
+
+- Dataset: [here](https://www.cs.toronto.edu/~kriz/cifar.html)
