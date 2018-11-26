@@ -1,6 +1,6 @@
 # Faster R-CNN
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -35,6 +35,8 @@ Something important to notice is the fact that both the classifier and the RPN s
 
 The following tables describe the results of the network depending on the type of network and dataset used. For the data, "07" is for the VOC 2007 trainval, "07+12" is for the union set of VOC 2007 trainval and VOC 2012 trainval and COCO stands for the COCO dataset.
 
+The first table is for the PASCAL VOC 2007 test set.
+
 | method | # proposals | data | mAP (%) |
 |--------|:-----------:|:----:|:-------:|
 |RPN+VGG unshared | 300 | 07 | 68.5 |
@@ -42,7 +44,9 @@ The following tables describe the results of the network depending on the type o
 |RPN+VGG, shared | 300 | 07+12 | 73.2 |
 |RPN+VGG, shared | 300 | COCO+07+12 | 78.8 |
 
-The second table make use of the PASCAL VOC 2012 dataset as well. For the data, "07" means the VOC 2007 trainval, "07++12" means the union set of VOC 2007 trainval+test and VOC 2012 trainval and COCO stands for the COCO dataset.
+For the data, "07" means the VOC 2007 trainval, "07++12" means the union set of VOC 2007 trainval+test and VOC 2012 trainval and COCO stands for the COCO dataset.
+
+The secodn table is for the PASCAL VOC 2012 test set.
 
 | method | # proposals | data | mAP (%) |
 |--------|:-----------:|:----:|:-------:|
@@ -56,13 +60,13 @@ More details on the results are given on the paper, these are the main ones.
 
 ## In Depth
 
-The main difference for this network with the Fast R-CNN is in the Region Proposal Network. The first thing is that this RPN makes the whole model trainable end-to-end. But, the counter part to this advantage is that the sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two, then the other, then the first, then second and so on until the model converge at some point.
+The main difference for this network with the Fast R-CNN is in the Region Proposal Network. The first thing is that this RPN makes the whole model trainable end-to-end. But, the counter part to this advantage is that the sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two parts of the network, then the other, then the first, then second and so on until the model converge at some point.
 
 ### Region Proposal Network
 
 The RPN is based upon a sliding window and anchor boxes, for each position of the window, k anchor box are output, telling if there is or not an object in them. The following image shows a sliding window and the anchors that would be output (the ks in the image is for the number of anchor box).
 
-![Network anchors](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/fasterrcnn/anchor.png "Faster R-CNN anchor")
+![Network anchors](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/fasterrcnn/anchor.png "Faster R-CNN anchor")
 
 This means that for each location on the grid, there is 4k outputs for the k boxes (coordinates for each box) and 2k output for the class (object or not object). 
 
@@ -70,7 +74,7 @@ Their method use convolutional layers to output the anchor boxes, thus making th
 
 Finally, the anchors are build on a "pyramid of anchor", that is the anchor are at multiple scale, thus removing the need to re-scale the image to detect object of different size.
 
-# Training the whole network
+### Training the whole network
 
 Since both the RPN and the classifier share layers, the training was modify to help converging faster.
 
@@ -82,9 +86,3 @@ They used a 4 steps training:
 - Then they train the classifier using the RPN of the step 1 (no layer shared);
 - The RPN is fine-tuned using the convolutional layers of the step 2;
 - Finally the classifier is fine-tuned in the same way.
-
-
-## Warnings
-
-None so far.
-

@@ -1,6 +1,6 @@
 # OverFeat
 
-_last modified : 01-09-2018_
+_last modified : 26-11-2018_
 
 ## General Information
 
@@ -13,26 +13,25 @@ _last modified : 01-09-2018_
 
 ## Brief
 
-To give a bit of context, this is an old article regarding the field of machine learning. Basically this was one of the new generation of algorithm to greatly improve the results on the classification/localization/detection competition. The results are far from what's done today, but at the time it was a new approach of the problem using CNN.
+This was one of the new generation of algorithm to greatly improve the results on the classification/localization/detection competition. The results are far from what's done today, but at the time it was a new approach of the problem using CNN.
 
-The paper is divided in three main parts: Classification, Localization and Detection. They used a similar architecture to the one presented in the ImageNet. 
+The paper is divided in three main parts: Classification, Localization and Detection. They used a similar architecture that the one presented in the ImageNet classification paper from Krizhevsky et al.
 
 Even if the article presents three separate parts, all of them are build on the same model.
 
-Finally, to give an idea of the results, it was number one at the time on detection with a (now low) 24,3% mAP on the detection.
+Finally, to give an idea of the results, it was number one at the time on detection with a 24,3% mAP on the detection.
 
 ## How Does It Work
 
-Each of the network for the three challenges will be detailed thereafter, but first let's notice that they were using multiple classifiers to get their results (a bit in the idea of random forest). Also, they have two versions of their networks, one fast and one accurate.
+Each of the network for the three challenges will be detailed thereafter, but first let's notice that they were using multiple classifiers to get their results. Also, they have two versions of their networks, one fast and one accurate.
 
 ### Classification
 
 This is the simplest task to carry, given an image, find the dominant object in it. They used an architecture similar to the ImageNet paper with a few improvements.
 
-The most noticeable change is the use of the multi-scale image coupled with a sliding window. The interesting part is they apply the sliding window not at the start of the network, but in the middle of it just before the dense layers. This way they avoid recomputing the whole feature extraction and make use of the properties of the convolutional layers.
-At test time they also replace the dense layer with convolutional ones making the whole network a series a convolutions/pooling.
+The most noticeable change is the use of the multi-scale image coupled with a sliding window. The interesting part is they apply the sliding window not at the start of the network, but in the middle of it just before the dense layers. This way they avoid recomputing the whole feature extraction.
 
-Then it is just a mixing of the results to get the correct classification
+At test time they also replace the dense layer with convolutional ones making the whole network a series a convolutions/pooling.
 
 ### Localization
 
@@ -44,7 +43,8 @@ The final step is to merge the bounding boxes for each window/scale to guess the
 
 To clarify things, the difference between Localization and Detection is the presence of a background label for the detection when no object is present. It is also to be noted that for the detection task, in many images, the objects can be much smaller.
 
-Basically the same pattern as Localization, small difference in the training to get the background class.
+The network used is the same as for the Localization, the difference is in the training, here negative training is performed with bootstrapping.
+
 
 ## Results
 
@@ -55,19 +55,3 @@ For Localization and detection it is not specified if the results are for the fa
 |Fast|13,6%|-|-|
 |Big |14,2%|-|-|
 |Undefined|-|29,9%|24.3%|
-
-## In Depth
-
-### Model design
-
-Multi-Scale Classification
-
-resolution augmentation
-
-The efficiency of ConvNets for detection
-
-Combining Predictions
-
-## Warning
-
-None so far.

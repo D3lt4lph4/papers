@@ -1,6 +1,6 @@
 # Fast R-CNN 
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -35,7 +35,7 @@ Comparison of results for classification on the VOC 2007:
 
 | Model | train set | mAP |
 |-------|-----------|-----|
-| RCNN | 0.7 | 66.0 |
+| RCNN | 07 | 66.0 |
 | Fast RCNN | 07 | 66.9 |
 | Fast RCNN | 07 without difficult | 68.1 |
 | Fast RCNN | 07+12 | 70.0 |
@@ -60,20 +60,16 @@ Comparison of results for classification on the VOC 2012.
 
 The workflow of the network is the following one:
 
-- First RoI are extracted from the image using the region proposal module;
+- First RoIs are extracted from the image using the region proposal module;
 - Then the input image is fed to the feature extractor module to output a feature map;
 - Using the RoI pooling layer, a fixed length vector is extracted from the feature map for each proposal;
 - Finally, these fixed length vectors go through fully connected layer to give two different outputs, one with the classes and the other one with the coordinates corrected of the bounding box (nms after to remove duplicate predictions).
 
 ### The RoI pooling layer
 
-In order to extract fixed size map, let's use (7x7), the same as in the paper, the RoI pooling layer adapts the size of the max pooling used to the size of the proposed region.
-The proposed RoI is divided into a grid of sub-area giving the desired output size. For instance a RoI of size (21x14) would be divided in blocks of size (3x2), each of these blocks is them max-pooled to give the (7x7) map.
+In order to extract fixed size map, let's say (7x7) the same as in the paper, the RoI pooling layer adapts the size of the max pooling used to the size of the proposed region.
+The proposed RoI is divided into a grid of sub-area giving the desired output size. For instance a RoI of size (21x14) would be divided in blocks of size (3x2), each of these blocks is then max-pooled to give the (7x7) map.
 
 ### Mini-batch for fast training
 
-To accelerate the training, when processing a batch of size M, rather than using M images with one RoI in each image, they use N image with M/N RoI. The main advantage of this technique is to share the computation of the feature map for M/N data. They claim this technique not to impede the training of the network.
-
-## Warning
-
-None so far
+To accelerate the training, when processing a batch of size M, rather than using M images with one RoI in each image, they use N image with M/N RoI. For instance, "when using N = 2 and M = 128, the proposed training scheme is roughly 64 times faster than sampling one RoI from 128 different images". The main advantage of this technique is to share the computation of the feature map for M/N data. They claim this technique not to impede the training of the network.

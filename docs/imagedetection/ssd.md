@@ -1,6 +1,6 @@
 # SSD
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -28,8 +28,8 @@ The following image, taken from the original paper, shows two grid and the match
 
 ![grid](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imagedetection/ssd/ssd-classif-how.png?raw=true "SSD grid")
 
-There are two grids shown, for each of those grids there is a number of pre-set boxes that can match the ground truth boxes (only a few are on the diagrams). The network tells for each box if it matches or not an object in the image (here two matches for the cat and one for the dog). The bigger the grid, the smaller the object detected is, this is how the SSD allows for multiple detection in one shot.
-It is also to be noted that the boxes are regressed at prediction to add in precision.
+There are two grids shown, for each of those grids there is a number of pre-set boxes that can match the ground truth boxes (only a few are on the diagrams). The network tells for each box if it matches or not an object in the image (here two matches for the cat and one for the dog). The bigger the grid, the smaller the object detected is, this is how the SSD allows for multiple detections in one shot.
+It is also to be noted that the boxes coordinates are regressed to add in precision.
 
 ## Results
 

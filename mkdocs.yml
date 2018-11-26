@@ -1,5 +1,7 @@
 site_name: Papers
 
+theme: readthedocs
+
 python:
    version: 2 # for unicode
    setup_py_install: true
@@ -19,6 +21,7 @@ extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX
 pages:
     - Home: index.md
     - Image Classification:
+      - ImageNet Classification with Deep CNN: imageclassif/imagenet.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
     - Image Detection:
@@ -31,6 +34,7 @@ pages:
       - YOLOv3: imagedetection/yolov3.md
       - SSD: imagedetection/ssd.md
       - FSSD: imagedetection/fssd.md
+      - RFB: imagedetection/rfb.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Image Generation:

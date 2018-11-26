@@ -1,6 +1,6 @@
 # FSSD
 
-_last modified : 01-09-2018_
+_last modified : 06-11-2018_
 
 ## General Information
 
@@ -45,9 +45,3 @@ As said before, the main particularity of the network is two reuse computed feat
 If one takes a look at the diagram in the first section, we can see that three layers are re-used before the the classification part. The selection is limited to those three layers because they think that the smaller layer at the end have too little information to be worth merging.
 
 The merging is done using concatenation of the three layers and by resizing the smallest layers to the correct size using bilinear interpolation. To downsize the number of filers, they use 1x1 convolutions.
-
-
-## Warning
-
-None so far.
-
