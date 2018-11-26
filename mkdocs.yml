@@ -21,6 +21,7 @@ extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX
 pages:
     - Home: index.md
     - Image Classification:
+      - ImageNet Classification with Deep CNN: imageclassif/imagenet.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
     - Image Detection:
