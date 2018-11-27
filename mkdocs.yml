@@ -35,6 +35,7 @@ pages:
       - SSD: imagedetection/ssd.md
       - FSSD: imagedetection/fssd.md
       - RFB: imagedetection/rfb.md
+      - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
     - Image Generation:
