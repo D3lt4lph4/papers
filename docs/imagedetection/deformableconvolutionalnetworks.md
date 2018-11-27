@@ -41,19 +41,19 @@ Object detection results of deformable ConvNets v.s. plain ConvNets on COCO test
 |method | backbone architecture | M | B | mAP@(0.5:0.95) | mAP@0.5 | mAP@(0.5:0.95) (small) | mAP@(0.5:0.95) (mid) | mAP@(0.5:0.95) (large) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | class-aware RPN  | ResNet-101 | | | 23.2 | 42.6 | 6.9 | 27.1  | 35.1 |
-| Ours | ResNet-101 | | | 25:8 | 45:9 | 7:2 | 28:3 | 40: 7  |
+| Ours | ResNet-101 | | | 25.8 | 45.9 | 7.2 | 28.3 | 40. 7  |
 | Faster RCNN | ResNet-101 | | | 29.4 | 48.0 | 9.0 | 30.5 | 47.1  |
-| Ours | ResNet-101 | |  | 33:1 | 50:3 | 11:6 | 34:9 | 51: 2  |
+| Ours | ResNet-101 | |  | 33.1 | 50.3 | 11.6 | 34.9 | 51. 2  |
 | R-FCN | ResNet-101 | | | 30.8 | 52.6 | 11.8 | 33.9 | 44.8 |
-| Ours | ResNet-101 | |  | 34:5 | 55:0 | 14:0 | 37:7 | 50: 3 |
+| Ours | ResNet-101 | |  | 34.5 | 55.0 | 14.0 | 37.7 | 50. 3 |
 | Faster RCNN | Aligned-Inception-ResNet | | | 30.8 | 49.6 | 9.6 | 32.5 | 49.0 |
-| Ours | Aligned-Inception-ResNet | | | 34:1 | 51:1 | 12:2 | 36:5 | 52:4 |
+| Ours | Aligned-Inception-ResNet | | | 34.1 | 51.1 | 12.2 | 36.5 | 52.4 |
 | R-FCN | Aligned-Inception-ResNet | | | 32.9 | 54.5 | 12.5 | 36.3  | 48.3 |
-| Ours | Aligned-Inception-ResNet | | | 36:1 | 56:7 | 14:8 | 39:8 | 52:2 |
+| Ours | Aligned-Inception-ResNet | | | 36.1 | 56.7 | 14.8 | 39.8 | 52.2 |
 | R-FCN | Aligned-Inception-ResNet | X | | 34.5 | 55.0 | 16.8 | 37.3 | 48.3 |
 | Ours | Aligned-Inception-ResNet | X | | 37.1 | 57.3 | 18.8 | 39.7 | 52.3 |
 | R-FCN | Aligned-Inception-ResNet | X | X | 35.5 | 55.6 | 17.8 | 38.4 | 49.3 |
-| Ours | Aligned-Inception-ResNet | X | X | 37:5 | 58:0 | 19:4 | 40:1 | 52:5 |
+| Ours | Aligned-Inception-ResNet | X | X | 37.5 | 58.0 | 19.4 | 40.1 | 52.5 |
 
 ## In Depth
 
