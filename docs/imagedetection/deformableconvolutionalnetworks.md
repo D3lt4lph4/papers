@@ -26,10 +26,10 @@ Deformable Convolution:
 ![Deformable Convolution](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_convolution.png "Deformable Convolution")
 
 Deformable roi pooling:
-![Deformable roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_roi_pooling.jpg "Deformable roi pooling")
+![Deformable roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_roi_pooling.png "Deformable roi pooling")
 
 Deformable ps roi pooling:
-![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.jpg "Deformable ps roi pooling")
+![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.png "Deformable ps roi pooling")
 
 
 ## Results
@@ -67,7 +67,7 @@ The conv layer is learned with backpropagation.
 
 ### Deformable roi pooling
 
-![Deformable roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_roi_pooling.jpg "Deformable roi pooling")
+![Deformable roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_roi_pooling.png "Deformable roi pooling")
 
 First the pooled feature map is generated from the RoI. Then this feature map goes through a fully connected layer to give the offsets. And again for a position on the output map, the value is calculated using the offsets.
 
@@ -76,6 +76,6 @@ If the offset is in between cells in the grid, the value are interpolated, with 
 
 ### Deformable ps roi pooling
 
-![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.jpg "Deformable ps roi pooling")
+![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.png "Deformable ps roi pooling")
 
 The main difference here with a simple deformable roi pooling is the presence of an offset for each class. Look for the [R-FCN](https://arxiv.org/abs/1605.06409) paper for more detail on the idea of the layer.
