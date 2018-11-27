@@ -11,7 +11,7 @@
 ## Brief
 
 The network presented in this paper improved by a large margin the results on the challenges from back then. The network consists, as described in the paper, of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. 
-In order to improve the results, they used novel techniques such as the ReLU activation function, local normalization, dropout layers.
+In order to improve the results, they used novel techniques such as the ReLU activation function, local normalization and dropout layers.
 
 ## How Does It Work
 
@@ -21,7 +21,7 @@ The following figure describe the architecture of the network, it is divided int
 
 ## Results
 
-Comparison of results on ILSVRC-2010 test set (lower the better, last line Krizhevsky network).
+Comparison of results on ILSVRC-2010 test set (the lower the better, last line Krizhevsky network).
 
 | Model | Top-1 | Top-5 |
 |-------|-------|-------|

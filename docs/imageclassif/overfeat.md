@@ -17,13 +17,11 @@ This was one of the new generation of algorithm to greatly improve the results o
 
 The paper is divided in three main parts: Classification, Localization and Detection. They used a similar architecture that the one presented in the ImageNet classification paper from Krizhevsky et al.
 
-Even if the article presents three separate parts, all of them are build on the same model.
+Even if there are three networks presented in the article, one for classification, one for localization and one for detection, all of them are build on the same base.
 
 Finally, to give an idea of the results, it was number one at the time on detection with a 24,3% mAP on the detection.
 
 ## How Does It Work
-
-Each of the network for the three challenges will be detailed thereafter, but first let's notice that they were using multiple classifiers to get their results. Also, they have two versions of their networks, one fast and one accurate.
 
 ### Classification
 
