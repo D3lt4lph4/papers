@@ -26,9 +26,11 @@ Deformable Convolution:
 ![Deformable Convolution](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_convolution.png "Deformable Convolution")
 
 Deformable roi pooling:
+
 ![Deformable roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_roi_pooling.png "Deformable roi pooling")
 
 Deformable ps roi pooling:
+
 ![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.png "Deformable ps roi pooling")
 
 
