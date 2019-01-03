@@ -13,13 +13,13 @@ _last modified : 27-11-2018_
 
 ## Brief
 
-This paper introduce the idea of convolutional layers that can adapt to the shape or information of the object to locate. Basically, rather than forcing the network into some pre-set filters, let it learn for itself what is best. The deformable convolutions can replace any convolutional layer in any network easily with not much increase in the computation cost. The whole layer can go through back-propagation.
+This paper introduce the idea of convolutional layers that can adapt to the shape of the object to locate. The idea can be sum up as "rather than forcing the network into some pre-set filters, let it learn for itself what is best". The deformable convolutions can replace any convolutional layer in any network easily with not much increase in the computation cost. The whole layer can go through back-propagation.
 
 ## How Does It Work
 
-The articles presents 3 types of layers, the deformable convolution, the deformable RoI pooling and the deformable PS RoI pooling.
+The articles presents 3 types of layers, the **deformable convolution**, the **deformable RoI pooling** and the **deformable PS RoI pooling**.
 
-All the deformable layer are fairly similar in conception, a branch process the input feature map to get the offsets, and then a bilinear interpolation is applied to the input feature map at the position of the offset to get the value of the output.
+All the deformable layers are fairly similar in conception, a branch process the input feature map to get the offsets, and then a bilinear interpolation is applied to the input feature map at the position of the offset to get the value of the output.
 
 Deformable Convolution:
 
@@ -61,11 +61,11 @@ Object detection results of deformable ConvNets v.s. plain ConvNets on COCO test
 
 ![Deformable Convolution](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_convolution.png "Deformable Convolution")
 
-A convolution is applied to the input feature map. The offset field is of size 2N for N 2D offset. Then for a position on the output map, the value is calculated using the offsets.
+A convolution is applied to the input feature map. The offset field is of size 2N for N 2D offset, i.e [(x1,y1), (x2, y2), ...]. Then for a position on the output map, the value is calculated using the offsets.
 
-The input and output feature maps have the same dimension and if the offset is in between cells in the grid, the value are interpolated.
+The input and output feature maps have the same dimension and if the offset is in between cells in the grid, the values for the convolution are interpolated.
 
-The conv layer is learned with backpropagation.
+The __conv__ layer is learned with backpropagation.
 
 ### Deformable roi pooling
 
@@ -73,7 +73,7 @@ The conv layer is learned with backpropagation.
 
 First the pooled feature map is generated from the RoI. Then this feature map goes through a fully connected layer to give the offsets. And again for a position on the output map, the value is calculated using the offsets.
 
-If the offset is in between cells in the grid, the value are interpolated, with the specificity of the bins.
+If the offset is in between cells in the grid, the values for the convolution interpolated, with the specificity of the bins.
 
 
 ### Deformable ps roi pooling
