@@ -1,6 +1,6 @@
 # Datasets for image segmentation
 
-_last modified : 02-09-2018_
+_last modified : 03-01-2019_
 
 Here are listed all the datasets that can be used for image segmentation. Each dataset should come with a small description of its size, what's in it and who provided it.
 
@@ -81,3 +81,31 @@ Here are listed all the datasets that can be used for image segmentation. Each d
     - Link: [article](https://arxiv.org/pdf/1604.01685.pdfhttps://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
 
 - Dataset: [here](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
+
+## Appoloscape
+
+- Contains:
+	- Others others, rover
+    - Sky: sky
+    - Movable Object: car, car_groups, motorbicycle, motorbicycle_group, bicycle, bicycle_group, person, person_group, rider, rider_group, truck, truck_group, bus, bus_group, tricycle, tricycle_group
+    - Flat: road, siderwalk
+    - Road obstacles: traffic_cone, road_pile, fence
+    - Roadside objects: traffic_light
+    - Void: pole, traffic_sign, wall, dustbin, billboard
+    - Building: building, bridge, tunnel, overpass
+    - Natural: vegatation
+
+
+- Size:
+    - It is expected that the released dataset will include 200K image frames
+    - On April 03, 2018，the Scene Parsing data set cumulatively provides 146,997 frames
+
+- Other details:
+    - Resolution: 3384 x 2710
+    - Other: pixel-level annotations and pose information，depth maps
+
+- Article:
+    - Authors: Xinyu Huang, Peng Wang, Xinjing Cheng, Dingfu Zhou, Qichuan Geng, Ruigang Yang
+    - Link: [article](https://arxiv.org/abs/1803.06184)
+
+- Dataset: [here](http://apolloscape.auto/index.html)
