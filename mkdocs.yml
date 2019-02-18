@@ -24,6 +24,7 @@ pages:
       - ImageNet Classification with Deep CNN: imageclassif/imagenet.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
+      - CapsNet: imageclassif/capsule.md
     - Image Detection:
       - R-CNN: imagedetection/rcnn.md
       - Fast R-CNN: imagedetection/fastrcnn.md
@@ -60,6 +61,7 @@ pages:
       - Database: datasets/list.md
       - Object Counting: datasets/counting.md
       - Events: datasets/events.md
+      - Forgery: datasets/forgery.md
       - Image Classification: datasets/imageclassification.md
       - Image Segmentation: datasets/imagesegmentation.md
       - NLP: datasets/nlp.md
