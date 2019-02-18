@@ -53,6 +53,8 @@ pages:
       - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
+    - Others:
+      - CoordConv: others/coordconv.md
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
