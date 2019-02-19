@@ -1,5 +1,7 @@
 # CoordConv
 
+_last modified : 19-02-2019_
+
 ## General Information
 
 - Title: An intriguing failing of convolutional neural networks and the CoordConv solution
@@ -11,25 +13,25 @@
 
 ## Brief
 
-This article present a new layer for convolutional neural networks.
+This article presents a new layer for convolutional neural networks.
 The problems they are trying to solve are the two following ones (they apply later in the article the layer on other types of problems):
 
 - Given two coordinates, generate a black dot on a grid at the indicated position
 - Given a grid with a black dot, git the position of the dot.
 
-They found that, for this kind of tasks, convolutions perform poorly.
+They found that, for this kind of tasks, convolutions perform poorly and introduce the coordconv layer as a solution.
 
 ## How Does It Work
 
-The idea of the layer is very simple, two layers, one with the x coordinates and one with the y coordinates (see figure below).
+The idea of the layer is very simple, two filters, one with the x coordinates and one with the y coordinates (see figure below). This way, the convolution can "know" its position in the feature map.
 
 ![Layer](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/coordconv/uber_coordconv_layer.png "Layer")
 
-The only concern one may have with this layer is to see the convolution losing its translations invariance properties. But since the layer will choose if it uses the CoordConv filters (setting weights to zero or not), it's actually not losing any properties.
+The only concern one may have with this layer is to see the convolution losing its translation invariance property. But since the layer will choose if it uses the CoordConv filters (setting weights to zero or not), the convolution should still work fine with translation.
 
 ## Results
 
-This figure from the paper show some exemples of the improvement for the toy problem :
+This figure from the paper show some exemples of the improvements for the toy problem :
 
 ![Results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/coordconv/uber_coordconv_results.png "Results")
 
