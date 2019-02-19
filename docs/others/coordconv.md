@@ -23,11 +23,11 @@ They found that, for this kind of tasks, convolutions perform poorly and introdu
 
 ## How Does It Work
 
-The idea of the layer is very simple, two filters, one with the x coordinates and one with the y coordinates (see figure below). This way, the convolution can "know" its position in the feature map.
+The idea of the layer is very simple, two feature maps, one with the x coordinates and one with the y coordinates (see figure below). This way, the convolution can "know" its position in the feature map.
 
 ![Layer](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/coordconv/uber_coordconv_layer.png "Layer")
 
-The only concern one may have with this layer is to see the convolution losing its translation invariance property. But since the layer will choose if it uses the CoordConv filters (setting weights to zero or not), the convolution should still work fine with translation.
+The only concern one may have with this layer is to see the convolution losing its translation invariance property. But since the layer will choose if it uses the CoordConv feature maps (setting weights to zero or not), the convolution should still work fine with translation.
 
 ## Results
 
