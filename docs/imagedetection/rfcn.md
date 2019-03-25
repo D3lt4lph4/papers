@@ -37,9 +37,9 @@ In the article, they report various experiments, which will not be shown here. O
 
 | Network | training data | mAP(%) | test time (sec/image) |
 |---------|:-------------:|:------:|:---------------------:|
-| Faster R-CNN | 07+12 76.4 0.42 |
+| [Faster R-CNN](https://arxiv.org/abs/1506.01497) | 07+12 76.4 0.42 |
 | Faster R-CNN +++ | 07+12+COCO | 85.6 | 3.36 |
-| R-FCN07+12 | 79.5 | 0.17 |
+| R-FCN 07+12 | 79.5 | 0.17 |
 | R-FCN multi-sc train | 07+12 | 80.5 | 0.17 |
 | R-FCN multi-sc train | 07+12+COCO | 83.6 | 0.17 |
 
@@ -47,7 +47,7 @@ In the article, they report various experiments, which will not be shown here. O
 
 | Network | training data | mAP(%) | test time (sec/image) |
 |---------|:-------------:|:------:|:---------------------:|
-| Faster R-CNN | 07++12 | 73.8 | 0.42 |
+| [Faster R-CNN](https://arxiv.org/abs/1506.01497) | 07++12 | 73.8 | 0.42 |
 | Faster R-CNN +++ | 07++12+COCO | 83.8 | 3.36 |
 | R-FCN multi-sc | train07++12 | 77.6 | 0.17 |
 | R-FCN multi-sc | train07++12+COCO | 82.0 | 0.17 |
