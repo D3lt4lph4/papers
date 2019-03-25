@@ -1,6 +1,6 @@
-# Fast R-CNN 
+# Fast R-CNN
 
-_last modified : 06-11-2018_
+_last modified : 25-03-2019_
 
 ## General Information
 
@@ -13,15 +13,15 @@ _last modified : 06-11-2018_
 
 ## Brief
 
-This network is an improved version of the R-CNN network from the same author. The article claim the Fast R-CNN to train 9 times faster than the R-CNN and to be 213 times faster at test time. It also has a better mAP than the R-CNN, 66% vs 62%.
+This network is an improved version of the R-CNN network from the same author. The article claims the Fast R-CNN to train 9 times faster than the R-CNN and to be 213 times faster at test time. It also has a better mAP than the R-CNN, 66% vs 62%.
 
-The main improvement of the network is to share the computation of the feature to avoid recomputing them for each box proposed by the region proposal algorithm (see below).
+The main improvement of the network is to share the computation of the feature to avoid recomputing them for each box proposed by the region proposal algorithm.
 
 ## How Does It Work
 
-The network is a 3 modules network. The first one is the region proposal, the second one is the feature extractor network and finally the last one is the classifier/regressor. 
+The network is a 3 modules network. The first one is the region proposal, the second one is the feature extractor network and finally the last one is the classifier/regressor.
 
-The region proposal, selects a set of potential boxes, then using the features extracted by the CNN network the classifier/regressor outputs the class of each boxes. 
+The region proposal, selects a set of potential boxes, then using the features extracted by the CNN network the classifier/regressor outputs the class of each boxes.
 
 The whole architecture is describe in the image thereafter:
 
@@ -35,7 +35,7 @@ Comparison of results for classification on the VOC 2007:
 
 | Model | train set | mAP |
 |-------|-----------|-----|
-| RCNN | 07 | 66.0 |
+| [RCNN](https://arxiv.org/abs/1311.2524) | 07 | 66.0 |
 | Fast RCNN | 07 | 66.9 |
 | Fast RCNN | 07 without difficult | 68.1 |
 | Fast RCNN | 07+12 | 70.0 |
@@ -44,7 +44,7 @@ Comparison of results for classification on the VOC 20010:
 
 | Model | train set | mAP |
 |-------|-----------|-----|
-| RCNN | 12 | 62.9 |
+| [RCNN](https://arxiv.org/abs/1311.2524) | 12 | 62.9 |
 | Fast RCNN | 12 | 66.1 |
 | Fast RCNN | 07+12 | 68.8 |
 
@@ -52,7 +52,7 @@ Comparison of results for classification on the VOC 2012.
 
 | Model | train set | mAP |
 |-------|-----------|-----|
-| RCNN | 12 | 62.4 |
+| [RCNN](https://arxiv.org/abs/1311.2524) | 12 | 62.4 |
 | Fast RCNN | 12 | 65.7 |
 | Fast RCNN | 07+12 | 68.4 |
 
@@ -62,7 +62,7 @@ The workflow of the network is the following one:
 
 - First RoIs are extracted from the image using the region proposal module;
 - Then the input image is fed to the feature extractor module to output a feature map;
-- Using the RoI pooling layer, a fixed length vector is extracted from the feature map for each proposal;
+- Using the RoI pooling layer, a fixed length vector is extracted from the feature map for each box proposal;
 - Finally, these fixed length vectors go through fully connected layer to give two different outputs, one with the classes and the other one with the coordinates corrected of the bounding box (nms after to remove duplicate predictions).
 
 ### The RoI pooling layer
