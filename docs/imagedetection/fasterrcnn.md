@@ -1,6 +1,6 @@
 # Faster R-CNN
 
-_last modified : 06-11-2018_
+_last modified : 25-03-2019_
 
 ## General Information
 
@@ -27,7 +27,7 @@ We can see three parts in this image:
 
 - The first one is the "conv layers", used to extract the features out of the image.
 - The second one is the RPN, used to generate the ROI that will be used by the classifier.
-- The last one is the classifier (Fast R-CNN) which tells for each ROI if there is an object from the target classes in it.
+- The last one is the classifier (same as [Fast R-CNN](https://arxiv.org/abs/1504.08083)) which tells for each ROI if there is an object from the target classes in it.
 
 Something important to notice is the fact that both the classifier and the RPN share the same weights for the extraction of the features. This was done to be able to do only a single pass on the image and avoid having two networks for the whole workflow.
 
@@ -46,7 +46,7 @@ The first table is for the PASCAL VOC 2007 test set.
 
 For the data, "07" means the VOC 2007 trainval, "07++12" means the union set of VOC 2007 trainval+test and VOC 2012 trainval and COCO stands for the COCO dataset.
 
-The secodn table is for the PASCAL VOC 2012 test set.
+The second table is for the PASCAL VOC 2012 test set.
 
 | method | # proposals | data | mAP (%) |
 |--------|:-----------:|:----:|:-------:|
@@ -60,7 +60,7 @@ More details on the results are given on the paper, these are the main ones.
 
 ## In Depth
 
-The main difference for this network with the Fast R-CNN is in the Region Proposal Network. The first thing is that this RPN makes the whole model trainable end-to-end. But, the counter part to this advantage is that the sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two parts of the network, then the other, then the first, then second and so on until the model converge at some point.
+The main difference for this network with the Fast R-CNN is in the Region Proposal Network. The first thing is that this RPN makes the whole model trainable end-to-end, the counter part to this advantage being that the sharing of the weights means the training will be a bit different from a classical deep learning training workflow. Here they did an "alternative training", meaning they first train one of the two parts of the network, then the other, then the first, then second and so on until the model converge at some point.
 
 ### Region Proposal Network
 
@@ -78,7 +78,7 @@ Finally, the anchors are build on a "pyramid of anchor", that is the anchor are 
 
 Since both the RPN and the classifier share layers, the training was modify to help converging faster.
 
-They describe different method in the paper, only the one they used will be described here.
+They describe different method in the paper, only the one they used is described here.
 
 They used a 4 steps training:
 
