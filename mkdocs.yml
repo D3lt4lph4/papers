@@ -25,6 +25,7 @@ pages:
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
       - CapsNet: imageclassif/capsule.md
+      - VGG: imageclassif/vgg.md
     - Image Detection:
       - R-CNN: imagedetection/rcnn.md
       - Fast R-CNN: imagedetection/fastrcnn.md
