@@ -1,6 +1,6 @@
 # CoordConv
 
-_last modified : 19-02-2019_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -13,13 +13,14 @@ _last modified : 19-02-2019_
 
 ## Brief
 
-This article presents a new layer for convolutional neural networks.
-The problems they are trying to solve are the two following ones (they apply later in the article the layer on other types of problems):
+
+
+This article presents a new layer for convolutional neural networks. They first show that, while intuition tells you that convolution is the solution for any problems regarding pixels, this does not hold true for all the cases. They set-up different toy problems (for instance "given a white dot on a black background, output the position of the dot") and show that the convolution fails remarkably. To circumvent this problem, they introduce a new type of layer, the CoordConv.
+
+The main problems they are trying to solve are the two following ones (they apply later in the article the layer on other types of problems):
 
 - Given two coordinates, generate a black dot on a grid at the indicated position
 - Given a grid with a black dot, git the position of the dot.
-
-They found that, for this kind of tasks, convolutions perform poorly and introduce the coordconv layer as a solution.
 
 ## How Does It Work
 
@@ -27,7 +28,7 @@ The idea of the layer is very simple, two feature maps, one with the x coordinat
 
 ![Layer](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/coordconv/uber_coordconv_layer.png "Layer")
 
-The only concern one may have with this layer is to see the convolution losing its translation invariance property. But since the layer will choose if it uses the CoordConv feature maps (setting weights to zero or not), the convolution should still work fine with translation.
+The only concern one may have with this layer is to see the convolution losing its translation invariance property. But since the layer will choose if it uses the CoordConv feature maps (setting weights to zero or not), the convolution should still work fine with the translation properties.
 
 ## Results
 
@@ -37,4 +38,4 @@ This figure from the paper show some exemples of the improvements for the toy pr
 
 ## In Depth
 
-For more details, check the Uber blog [here](https://eng.uber.com/coordconv/)
+For more details, check the blog [here](https://eng.uber.com/coordconv/)
