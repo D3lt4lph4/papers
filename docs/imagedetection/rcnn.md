@@ -1,6 +1,6 @@
 # RCNN
 
-_last modified : 06-11-2018_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -17,9 +17,9 @@ This network is one of the pioneers for object detection. In its conception it i
 
 Even if the architecture of the network is inspired by OverFeat, the RCNN outperformed all of the results at the time of its publication.
 
-One of the main contribution of the paper is to demonstrate the gain obtained when pre-training on large auxiliary dataset and after that training on the target set (usually smaller).
+One of the main contribution of the paper is to demonstrate the gain obtained when pre-training on large auxiliary dataset and then training on the target set.
 
-This is not an end-to-end classifier as we can see nowadays.
+This is not an end-to-end classifier.
 
 ## How Does It Work
 
@@ -31,45 +31,30 @@ A region proposal algorithm extract ROI, then each region is fed to a classifier
 
 ## Results
 
-The results are for two different dataset.
-
 Results for the PASCAL VOC 2010 challenge :
 
 | Model | mAP |
 |-------|-----|
 | RCNN | 53.7 |
-| SegDPM | 40.4 |
-| Regionlets | 39.7 |
-| UVA | 35.1 |
-| DPM v5 | 33.4 |
-
-links :
-
-- [DPM v5](https://www.rossgirshick.info/latent/)
-- [UVA](https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib)
-- [Regionlets](http://www.ece.northwestern.edu/~mya671/mypapers/ICCV13_Wang_Yang_Zhu_Lin.pdf)
-- [SegDPM](https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Fidler_Bottom-Up_Segmentation_for_2013_CVPR_paper.pdf)
-
+| [SegDPM](https://www.cv-foundation.org/openaccess/content_cvpr_2013/papers/Fidler_Bottom-Up_Segmentation_for_2013_CVPR_paper.pdf) | 40.4 |
+| [Regionlets](http://www.ece.northwestern.edu/~mya671/mypapers/ICCV13_Wang_Yang_Zhu_Lin.pdf) | 39.7 |
+| [UVA](https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib) | 35.1 |
+| [DPM v5](https://www.rossgirshick.info/latent/) | 33.4 |
 
 Results for the ILSVRC 2013 challenge :
 
 | Model | mAP |
 |-------|-----|
 | RCNN | 31.4 |
-| OverFeat | 24.3 |
-
-links:
-
-- [OverFeat](https://arxiv.org/abs/1312.6229)
-
+| [OverFeat](https://arxiv.org/abs/1312.6229) | 24.3 |
 
 ## In Depth
 
 ### At test time
 
-The first part of the network uses the [selective search] algorithm(https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib) to generate around 2k boxes of possible objects.
+The first part of the network uses the [selective search](https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib) algorithm to generate around 2k boxes of possible objects.
 
-Then, second part of the network uses the network of Krizhevsky et al to generate a  4096-dimensional feature vector from each boxes that were proposed. The input image is a 227x227 mean-subtracted wrapped RGB image.
+Then, second part of the network uses the network from Krizhevsky et al. to generate a  4096-dimensional feature vector from each boxes that were proposed. The input image is a 227x227 mean-subtracted wrapped RGB image.
 
 Finally the correct class is extracted using a SVM and Non-Maximum suppression from all the boxes.
 
@@ -77,6 +62,6 @@ Finally the correct class is extracted using a SVM and Non-Maximum suppression f
 
 The CNN is trained with the fully connected layers at the end modified to match the number of classes in the dataset.
 
-The network is first pre-trained "on a large auxiliary dataset (ILSVRC2012 classification) using image-level annotations only", with all the classes. Then after replacing the fully connected with a smaller one to match the number of class, the network is fine tuned.
+The network is first pre-trained "on a large auxiliary dataset (ILSVRC2012 classification) using image-level annotations only", with all the classes. Then the network is fine tuned by replacing the fully connected layer with a smaller one to match the number of class.
 
 Finally, once the CNN part has converged, the SVMs are trained.

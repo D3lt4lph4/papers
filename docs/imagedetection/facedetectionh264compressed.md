@@ -1,6 +1,6 @@
 # Face detection directly from H.264 compressed video with convolutional neural network
 
-_last modified : 19-02-2019_
+_last modified : 13-06-2019_
 
 ## General Information
 

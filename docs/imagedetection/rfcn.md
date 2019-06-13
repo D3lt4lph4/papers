@@ -1,6 +1,6 @@
 # R-FCN
 
-_last modified : 18-03-2019_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -37,9 +37,9 @@ In the article, they report various experiments, which will not be shown here. O
 
 | Network | training data | mAP(%) | test time (sec/image) |
 |---------|:-------------:|:------:|:---------------------:|
-| Faster R-CNN | 07+12 76.4 0.42 |
-| Faster R-CNN +++ | 07+12+COCO | 85.6 | 3.36 | 
-| R-FCN07+12 | 79.5 | 0.17 |
+| [Faster R-CNN](https://arxiv.org/abs/1506.01497) | 07+12 76.4 0.42 |
+| Faster R-CNN +++ | 07+12+COCO | 85.6 | 3.36 |
+| R-FCN 07+12 | 79.5 | 0.17 |
 | R-FCN multi-sc train | 07+12 | 80.5 | 0.17 |
 | R-FCN multi-sc train | 07+12+COCO | 83.6 | 0.17 |
 
@@ -47,20 +47,21 @@ In the article, they report various experiments, which will not be shown here. O
 
 | Network | training data | mAP(%) | test time (sec/image) |
 |---------|:-------------:|:------:|:---------------------:|
-| Faster R-CNN | 07++12 | 73.8 | 0.42 |
+| [Faster R-CNN](https://arxiv.org/abs/1506.01497) | 07++12 | 73.8 | 0.42 |
 | Faster R-CNN +++ | 07++12+COCO | 83.8 | 3.36 |
 | R-FCN multi-sc | train07++12 | 77.6 | 0.17 |
 | R-FCN multi-sc | train07++12+COCO | 82.0 | 0.17 |
 
 ## In Depth
 
-Now lets go a bit more in to the details of the last part of the network, the ROI + vote.
+Lets detail the last part of the network, the ROI + vote.
 
 Taken from the paper, this diagram describes in details the last part of the network:
 
 ![Network details](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfcn/networkdetails.png "R-FCN")
 
-From now on, "cells layers" will refer to the colored layer obtained from the feature maps after the convolutions.
+From now on, "cells layers" will refer to the colored layer obtained from the feature maps after the last convolutions.
+
 
 The idea is the following, the RoIs are cut down into N bins (here k*k), each of these bins correspond to one of the cell of the cells layers. This way, to each bin of the ROI a class is assigned. Finally, from those N bins, the final class is voted.
 

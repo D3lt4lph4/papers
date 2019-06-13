@@ -1,6 +1,6 @@
 # YOLO
 
-_last modified : 06-11-2018_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -13,7 +13,7 @@ _last modified : 06-11-2018_
 
 ## Brief
 
-YOLO is a one shot detectors, meaning that it only does one pass on the images to output all the detections. The obvious advantage in this method is the speed up in the computation and the increase in the number of frame being processed by second. The downside of this method is to have mAP a bit under the top classifiers (not always true).
+YOLO is a one shot detectors, meaning that it only does one pass on the images to output all the detections. The obvious advantage in this method is the speed up in the computation and the increase in the number of frame being processed by second. The downside of this method is to have mAP a bit under the top classifiers.
 
 ## How Does It Work
 
@@ -28,16 +28,6 @@ The main idea is to have a grid of boxes to cover all the image being processed.
 ## Results
 
 The final results take from the article are the following ones:
-
-- VOC 2007 (Combined is the Fast R-CNN + the network on the line)
-
-| Network | mAP | Combined | Gain |
-|---------|:---:|:--------:|:----:|
-| Fast R-CNN | 71.8 | - | - |
-| Fast R-CNN (2007 data) | 66.9 | 72.4| .6 |
-| Fast R-CNN (VGG-M) | 59.2 | 72.4 | .6 |
-| Fast R-CNN (CaffeNet) | 57.1 | 72.1 | .3 |
-| YOLO | 63.4 | 75.0 | 3.2 |
 
 - VOC 2012
 
@@ -64,8 +54,6 @@ The final results take from the article are the following ones:
 | Faster R-CNN VGG-16 | 2007+2012 | 73.2 | 7 |
 | Faster R-CNN ZF | 2007+2012 | 62.1 | 18 |
 | YOLO VGG-16 | 2007+2012 | 66.4 | 21 |
-
-Among the results, one interesting thing is the mixing of their method with others to improve the mAP the two had separately.
 
 ## In Depth
 

@@ -1,6 +1,6 @@
 # YOLO9000
 
-_last modified : 06-11-2018_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -14,11 +14,11 @@ _last modified : 06-11-2018_
 
 ## Brief
 
-This is an improved version of the YOLO network. It was designed to palliate to some defect of the YOLO, the precision of the network and the level of recall. On top of that, the new version can now predict up to 9000 classes and predict unseen classes.
+This is an improved version of the YOLO network. It was designed to palliate to some defect of the YOLO: the precision of the network and the level of recall. On top of that, the new version can now predict up to 9000 classes and predict unseen classes.
 
 ## How Does It Work
 
-The main idea stays the same as for the YOLO network, but the last layers are not anymore fully connected but convolutional ones. The number of convolutional layers is increased, but since the fully connected layers are removed, the speed is not impacted.
+The main idea stays the same as for the YOLO network, but the last layers are not fully connected but convolutional ones. The number of convolutional layers is increased, but since the fully connected layers are removed, the speed is not impacted.
 
 ## Results
 

@@ -1,6 +1,6 @@
 # SSD
 
-_last modified : 06-11-2018_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -74,7 +74,7 @@ For each group of boxes, the numbers are as follows:
 
 To explain a bit the numbers in the diagram and how using convolution one can go from filter map to boxes, let's take an example: the boxes obtained from the layer conv_9_2.
 
-The grid is 5x5, for a total of 25 cells. For each cell 6 boxes will be predicted using a 3x3 convolution, so we have 3x3x6x4 (x4 for the coordinates of the box). In addition to that, for each box, we need to tell the class associated, thus we have 3x3x(6x(Classes+4)).
+The grid is 5x5, for a total of 25 cells. For each cell 6 boxes will be predicted using a 3x3 convolution, so we have 3x3x(6*4) (*4 for the coordinates of the box). In addition to that, for each box, we need to tell the class associated, thus we have 3x3x(6 *(Classes+4)).
 
 ### Loss
 
@@ -88,6 +88,6 @@ With x being an indicator for matching default and ground truth box, c the confi
 
 The important part is the modification of the loss function to fit the huge number of boxes. All the boxes are either matched to an object or to the background. Because of this matching strategy, there is a lot more of unmatched box than matched box. This creates an imbalance for the training which could get the network to predict all the boxes as background. That is why the loss function uses a maximum ratio between the matched and unmatched boxes. Basically, the Lconf and Lloc are not over all the boxes but a few of them.
 
-## Warning
+## To be Noted 
 
 An important unspecified point, in the paper the bounding boxes are regressed, but in the implementation they are also divided by some term that is here to account as some kind of variance. One could see this as some normalization to take into account the differences a person who would tag the data would make if he/she was to be tagging two times the same image.

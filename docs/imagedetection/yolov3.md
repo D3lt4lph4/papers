@@ -1,6 +1,6 @@
 # YOLOv3
 
-_last modified : 06-11-2018_
+_last modified : 13-06-2019_
 
 ## General Information
 
@@ -15,7 +15,7 @@ _last modified : 06-11-2018_
 
 ## Brief
 
-This is the last version of the YOLO network, the authors share the new architecture of the network as well as the technical details for the implementation and the training of the network. According to the results, the network gets very good results (close to (but under) the state of the art).
+This is the last version of the YOLO network, the authors share the new architecture of the network as well as the technical details for the implementation and the training of the network. According to the article, the network gets very good results (close to (but under) the state of the art for improved detection speed).
 
 ## How Does It Work
 
@@ -42,4 +42,9 @@ COCO dataset:
 
 ## In Depth
 
-A lot of little stuff described in the paper, the interesting part is in section 4, what didn't work. Apart from that one notable difference is the multi-scale classification through the use of the boxes.
+A lot of improvement were made, including:
+
+- objectness, they add an objectness score to the boxes prediction to take into account the fact that many prior box may overlap an object
+- Not using a softmax classifier (using a softmax make the assumption of not overlapping classes), instead a logistic classifier
+- Multi-scale prediction, the network predicts feature at 3 scales and uses a system similar to feature pyramid network
+- New feature extractor
