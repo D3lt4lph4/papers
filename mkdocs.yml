@@ -54,6 +54,8 @@ pages:
       - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
+    - Flow estimation:
+      - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
     - Others:
       - CoordConv: others/coordconv.md
     - Optimizers:
