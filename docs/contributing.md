@@ -7,6 +7,9 @@ Anyone can contribute, please write in proper english and follow this example(ca
 ```markdown
 # Title of the paper/network/...
 
+(will be updated by a git hook on commit)
+_last modified : 11-07-2019_
+
 ## General Information (main fields described, non-exhaustive list)
 
 - Title: ...
@@ -19,11 +22,11 @@ Anyone can contribute, please write in proper english and follow this example(ca
 
 ## Brief
 
-Very short description of what it does, advantages, etc
+Very short description of what it does, advantages, scientific locks, etc
 
 ## How Does It Work
 
-A bit like above but more in details.
+How did the solution to their problem was done
 
 ## Results
 
