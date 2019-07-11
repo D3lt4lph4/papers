@@ -2,7 +2,7 @@
 
 _last modified : 11-07-2019_
 
-## General Information (main fields described, non-exhaustive list)
+## General Information
 
 - Title: Estimating Velocity Fields on a Freeway From Low-Resolution Videos
 - Authors: Young Cho and John Rice
