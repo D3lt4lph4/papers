@@ -19,7 +19,7 @@ According to the article, most if not all the algorithms used for flow estimatio
 This is a three steps method:
 
 - First an "intensity profile" of the target lane is created for each moment in time
-- Then, the best matching pattern of the current one is looked for at time \(t + \tau\) and \(t - \tau)\ using the L_1 norm
+- Then, the best matching pattern of the current one is looked for at time \(t + \tau\) and \(t - \tau\) using the L_1 norm
 - Finally the speed estimate is estimated as the slope of the line connecting the two centers of the pair (current pattern and best matching one)
 
 An example of the intensity profile for a given time is shown in following figure, we can see the picks corresponding to the cars.
