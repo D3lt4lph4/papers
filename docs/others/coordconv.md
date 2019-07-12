@@ -1,6 +1,6 @@
 # CoordConv
 
-_last modified : 13-06-2019_
+_last modified : 12-07-2019_
 
 ## General Information
 
@@ -13,11 +13,9 @@ _last modified : 13-06-2019_
 
 ## Brief
 
+The CCNs are now the norm when it comes to image processing. But curiously, this type of architectures fails on some simple examples. In this paper, they set-up different toy problems (for instance "given a white dot on a black background, output the position of the dot") and show that the convolution network fails remarkably. To solve this problem, they introduce a new type of layer, the CoordConv.
 
-
-This article presents a new layer for convolutional neural networks. They first show that, while intuition tells you that convolution is the solution for any problems regarding pixels, this does not hold true for all the cases. They set-up different toy problems (for instance "given a white dot on a black background, output the position of the dot") and show that the convolution fails remarkably. To circumvent this problem, they introduce a new type of layer, the CoordConv.
-
-The main problems they are trying to solve are the two following ones (they apply later in the article the layer on other types of problems):
+The main toy problems they are trying to resolve are the two following ones (they apply later in the article the layer on other types of problems):
 
 - Given two coordinates, generate a black dot on a grid at the indicated position
 - Given a grid with a black dot, git the position of the dot.
@@ -32,7 +30,7 @@ The only concern one may have with this layer is to see the convolution losing i
 
 ## Results
 
-This figure from the paper show some exemples of the improvements for the toy problem :
+This figure from the paper show some exemples of the improvements for the toy problems :
 
 ![Results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/coordconv/uber_coordconv_results.png "Results")
 
