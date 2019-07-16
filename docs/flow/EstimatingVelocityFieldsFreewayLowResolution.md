@@ -33,7 +33,7 @@ An example of the intensity profile (pixel vs time) is shown in the following fi
 ## Results
 
 They used a 15 minutes video of a highway to evaluate their model. The camera used covers about one mile of distance and the baseline speed of the flows are calculated using inductive loops. There is no link in the article to the dataset.
-The following table shows the mean and standard deviation on the different station of the road (position of the induction loops used to get the real average of the speed). They explain the variations in the article, and all in all the method seems to work correctly.
+The following table shows the mean and standard deviation on the different stations of the road (position of the induction loops used to get the real average of the speed). They explain the variations in the article, and all in all the method seems to work correctly.
 
 | Satation | East bound | West bound |
 |:--------:|:----------:|:----------:|
