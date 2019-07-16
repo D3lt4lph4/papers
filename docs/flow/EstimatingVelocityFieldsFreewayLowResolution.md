@@ -1,6 +1,6 @@
 # Estimating Velocity Fields on a Freeway From Low-Resolution Videos
 
-_last modified : 11-07-2019_
+_last modified : 16-07-2019_
 
 ## General Information
 
@@ -19,8 +19,8 @@ According to the article, most if not all the algorithms used for flow estimatio
 This is a three steps method:
 
 - First an "intensity profile" of the target lane is created for each moment in time
-- Then, the best matching pattern of the current one is looked for at time \(t + \tau\) and \(t - \tau\) using the L_1 norm
-- Finally the speed estimate is estimated as the slope of the line connecting the two centers of the pair (current pattern and best matching one)
+- Then, the best matching pattern of the current intensity profile is looked for at time \(t + \tau\) and \(t - \tau\) using the L_1 norm
+- Finally the speed estimate is estimated as the slope of the line connecting the two centers of the pair (the current pattern and the best matching one)
 
 An example of the intensity profile for a given time is shown in following figure, we can see the picks corresponding to the cars.
 
@@ -33,7 +33,7 @@ An example of the intensity profile (pixel vs time) is shown in the following fi
 ## Results
 
 They used a 15 minutes video of a highway to evaluate their model. The camera used covers about one mile of distance and the baseline speed of the flows are calculated using inductive loops. There is no link in the article to the dataset.
-The following table shows the mean and standard deviation on the different station of the road (position of the loops). They explain the variations in the article, and all in all the method seems to work correctly.
+The following table shows the mean and standard deviation on the different station of the road (position of the induction loops used to get the real average of the speed). They explain the variations in the article, and all in all the method seems to work correctly.
 
 | Satation | East bound | West bound |
 |:--------:|:----------:|:----------:|
