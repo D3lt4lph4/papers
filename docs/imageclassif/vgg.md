@@ -1,6 +1,6 @@
 # VGG
 
-_last modified : 13-06-2019_
+_last modified : 16-07-2019_
 
 ## General Information (main fields described, non-exhaustive list)
 
@@ -16,12 +16,12 @@ This article tests the importance of depth for neural networks. To do so, they t
 
 ## How Does It Work
 
-There are multiple networks trained in the article, all of the architecture are describe in the figure below. The networks are series of convolutions followed by fully connected layers.
+There are multiple networks trained in the article, all of the architecture are describe in the figure below. The networks are series of convolutions and pooling followed by fully connected layers.
 
 ![Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imageclassif/vgg/vgg_architectures.png "Networks")
 ## Results
 
-The table below describes all the results obtained on the ILSVRC challenge (\cite{ILSVRC15}).
+The table below describes all the results obtained on the ILSVRC challenge.
 
  
 
@@ -55,4 +55,4 @@ E | [256; 512] | 256,384,512 |24.8 |7.5 |
 
 ## In Depth
 
-Nothing special, go check the article for details on the data-augmentation used or the experiments they did
+Nothing special, go check the article for details on the data-augmentation used or the experiments they did.
