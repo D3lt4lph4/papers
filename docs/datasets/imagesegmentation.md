@@ -1,6 +1,6 @@
 # Datasets for image segmentation
 
-_last modified : 03-01-2019_
+_last modified : 19-07-2019_
 
 Here are listed all the datasets that can be used for image segmentation. Each dataset should come with a small description of its size, what's in it and who provided it.
 
@@ -24,6 +24,7 @@ Here are listed all the datasets that can be used for image segmentation. Each d
     - location: Different location in the USA, New York, Berkeley, San Francisco
 
 - Article:
+    - Title: BDD100K: A Diverse Driving Video Database withScalable Annotation Tooling
     - Authors: Fisher Yu, Wenqi Xian, Yingying Chen, Fangchen Liu, Mike Liao, Vashisht Madhavan, Trevor Darrell
     - Link: [article](https://arxiv.org/pdf/1805.04687.pdf)
 
@@ -57,6 +58,7 @@ Here are listed all the datasets that can be used for image segmentation. Each d
 
 
 - Article:
+    - Title: The Cityscapes Dataset for Semantic Urban Scene Understanding
     - Authors: Marius Cordts, Mohamed Omran, Sebastian Ramos, Timo Rehfeld, Markus Enzweiler, Rodrigo Benenson, Uwe Franke, Stefan Roth, Bernt Schiele
     - Link: [article](https://arxiv.org/pdf/1604.01685.pdf)
 
@@ -77,8 +79,9 @@ Here are listed all the datasets that can be used for image segmentation. Each d
     - Both object and instance labels
 
 - Article:
+    - Title: Indoor Segmentation and Support Inference from RGBD Images
     - Authors: Nathan Silberman, Pushmeet Kohli, Derek Hoiem, Rob Fergus
-    - Link: [article](https://arxiv.org/pdf/1604.01685.pdfhttps://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
+    - Link: [article](https://cs.nyu.edu/~silberman/papers/indoor_seg_support.pdf)
 
 - Dataset: [here](https://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html)
 
@@ -105,6 +108,7 @@ Here are listed all the datasets that can be used for image segmentation. Each d
     - Other: pixel-level annotations and pose information，depth maps
 
 - Article:
+    - Title: The ApolloScape Open Dataset for Autonomous Driving and its Application
     - Authors: Xinyu Huang, Peng Wang, Xinjing Cheng, Dingfu Zhou, Qichuan Geng, Ruigang Yang
     - Link: [article](https://arxiv.org/abs/1803.06184)
 
