@@ -1,6 +1,6 @@
 # Recurrent Attention Model
 
-_last modified : 01-09-2018_
+_last modified : 19-07-2019_
 
 ## General Information
 
@@ -14,15 +14,41 @@ _last modified : 01-09-2018_
 
 ## Brief
 
-This article describe a detection workflow that simulate the way the human eye works. Rather than looking at the whole image and doing the classification, the agent looks at glimpse of the image and move his eye around to classify what it sees. It was presented as some alternative to the existing classifiers which needed first the extraction of ROI to work.
+The authors argue that applying convolutional neural networks to large image can be computationally expensive and thus aim to provide a new method to reduce this cost. The article describe a detection/classification workflow that simulate the way the human eye works. Rather than looking at the whole image and doing the classification, the agent looks at glimpse of the image and move his eye around to classify what it sees.
 
 ## How Does It Work
 
-The architecture of the system is made of two main parts:
+The solution proposed is an RNN. The RNN can see only part of the image and has to output the next location to look at. More exactly, the network is composed of four main functions (c.f figure below):
 
-- A glimpse senor which can only see a part of the image, the agent never sees the full image
-- A glimpse network which output two things, where to look next and the classification at the current position
-
-The glimpse network makes use of RNN structure, thus the classification takes into account the previous states and should improve over time.
+- glimpse network, $f_g(\theta_g)$, which outputs a representation of a glimpse
+- core network, $f_h(\theta_h)$, to calculate an internal state given the new features and the previous states
+- location network, $f_l(\theta_l)$, to output the new location given the current state
+- action network, $f_a(\theta_a)$, to output the action (for instance classification) given the current state
 
 ![RAM Description](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ram/ram-network.png?raw=true "RAM Framework")
+
+## Results
+
+They test on different datasets and outperform the convolutional and fully connected layers. The tables below show some results, refer to the paper for more details.
+
+| Model | Error |
+|:--:|:--:|
+| FC, 2 layers (256 hiddens each) | 1.69% |
+| Convolutional, 2 layers | 1.21% |
+| RAM, 2 glimpses,8x8 , 1 scale | 3.79% |
+| RAM, 3 glimpses,8x8 , 1 scale | 1.51% |
+| RAM, 4 glimpses,8x8 , 1 scale | 1.54% |
+| RAM, 5 glimpses,8x8 , 1 scale | 1.34% |
+| RAM, 6 glimpses,8x8 , 1 scale | 1.12% |
+| RAM, 7 glimpses,8x8, 1 scale | 1.07% |
+
+| Model | Error |
+|:--:|:--:|
+| FC, 2 layers (64 hiddens each) | 6.42% |
+| FC, 2 layers (256 hiddens each) | 2.63% |
+| Convolutional, 2 layers | 1.62% |
+| RAM, 4 glimpses,12x12 , 3 scales | 1.54% |
+| RAM, 6 glimpses,12x12, 3 scales | 1.22% |
+| RAM, 8 glimpses,12x12, 3 scales | 1.2% |
+
+## In Depth
