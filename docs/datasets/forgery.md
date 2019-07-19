@@ -1,6 +1,6 @@
 # Forgeries dataset
 
-_last modified : 01-09-2018_
+_last modified : 19-07-2019_
 
 This section regroups the datasets for image forgery.
 
@@ -17,6 +17,7 @@ This section regroups the datasets for image forgery.
     - 30 fps
 
 - Article:
+    - Title: FaceForensics: A Large-scale Video Dataset for Forgery Detection in Human Faces
     - Authors: Andreas Rössler, Davide Cozzolino, Luisa Verdoliva, Christian Riess, Justus Thies, Matthias Nießner
     - Link: [article](https://arxiv.org/abs/1803.09179)
 
