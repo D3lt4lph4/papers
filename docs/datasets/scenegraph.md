@@ -1,6 +1,6 @@
 # Datasets for graphs
 
-_last modified : 01-09-2018_
+_last modified : 19-07-2019_
 
 Here are describe the dataset that can be used when graphs are used as input (graph to image, image to graph, ...)
 
@@ -26,11 +26,9 @@ Here are describe the dataset that can be used when graphs are used as input (gr
     - Total Scene Graphs: 108,249
     - Total Region Graphs: 3,788,715
 
-- Other details:
-    - Question Answering (?)
-
 - Article:
+    - Title: Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations
     - Authors: Ranjay Krishna, Yuke ZhuOliver, GrothJustin, JohnsonKenji, HataJoshua, KravitzStephanie, ChenYannis, Kalantidis, Li-Jia Li, David A. Shamma, Michael S. Bernstein, Li Fei-Fei
-    - Link: [article](https://mylinkhttps://visualgenome.org/static/paper/Visual_Genome.pdf)
+    - Link: [article](https://visualgenome.org/static/paper/Visual_Genome.pdf)
 
 - Dataset: [here](https://visualgenome.org/)
