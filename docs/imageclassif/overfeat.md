@@ -1,6 +1,6 @@
 # OverFeat
 
-_last modified : 26-11-2018_
+_last modified : 19-07-2019_
 
 ## General Information
 
@@ -25,7 +25,7 @@ Finally, to give an idea of the results, it was number one at the time on detect
 
 ### Classification
 
-This is the simplest task to carry, given an image, find the dominant object in it. They used an architecture similar to the ImageNet paper with a few improvements.
+This is the simplest task to carry: given an image, find the dominant object in it. They used an architecture similar to the ImageNet paper with a few improvements.
 
 The most noticeable change is the use of the multi-scale image coupled with a sliding window. The interesting part is they apply the sliding window not at the start of the network, but in the middle of it just before the dense layers. This way they avoid recomputing the whole feature extraction.
 
@@ -41,7 +41,7 @@ The final step is to merge the bounding boxes for each window/scale to guess the
 
 To clarify things, the difference between Localization and Detection is the presence of a background label for the detection when no object is present. It is also to be noted that for the detection task, in many images, the objects can be much smaller.
 
-The network used is the same as for the Localization, the difference is in the training, here negative training is performed with bootstrapping.
+The network used is the same as for the Localization, the difference is in the training. Negative training is performed with bootstrapping.
 
 
 ## Results
