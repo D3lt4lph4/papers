@@ -98,7 +98,6 @@ Here are listed all the datasets that can be used for image segmentation. Each d
     - Building: building, bridge, tunnel, overpass
     - Natural: vegatation
 
-
 - Size:
     - It is expected that the released dataset will include 200K image frames
     - On April 03, 2018，the Scene Parsing data set cumulatively provides 146,997 frames

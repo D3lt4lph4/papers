@@ -23,13 +23,9 @@ This dataset is both for multi-object detection and multi-object tracking.
     - 10 hours of videos captured with a Cannon EOS 550D camera
 
 - Article:
+    - Title: UA-DETRAC: A New Benchmark and Protocol for Multi-Object Detection and Tracking
     - Authors: Longyin Wen, Dawei Du, Zhaowei Cai, Zhen Lei, Ming{-}Ching Chang, Honggang Qi, Jongwoo Lim, Ming{-}Hsuan Yang and Siwei Lyu
     - Link: [article](https://arxiv.org/abs/1511.04136)
-
-- Book:
-    - Title: UA-DETRAC 2017: Report of AVSS2017 \& IWT4S Challenge on Advanced Traffic Monitoring
-    - Authors: Lyu, Siwei and Chang, Ming-Ching and Du, Dawei and Wen, Longyin and Qi, Honggang and Li, Yuezun and Wei, Yi and Ke, Lipeng and Hu, Tao and Del Coco, Marco and others
-    - pages: 1--7
 
 - Dataset: [here](http://detrac-db.rit.albany.edu/)
 
