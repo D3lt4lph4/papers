@@ -14,7 +14,7 @@ _last modified : 19-07-2019_
 
 ## Brief
 
-The authors argue that applying convolutional neural networks to large image can be computationally expensive and thus aim to provide a new method to reduce this cost. The article describe a detection/classification workflow that simulate the way the human eye works. Rather than looking at the whole image and doing the classification, the agent looks at glimpse of the image and move his eye around to classify what it sees.
+The authors argue that applying convolutional neural networks to large image can be computationally expensive and thus aim to provide a new method to reduce this cost. The article describe a detection/classification workflow that simulate the way the human eye works. Rather than looking at the whole image and to do the classification, the agent looks at glimpse of the image and move his eye around to classify what it sees.
 
 ## How Does It Work
 
@@ -27,9 +27,11 @@ The solution proposed is an RNN. The RNN can see only part of the image and has 
 
 ![RAM Description](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/ram/ram-network.png?raw=true "RAM Framework")
 
+The network has to be trained using reinforcement learning techniques. For instance, there is no ground truth for the best place to look at, the network has to guess for itself.
+
 ## Results
 
-They test on different datasets and outperform the convolutional and fully connected layers. The tables below show some results, refer to the paper for more details.
+They test on different datasets and outperform the convolutional and fully connected layers. The tables below show some results, refer to the paper for more details. The number of glimpse is the number of time the network was allowed to look at the image.
 
 | Model | Error |
 |:--:|:--:|
