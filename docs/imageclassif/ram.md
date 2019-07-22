@@ -54,3 +54,5 @@ They test on different datasets and outperform the convolutional and fully conne
 | RAM, 8 glimpses,12x12, 3 scales | 1.2% |
 
 ## In Depth
+
+Check the articles for more details.
