@@ -44,6 +44,12 @@ This dataset is both for multi-object detection and multi-object tracking.
     - Detection / 2D Objects: 7481 training images and 7518 test images
     - Detection / 3D Objects: 7481 training images and 7518 test images
     - Detection / bird's eye view: 7481 training images and 7518 test images for 80 256 labeled objects
+
+- Article:
+    - Title: Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite
+    - Authors: Andreas Geiger and Philip Lenz and Raquel Urtasun
+    - Link: [article](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf)
+
 - Dataset: [here](http://www.cvlibs.net/datasets/kitti/index.php)
 
 ## The Berkeley BBD100K
