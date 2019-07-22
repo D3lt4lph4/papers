@@ -10,7 +10,7 @@
 
 ## Brief
 
-The network was introduced by Krizhevsky et al.\cite{NIPS2012_4824} It was created for the ILSVRC-2010/2012 challenge. The network presented in this paper improved by a large margin the results on the challenges from back then. The network consists, as described in the paper, of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. 
+The network was introduced by Krizhevsky et al.\cite{NIPS2012_4824} It was created for the ILSVRC-2010/2012 challenge. The network presented in this paper improved by a large margin the results on the challenge. The network consists of five convolutional layers, some of which are followed by max-pooling layers, and three fully-connected layers with a final 1000-way softmax. 
 In order to improve the results, they used novel techniques such as the ReLU activation function, local normalization and dropout layers.
 
 ## How Does It Work
@@ -33,7 +33,7 @@ Comparison of results on ILSVRC-2010 test set (the lower the better, last line K
 | SIFT + FVs | 45,7 % | 25,7 % |
 | CNN | 37,5 % | 17,0 % |
 
-Comparison of error rates on ILSVRC-2012 validation and test sets. First line are best results achieved by others.  Models with an asterisk* were “pre-trained” to classify the entire ImageNet 2011 Fall release :
+Comparison of error rates on ILSVRC-2012 validation and test sets. First line is the best result achieved by others.  Models with an asterisk* were “pre-trained” to classify the entire ImageNet 2011 Fall release :
 
 | Model | Top-1 (val) | Top-5 (val) | Top-5 (test) |
 |-------|-------------|-------------|--------------|
