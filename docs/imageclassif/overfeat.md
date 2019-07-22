@@ -19,7 +19,7 @@ The paper is divided in three main parts: Classification, Localization and Detec
 
 Even if there are three networks presented in the article, one for classification, one for localization and one for detection, all of them are build on the same base.
 
-Finally, to give an idea of the results, it was number one at the time on detection with a 24,3% mAP on the detection.
+Finally, to give an idea of the quality of the results, it was number one at the time on detection with a 24,3% mAP on the detection.
 
 ## How Does It Work
 
