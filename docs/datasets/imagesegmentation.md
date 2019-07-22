@@ -2,7 +2,7 @@
 
 _last modified : 19-07-2019_
 
-Here are listed all the datasets that can be used for image segmentation. Each dataset should come with a small description of its size, what's in it and who provided it.
+Here are listed all the datasets that can be used for image segmentation.
 
 ## The Berkeley BBD100K
 
