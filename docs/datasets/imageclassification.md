@@ -1,4 +1,4 @@
-# Datasets for image classification
+# Datasets for image classification and detection
 
 _last modified : 19-07-2019_
 

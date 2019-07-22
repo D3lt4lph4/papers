@@ -67,7 +67,7 @@ pages:
       - Object Counting: datasets/counting.md
       - Events: datasets/events.md
       - Forgery: datasets/forgery.md
-      - Image Classification: datasets/imageclassification.md
+      - Image Classification/Detection: datasets/imageclassification.md
       - Image Segmentation: datasets/imagesegmentation.md
       - NLP: datasets/nlp.md
       - RL: datasets/rl.md
