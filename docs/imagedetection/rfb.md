@@ -13,19 +13,17 @@ _last modified : 09-11-2018_
 
 ## Brief
 
-This article introduce a new module, the RF Block (RFB) inspired by the Receptive Fields (RFs) in the human visual systems. This is the main contribution of the article, the network they use is strongly based on the [SSD](https://arxiv.org/abs/1512.02325). The idea is to improve the precision of the one stage networks by copying the pattern of the neurones in the human visual cortex. They get results on par with the state of the art detector while keeping the speed advantage of the one stage classifiers.
+This article tries to improve the accuracy of the single shot detectors while keeping the same detection speed. To do so, they  introduce a new module, the RF Block (RFB) inspired by the Receptive Fields (RFs) in the human visual systems. The idea is to copy the pattern of the neurones in the human visual cortex. They get results on par with the state of the art detector while keeping the speed advantage of the one stage classifiers.
 
 ## How Does It Work
 
-The architecture of the network is shown in the following figure and is basically an SSD with some of the layers replaced by the RFB module. The backbone network is still a VGG16 and the prediction is still made by a cascade of convolutions.
+The architecture of the network is shown in the following figure and is a SSD with some of the layers replaced by the RFB module. The backbone network is still a VGG16 and the prediction is still made by a cascade of convolutions.
 
 ![RFB Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfb/rbf_network.png "RFB Network")
 
-Basically the idea is to look wider, as show in the following figure:
+The idea is to look wider, the RBF module makes use of a trou convolutions to increase the perception field of the network, as shown in the following figure:
 
 ![RFB module activation](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfb/rbf_spatial_precision.png "RFB module activation")
-
-More region are activated by the module.
 
 ## Results
 
