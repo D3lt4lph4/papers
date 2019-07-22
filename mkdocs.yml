@@ -72,5 +72,5 @@ pages:
       - NLP: datasets/nlp.md
       - RL: datasets/rl.md
       - Tracking: datasets/tracking.md
-      - Self Driving: datasets/scenegraph.md
+      - Graphs : datasets/scenegraph.md
     - Contributing: contributing.md
