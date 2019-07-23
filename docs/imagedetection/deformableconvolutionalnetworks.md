@@ -13,13 +13,13 @@ _last modified : 27-11-2018_
 
 ## Brief
 
-This paper introduce the idea of convolutional layers that can adapt to the shape of the object to locate. The idea can be sum up as "rather than forcing the network into some pre-set filters, let it learn for itself what is best". The deformable convolutions can replace any convolutional layer in any network easily with not much increase in the computation cost. The whole layer can go through back-propagation.
+In this paper, the authors argue that neural networks are limited to model geometric transformation due to the fixed nature of the layers making up the network. To remove this lock, they introduce layers that can adapt to the shape of the object to locate. Rather than forcing the network into some pre-set filters, let it learn for itself what is best. The deformable layers can replace any layers in any network easily with not much increase in the computation cost (i.e deformable convolutional can replace convolutional, deformable pooling can replace pooling). Their layers can go through back-propagation.
 
 ## How Does It Work
 
 The articles presents 3 types of layers, the **deformable convolution**, the **deformable RoI pooling** and the **deformable PS RoI pooling**.
 
-All the deformable layers are fairly similar in conception, a branch process the input feature map to get the offsets, and then a bilinear interpolation is applied to the input feature map at the position of the offset to get the value of the output.
+All the deformable layers are fairly similar in conception, a branch process the input feature map to get the offsets, and then bilinear interpolation is applied to the input feature map at the position of the offset to get the value of the output.
 
 Deformable Convolution:
 
@@ -36,7 +36,9 @@ Deformable ps roi pooling:
 
 ## Results
 
-Object detection results of deformable ConvNets v.s. plain ConvNets on COCO test-dev set. M denotes multi-scale testing, and B denotes iterative bounding box average in the table:
+The table below shows the results of various architecture with and without the deformable layers. As shown, the architecture with the deformable layers performs systematically better than the one without.
+
+Object detection results of deformable ConvNets v.s. plain ConvNets on COCO test-dev set. M denotes multi-scale testing, and [B](https://arxiv.org/abs/1505.01749) denotes iterative bounding box average in the table:
 
 |method | backbone architecture | M | B | mAP@(0.5:0.95) | mAP@0.5 | mAP@(0.5:0.95) (small) | mAP@(0.5:0.95) (mid) | mAP@(0.5:0.95) (large) |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
@@ -73,11 +75,11 @@ The __conv__ layer is learned with backpropagation.
 
 First the pooled feature map is generated from the RoI. Then this feature map goes through a fully connected layer to give the offsets. And again for a position on the output map, the value is calculated using the offsets.
 
-If the offset is in between cells in the grid, the values for the convolution interpolated, with the specificity of the bins.
+If the offset is in between cells in the grid, the values for the pooling are interpolated.
 
 
 ### Deformable ps roi pooling
 
 ![Deformable ps roi pooling](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/deformableconvnet/deformable_ps_roi_pooling.png "Deformable ps roi pooling")
 
-The main difference here with a simple deformable roi pooling is the presence of an offset for each class. Look for the [R-FCN](https://arxiv.org/abs/1605.06409) paper for more detail on the idea of the layer.
+The main difference here with a simple deformable roi pooling is the presence of an offset for each class. Look for the [R-FCN](https://arxiv.org/abs/1605.06409) paper for more details.
