@@ -13,21 +13,21 @@ _last modified : 01-09-2018_
 
 ## Brief
 
-This article aims to take a sentence describing a scene, and generate an image from this description. It differs from previous work in the fact that a scene graph with relation between the object is processed instead of processing directly the sentence. No insight is given as to how generate the scene graph as an input.
+Methods exist to generate image from natural language descriptions. These methods can take various forms, for instance, RNN coupled with GANs.  In this article, the authors propose to improve the results obtained on these methods by capturing more information about the image to generate using scene graphs. No insight is given as to how generate the scene graph as an input.
 
 ## How Does It Work
 
-The network works in two main parts, the first one processes the graph and allow for changing in space for the features in the graph. The second part takes the modified graph to generate the images.
+To solve the problem they propose an end to end network. The network has two main parts, the first one processes the graph to create the features representative of the description of the image. And the second part takes the features and uses them to create the image representing the scene.
 
 This image from the articles shows the whole pipeline:
 
 ![network pipeline](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/pipeline.png?raw=true "Network Pipeline")
 
-The scene graph is transformed while keeping the same graph structure, then the boxes and shapes are predicted and finally, the image is generated.
+First the input scene graph is transformed while keeping the graph structure. Then boxes and shapes representing the objects of the scene are predicted. Finally, from the representation of the scene, the image is generated with convolutional layers.
 
 ## Results
 
-The network was tested on two dataset, COCO-stuff and Visual Genome. The results are in the range of the other method compared to ([StackGAN](https://arxiv.org/abs/1612.03242)). There was also a study realized with real person as judges, and it seems that this method produce images closer to what a human would understand.
+To test the proposed approach, the authors use the mechanical turk. They propose their image as well as the image from the state of the art network and ask the question: "Which image match the caption better ?" (the images were generated using the same caption). They show that their images are preferred in 67.6\% of the presented pairs of images.
 
 ## In Depth
 
