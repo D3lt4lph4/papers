@@ -28,3 +28,20 @@ This dataset is both for multi-object detection and multi-object tracking.
     - Link: [article](https://arxiv.org/abs/1511.04136)
 
 - Dataset: [here](http://detrac-db.rit.albany.edu/)
+
+## AI City Challenge
+
+This dataset is linked to a challenge, it is unsure whether they will give the data if you do not participate in the challenge. Also the data may change from year to year as the challenge evolves
+
+- Contains:
+    - Vehicles, urban objects (may not be labeled)
+    - Metadata of the cameras
+
+- Size:
+    - 25h of videos for the highways
+    - 3 hours of synchronized multiple cameras for the city
+
+- Other details:
+    - location: Highways in Iowa, Images from city in the USA
+
+- Dataset: [here](https://www.aicitychallenge.org/)
