@@ -33,18 +33,18 @@ To test the proposed approach, the authors use the mechanical turk. They propose
 
 Let's describe a bit more each steps of the network.
 
-First there is the graph with the object and their relation between each one of them. The graph is a list of tuples ($o_i$ ,r ,$o_j$), all the object are linked to an other one.
+First the features are generated using the input scene graph. The graph is a series of relation between object, noted as ($o_i$ ,r ,$o_j$), object i in relation r with object j. All the object are linked to an other one.
 
-From this graph there is a "one to one" mapping with graph convolutions as describe in the following image:
+From this graph there is a "one to one" mapping using a graph convolutions as describe in the following image:
 
 ![graph to graph](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_graph.png?raw=true "Graph to Graph")
 
-When one go from $v_r$ to $v'_r$ the function only use the input relation and the to objects target of this relation. But when you go from object to object, all the relation linking this object to other objects are considered. The h function takes as input all the $y = g()$ generated from object being in relation with the current object processed, i.e for $v_2$ we use $g_o$ and $g_s$ because $v_2$ is in relation with $v_1$ and $v_3$.
+For each vectors describing either a relation $v_r$ or an object $v_i$, new vectors are output. The function to output the new relation vectors differ from the function used to output the new object vectors because object may be linked to multiple object while relation are only between to objects.
 
 Then, the new graph is processed to go from graph to image:
 
-![graph to image](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_graph.png?raw=true "Graph To Image")
+![graph to image](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_image.png "Graph To Image")
 
-This steps is used for each objects and works in two pipelines, the bottom one generates the bounding box, the top one the mask inside the box. Then all the output are merged together and presented to a [Cascade Refinement Network](https://arxiv.org/abs/1707.09405) to generate the final image.
+This steps is used for each objects and works in two pipelines (inside the red rectangle), the bottom one generates the bounding box, the top one the masked embedding. The masked embedding is then interpolated inside the box in the description matrix. As said before, this step is done for all the objects (blue and green rectangles), and all the generated matrix are merged to get the scene layout.
 
-Finally for the training they use a pair of discriminator networks and train in a adversarial fashion.
+Finally, the scene layout is presented to a [Cascade Refinement Network](https://arxiv.org/abs/1707.09405) to generate the final image. For the training they use a pair of discriminator networks and train in a adversarial fashion.
