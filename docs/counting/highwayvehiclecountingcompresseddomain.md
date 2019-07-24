@@ -13,7 +13,7 @@ _last modified : 11-07-2019_
 ## Brief
 
 This article aims to count the number of vehicles in a given highway by using the compressed video (H.264) information, the motion vectors.
-The main aim of the article is to reduce method complexity compared to others while still being competitive.
+The main aim of the article is to reduce method complexity compared to others while still being competitive in precision.
 
 ## How Does It Work
 
@@ -23,7 +23,7 @@ They used a multi-regression method for counting the vehicles. They first create
 
 The preprocessing steps (extraction of the low level features) are as follow:
 
-- Normalization of the Motion Vectors (MV): this is mostly to account for the fact that the motion vectors may reference different frames (earlier frame means bigger motion vector)
+- Normalization of the Motion Vectors (MV): this is mostly to account for the fact that the motion vectors may reference different frames (the earlier the reference frame the bigger the motion vectors)
 - Macro-block weighting: because smaller blocks have more chance to represent a car (finer details), they give different weights to favor those smaller blocks
 - Foreground segmentation: They extract the motion vectors that are above a given threshold as they should be Foreground
 - Perspective normalization: To account for the Perspective in the image, they again add a weights to the blocks (the weights are defined one time per camera through calibration)
@@ -40,7 +40,7 @@ Finally the HCR is used to predict the count. They used HCR to have a local line
 
 ## Results
 
-Some of the results are shown in the table \ref{hvc:results}. Multiple training strategies are tested, this are the results for one of them: "the samples are randomly split into the training set containing 800 samples and the test set containing 1232 samples as in the classification experiment".
+Some of the results are shown in the following table. Multiple training strategies are tested, this are the results for one of them: "the samples are randomly split into the training set containing 800 samples and the test set containing 1232 samples as in the classification experiment". See the article for more details on all the experiments.
 
 
 | Number of training samples | 200 | 300 | 400 | 500 | 600 | 700 | 800 |
@@ -49,4 +49,6 @@ Some of the results are shown in the table \ref{hvc:results}. Multiple training 
 | [Chan et al.](https://ieeexplore.ieee.org/abstract/document/4587569) | 3.324 | 3.294 | 3.217 | 3.074 | 2.838 | 2.650 | 2.653 |
 | [Ryan et al.](https://www.sciencedirect.com/science/article/pii/S1077314214001611) | **3.301** | 3.242 | 3.196 | 3.181 | 3.035 | **2.586** | **2.543** |
 
+## In Depth
 
+See the article
