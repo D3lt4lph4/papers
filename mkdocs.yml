@@ -21,13 +21,14 @@ extra_javascript: ['https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX
 pages:
     - Home: index.md
     - Image Classification:
-      - Home: imageclassif/index.md
+      - Introduction: imageclassif/index.md
       - ImageNet Classification with Deep CNN: imageclassif/imagenet.md
       - OverFeat: imageclassif/overfeat.md
       - RAM: imageclassif/ram.md
       - CapsNet: imageclassif/capsule.md
       - VGG: imageclassif/vgg.md
     - Image Detection:
+      - Introduction: imageclassif/index.md
       - R-CNN: imagedetection/rcnn.md
       - Fast R-CNN: imagedetection/fastrcnn.md
       - Faster R-CNN: imagedetection/fasterrcnn.md
@@ -40,30 +41,38 @@ pages:
       - RFB: imagedetection/rfb.md
       - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
     - Image Segmentation:
+      - Introduction: imageclassif/index.md
       - Introduction: imageseg/index.md
     - Image Generation:
+      - Introduction: imageclassif/index.md
       - Photographic Image Synthesis with Cascaded Refinement Networks: imagegeneration/photographicimagesynthesis.md
     - Natural Language Processing:
       - Introduction: nlp/index.md
     - Reinforcement Learning:
       - Introduction: rl/index.md
     - Tracking:
+      - Introduction: imageclassif/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Scene Graph:
+      - Introduction: imageclassif/index.md
       - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
       - Neural Motifs, Scene Graph Parsing with Global Context: scenegraph/neuralmotifparsingwithglobalcontext.md
       - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
+      - Introduction: imageclassif/index.md
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
       - ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness: knowingyournetwork/biastowardtextures.md
     - Flow estimation:
+      - Introduction: imageclassif/index.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
     - Others:
+      - Introduction: imageclassif/index.md
       - CoordConv: others/coordconv.md
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
     - Datasets:
+      - Introduction: imageclassif/index.md
       - Database: datasets/list.md
       - Object Counting: datasets/counting.md
       - Events: datasets/events.md

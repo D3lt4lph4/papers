@@ -17,4 +17,16 @@ There are other very good repositories on github with the same aim of regrouping
 
 Table of content:
 
-## [Image Classification](imageclassif/index.md)
+- [Image Classification](imageclassif/index.md)
+- [Image Detection](imagedetection/index.md)
+- [Image Segmentation](imageseg/index.md)
+- [Image Generation](imagegeneration/index.md)
+- [Natural Language Processing](nlp/index.md)
+- [Reinforcement Learning](rl/index.md)
+- [Tracking](tracking/index.md)
+- [Scene Graph](scenegraph/index.md)
+- [Knowing Your Network](imageclassif/index.md)
+- [Flow Estimation](flow/index.md)
+- [Others](others/index.md)
+- [Optimizers](optimization/index.md)
+- [Datasets](datasets/index.md)
