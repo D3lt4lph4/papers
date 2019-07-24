@@ -28,7 +28,7 @@ pages:
       - CapsNet: imageclassif/capsule.md
       - VGG: imageclassif/vgg.md
     - Image Detection:
-      - Introduction: imageclassif/index.md
+      - Introduction: imagedetection/index.md
       - R-CNN: imagedetection/rcnn.md
       - Fast R-CNN: imagedetection/fastrcnn.md
       - Faster R-CNN: imagedetection/fasterrcnn.md
@@ -41,38 +41,38 @@ pages:
       - RFB: imagedetection/rfb.md
       - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
     - Image Segmentation:
-      - Introduction: imageclassif/index.md
+      - Introduction: imageseg/index.md
       - Introduction: imageseg/index.md
     - Image Generation:
-      - Introduction: imageclassif/index.md
+      - Introduction: imagegeneration/index.md
       - Photographic Image Synthesis with Cascaded Refinement Networks: imagegeneration/photographicimagesynthesis.md
     - Natural Language Processing:
       - Introduction: nlp/index.md
     - Reinforcement Learning:
       - Introduction: rl/index.md
     - Tracking:
-      - Introduction: imageclassif/index.md
+      - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
     - Scene Graph:
-      - Introduction: imageclassif/index.md
+      - Introduction: scenegraph/index.md
       - Image Generation From Scene Graph: scenegraph/imagegenerationfromscenegraph.md
       - Neural Motifs, Scene Graph Parsing with Global Context: scenegraph/neuralmotifparsingwithglobalcontext.md
       - Scene Graph Generation From Images: scenegraph/scenegraphgenerationfromimages.md
     - Knowing your Network:
-      - Introduction: imageclassif/index.md
+      - Introduction: knowingyournetwork/index.md
       - Why Should I Trust You ?: knowingyournetwork/whyshoulditrustyou.md
       - ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness: knowingyournetwork/biastowardtextures.md
     - Flow estimation:
-      - Introduction: imageclassif/index.md
+      - Introduction: flow/index.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
     - Others:
-      - Introduction: imageclassif/index.md
+      - Introduction: others/index.md
       - CoordConv: others/coordconv.md
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
     - Datasets:
-      - Introduction: imageclassif/index.md
+      - Introduction: datasets/index.md
       - Database: datasets/list.md
       - Object Counting: datasets/counting.md
       - Events: datasets/events.md

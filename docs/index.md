@@ -25,7 +25,7 @@ Table of content:
 - [Reinforcement Learning](rl/index.md)
 - [Tracking](tracking/index.md)
 - [Scene Graph](scenegraph/index.md)
-- [Knowing Your Network](imageclassif/index.md)
+- [Knowing Your Network](knowingyournetwork/index.md)
 - [Flow Estimation](flow/index.md)
 - [Others](others/index.md)
 - [Optimizers](optimization/index.md)
