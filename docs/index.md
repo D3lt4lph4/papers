@@ -24,6 +24,7 @@ Table of content:
 - [Natural Language Processing](nlp/index.md)
 - [Reinforcement Learning](rl/index.md)
 - [Tracking](tracking/index.md)
+- [Counting](counting/index.md)
 - [Scene Graph](scenegraph/index.md)
 - [Knowing Your Network](knowingyournetwork/index.md)
 - [Flow Estimation](flow/index.md)
