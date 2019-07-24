@@ -14,3 +14,7 @@ There are other very good repositories on github with the same aim of regrouping
 - [Awesome Recurrent Neural Networks](https://github.com/kjw0612/awesome-rnn)
 
 - [Awesome Deep Vision](https://github.com/kjw0612/awesome-deep-vision)
+
+Table of content:
+
+- [Image Classification](imageclassif/index.md)
