@@ -13,11 +13,11 @@ _last modified : 09-11-2018_
 
 ## Brief
 
-This article tries to improve the accuracy of the single shot detectors while keeping the same detection speed. To do so, they  introduce a new module, the RF Block (RFB) inspired by the Receptive Fields (RFs) in the human visual systems. The idea is to copy the pattern of the neurones in the human visual cortex. They get results on par with the state of the art detector while keeping the speed advantage of the one stage classifiers.
+This article tries to improve the accuracy of the single shot detectors  while avoiding a decrease of the speed of inference. To do so, they  introduce a new module, the RF Block (RFB) inspired by the Receptive Fields (RFs) in the human visual systems. The idea is to copy the pattern of the neurones in the human visual cortex. They get results on par with the state of the art multi-stage detectors while keeping the speed advantage of the one stage classifiers.
 
 ## How Does It Work
 
-The architecture of the network is shown in the following figure and is a SSD with some of the layers replaced by the RFB module. The backbone network is still a VGG16 and the prediction is still made by a cascade of convolutions.
+The architecture of the proposed test network is shown in the following figure and is a SSD with some of the layers replaced by the RFB module. The backbone network is still a VGG16 and the prediction is still made by a cascade of convolutions.
 
 ![RFB Network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/imagedetection/rfb/rbf_network.png "RFB Network")
 
