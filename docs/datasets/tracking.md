@@ -29,7 +29,7 @@ This dataset is both for multi-object detection and multi-object tracking.
 
 - Dataset: [here](http://detrac-db.rit.albany.edu/)
 
-## AI City Challenge
+## AI City Challenge (2019)
 
 This dataset is linked to a challenge, it is unsure whether they will give the data if you do not participate in the challenge. Also the data may change from year to year as the challenge evolves
 
