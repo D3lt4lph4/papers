@@ -33,7 +33,7 @@ To test the proposed approach, the authors use the mechanical turk. They showed 
 
 Let's describe a bit more each steps of the network.
 
-First the features are generated using the input scene graph. The graph is a series of relation between object, noted as ($o_i$ ,r ,$o_j$), object i in relation r with object j. All the object are linked to an other one.
+First the features are generated using the input scene graph. The graph is a series of relation between object, noted as ($o_i$ ,$r$ ,$o_j$), $object i$ in relation $r$ with $object j$. All the object are linked to an other one.
 
 From this graph there is a one to one mapping using "graph convolutions" as describe in the following image:
 
