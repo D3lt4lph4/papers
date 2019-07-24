@@ -17,4 +17,4 @@ There are other very good repositories on github with the same aim of regrouping
 
 Table of content:
 
-- [Image Classification](imageclassif/index.md)
+[## Image Classification](imageclassif/index.md)
