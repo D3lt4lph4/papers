@@ -112,3 +112,50 @@ Here are listed all the datasets that can be used for image segmentation.
     - Link: [article](https://arxiv.org/abs/1803.06184)
 
 - Dataset: [here](http://apolloscape.auto/index.html)
+
+
+## Playing For Data (Generated from GTA V)
+
+- Contains:
+    - 
+
+- Size:
+    - 24966 densely labelled frames
+
+- Other details:
+
+- Article:
+    - Title: Playing for Data: Ground Truth from Computer Games
+    - Authors: 	Stephan Richter, Vibhav Vineet, Stefan Roth, Vladlen Koltun
+    - Link: [article](https://arxiv.org/abs/1608.02192)
+
+- Dataset: [here](https://download.visinf.tu-darmstadt.de/data/from_games/)
+
+## Vkitti
+
+- Contains:
+    - Vehicles: Cars, Bus, Van, Other
+    - Weather: cloudy, sunny, rainy, night
+    - Different level of occlusion
+    - ...
+
+- Size:
+    - more than 140 thousand frames
+    - 8250 vehicles manually annotated
+    - 1.21 million labeled bounding boxes of objects
+    - ...
+
+- Other details:
+    - location: 24 different locations at Beijing and Tianjin in China
+    - 10 hours of videos captured with a Cannon EOS 550D camera
+    - ...
+
+- Article:
+    - Authors: ...
+    - Link: [article](https://mylink)
+
+- Book:
+    - Authors: ...
+    - pages: ...
+
+- Dataset: [here](http://mylink)
