@@ -1,25 +1,34 @@
-# Title of the paper/network/...
+# Virtual Worlds as Proxy for Multi-Object Tracking Analysis
 
 (will be updated by a git hook on commit)
 _last modified : 11-07-2019_
 
 ## General Information (main fields described, non-exhaustive list)
 
-- Title: ...
-- Authors: ...
-- Link: [article](link to the paper)
-- Date of first submission: (to have some idea on the "age" of the article)
-- Implementations: (if any found)
-    - [Keras](http://awesomelink1)
-    - [Caffe](http://awesomelink2)
+- Title: Virtual Worlds as Proxy for Multi-Object Tracking Analysis
+- Authors: Adrien Gaidon, Qiao Wang, Yohann Cabon and Eleonora Vig
+- Link: [article](https://arxiv.org/abs/1605.06457)
+- Date of first submission: 20 May 2016
+- Implementations: 
 
 ## Brief
 
-Very short description of what it does, advantages, scientific locks, etc
+This article presents a new approach to deep learning training. They use generated data to train neural networks. They have four contributions:
+
+- Generation of a generated dataset from an existing one
+- Creation of the Virtual Kitti dataset
+- Quantitative measure of the usefulness of the created world
+- Measurement of the impact of weather condition on real datasets
 
 ## How Does It Work
 
-How did the solution to their problem was done
+The generation of the virtual world and evaluation of the usefulness follows a five steps scheme:
+
+- Acquisition of the real data
+- CLoning of the world (using the annotated real images and manual reconstruction of the world)
+- Generation of various weather conditions
+- Automatic generation of detailed ground truth annotations (notably segmentation, easier using virtual world)
+- Evaluation of the "usefulness" of the world
 
 ## Results
 
