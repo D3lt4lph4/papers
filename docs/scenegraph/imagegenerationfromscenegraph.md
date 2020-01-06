@@ -23,7 +23,7 @@ This image from the articles shows the whole pipeline:
 
 ![network pipeline](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/pipeline.png?raw=true "Network Pipeline")
 
-First the input scene graph is transformed while keeping the graph structure. Then boxes and shapes representing the objects of the scene are predicted. Finally, from the representation of the scene, the image is generated with convolutional layers.
+First the input scene graph is transformed while keeping the graph structure. Then boxes and shapes representing the objects of the scene are predicted. Finally, from the representation of the scene, the image is generated with Cascaded Refinement Network. The whole process is trained adversarially using discriminators.
 
 ## Results
 
@@ -39,7 +39,7 @@ From this graph there is a one to one mapping using "graph convolutions" as desc
 
 ![graph to graph](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_graph.png?raw=true "Graph to Graph")
 
-For each vectors describing either a relation $v_ri$ or an object $v_i$, new vectors are output. The function to output the new relation vectors differ from the function used to output the new object vectors because object may be linked to multiple object while relation are only between to objects.
+For each vectors describing either a relation $v_ri$ or an object $v_i$, new vectors are output. The function to output the new relation vectors differ from the function used to output the new object vectors because object may be linked to multiple object while relation are only between to objects (usage of the pooling function h).
 
 Then, the new graph of features is processed to go from graph to image:
 
