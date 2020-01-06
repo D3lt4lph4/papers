@@ -101,28 +101,17 @@ This dataset is both for multi-object detection and multi-object tracking.
 ## VKitti
 
 - Contains:
-    - Vehicles: Cars, Bus, Van, Other
-    - Weather: cloudy, sunny, rainy, night
-    - Different level of occlusion
-    - ...
+    - Based on the Kitti dataset, should contain the same classes
 
 - Size:
-    - more than 140 thousand frames
-    - 8250 vehicles manually annotated
-    - 1.21 million labeled bounding boxes of objects
-    - ...
+    - 50 high-resolution monocular videos (21,260 frames)
 
 - Other details:
-    - location: 24 different locations at Beijing and Tianjin in China
-    - 10 hours of videos captured with a Cannon EOS 550D camera
-    - ...
+    - five different virtual worlds in urban settings under different imaging and weather conditions
+    - These photo-realistic synthetic videos are automatically, exactly, and fully annotated for 2D and 3D multi-object tracking and at the pixel level with category, instance, flow, and depth labels
 
 - Article:
-    - Authors: ...
-    - Link: [article](https://mylink)
+    - Authors: Gaidon A, Wang Q, Cabon Y and Vig E
+    - Link: [article](https://arxiv.org/abs/1605.06457)
 
-- Book:
-    - Authors: ...
-    - pages: ...
-
-- Dataset: [here](http://mylink)
+- Dataset: [here](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds/)
