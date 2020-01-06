@@ -53,6 +53,7 @@ pages:
     - Tracking:
       - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
+      - Virtual Worlds as Proxy for Multi-Object Tracking Analysis: tracking/vkitti.md
     - Counting:
       - Introduction: counting/index.md
       - Highway Vehicle Counting in Compressed Domain: counting/highwayvehiclecountingcompresseddomain.md
