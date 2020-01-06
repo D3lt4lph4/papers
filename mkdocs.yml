@@ -42,7 +42,6 @@ pages:
       - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
-      - Introduction: imageseg/index.md
     - Image Generation:
       - Introduction: imagegeneration/index.md
       - Photographic Image Synthesis with Cascaded Refinement Networks: imagegeneration/photographicimagesynthesis.md
