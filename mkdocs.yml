@@ -57,6 +57,7 @@ pages:
       - ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness: knowingyournetwork/biastowardtextures.md
     - Flow estimation:
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
+      - Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression: flow/CompressedDomainHighwayVehicleCountingRegression.md
     - Others:
       - CoordConv: others/coordconv.md
     - Optimizers:
