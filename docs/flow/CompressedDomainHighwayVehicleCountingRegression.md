@@ -2,7 +2,7 @@
 
 _last modified : 23-01-2020_
 
-## General Information (main fields described, non-exhaustive list)
+## General Information
 
 - Title:  Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression 
 - Authors: Zilei Wang, Xu Liu, Jiashi Feng, Jian Yang, Hongsheng Xi
