@@ -13,38 +13,38 @@ _last modified : 01-09-2018_
 
 ## Brief
 
-This article aims to take a sentence describing a scene, and generate an image from this description. It differs from previous work in the fact that a scene graph with relation between the object is processed instead of processing directly the sentence. No insight is given as to how generate the scene graph as an input.
+Methods exist to generate image from natural language descriptions. These methods can take various forms, one example of such methods would be RNN coupled with GANs.  In this article, the authors propose to improve the results obtained on these methods by capturing more information about the image to generate using scene graphs. No insight is given as to how generate the scene graph as an input.
 
 ## How Does It Work
 
-The network works in two main parts, the first one processes the graph and allow for changing in space for the features in the graph. The second part takes the modified graph to generate the images.
+To solve the problem they propose an end to end network. The network has two main parts, the first one processes the graph to create the features representative of the description of the image. And the second part takes the features and uses them to create the image representing the scene.
 
 This image from the articles shows the whole pipeline:
 
 ![network pipeline](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/pipeline.png?raw=true "Network Pipeline")
 
-The scene graph is transformed while keeping the same graph structure, then the boxes and shapes are predicted and finally, the image is generated.
+First the input scene graph is transformed while keeping the graph structure. Then boxes and shapes representing the objects of the scene are predicted. Finally, from the representation of the scene, the image is generated with Cascaded Refinement Network. The whole process is trained adversarially using discriminators.
 
 ## Results
 
-The network was tested on two dataset, COCO-stuff and Visual Genome. The results are in the range of the other method compared to ([StackGAN](https://arxiv.org/abs/1612.03242)). There was also a study realized with real person as judges, and it seems that this method produce images closer to what a human would understand.
+To test the proposed approach, the authors use the mechanical turk. They showed their image as well as the image from the state of the art method and ask the question: "Which image match the caption better ?" (the images were generated using the same caption). They showed that their images were preferred in 67.6\% of the presented pairs of images.
 
 ## In Depth
 
 Let's describe a bit more each steps of the network.
 
-First there is the graph with the object and their relation between each one of them. The graph is a list of tuples ($o_i$ ,r ,$o_j$), all the object are linked to an other one.
+First the features are generated using the input scene graph. The graph is a series of relation between object, noted as ($o_i$ ,$r$ ,$o_j$), $object i$ in relation $r$ with $object j$. All the object are linked to an other one.
 
-From this graph there is a "one to one" mapping with graph convolutions as describe in the following image:
+From this graph there is a one to one mapping using "graph convolutions" as describe in the following image:
 
 ![graph to graph](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_graph.png?raw=true "Graph to Graph")
 
-When one go from $v_r$ to $v'_r$ the function only use the input relation and the to objects target of this relation. But when you go from object to object, all the relation linking this object to other objects are considered. The h function takes as input all the $y = g()$ generated from object being in relation with the current object processed, i.e for $v_2$ we use $g_o$ and $g_s$ because $v_2$ is in relation with $v_1$ and $v_3$.
+For each vectors describing either a relation $v_ri$ or an object $v_i$, new vectors are output. The function to output the new relation vectors differ from the function used to output the new object vectors because object may be linked to multiple object while relation are only between to objects (usage of the pooling function h).
 
-Then, the new graph is processed to go from graph to image:
+Then, the new graph of features is processed to go from graph to image:
 
-![graph to image](https://github.com/D3lt4lph4/papers/blob/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_graph.png?raw=true "Graph To Image")
+![graph to image](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/scenegraph/imagegenerationfromscenegraph/graph_to_image.png "Graph To Image")
 
-This steps is used for each objects and works in two pipelines, the bottom one generates the bounding box, the top one the mask inside the box. Then all the output are merged together and presented to a [Cascade Refinement Network](https://arxiv.org/abs/1707.09405) to generate the final image.
+This processing steps is done for each objects and works in two pipelines (inside the red rectangle), the bottom one generates the bounding box of the object to generate, the top one the masked embedding. The masked embedding is then interpolated inside the box in the description matrix. As said before, this step is done for all the objects (blue and green rectangles), and all the generated matrix are merged to get the scene layout.
 
-Finally for the training they use a pair of discriminator networks and train in a adversarial fashion.
+Finally, the scene layout is presented to a [Cascade Refinement Network](https://arxiv.org/abs/1707.09405) to generate the final image. For the training they use a pair of discriminator networks and train in a adversarial fashion.

@@ -1,8 +1,8 @@
-# Events dataset
+# Events datasets
 
 _last modified : 19-07-2019_
 
-This section regroups the dataset regarding event happening in an image/video such as aggression/accident/loading of an object/...
+This section regroups the datasets regarding event happening in an image/video such as aggression/accident/loading of an object/...
 
 ## VIRAT Video Dataset
 

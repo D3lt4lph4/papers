@@ -14,3 +14,20 @@ There are other very good repositories on github with the same aim of regrouping
 - [Awesome Recurrent Neural Networks](https://github.com/kjw0612/awesome-rnn)
 
 - [Awesome Deep Vision](https://github.com/kjw0612/awesome-deep-vision)
+
+Table of content:
+
+- [Image Classification](imageclassif/index.md)
+- [Image Detection](imagedetection/index.md)
+- [Image Segmentation](imageseg/index.md)
+- [Image Generation](imagegeneration/index.md)
+- [Natural Language Processing](nlp/index.md)
+- [Reinforcement Learning](rl/index.md)
+- [Tracking](tracking/index.md)
+- [Counting](counting/index.md)
+- [Scene Graph](scenegraph/index.md)
+- [Knowing Your Network](knowingyournetwork/index.md)
+- [Flow Estimation](flow/index.md)
+- [Others](others/index.md)
+- [Optimizers](optimization/index.md)
+- [Datasets](datasets/index.md)

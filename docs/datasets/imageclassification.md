@@ -1,4 +1,4 @@
-# Datasets for image classification
+# Datasets for image classification and detection
 
 _last modified : 19-07-2019_
 
@@ -44,6 +44,12 @@ This dataset is both for multi-object detection and multi-object tracking.
     - Detection / 2D Objects: 7481 training images and 7518 test images
     - Detection / 3D Objects: 7481 training images and 7518 test images
     - Detection / bird's eye view: 7481 training images and 7518 test images for 80 256 labeled objects
+
+- Article:
+    - Title: Are we ready for Autonomous Driving? The KITTI Vision Benchmark Suite
+    - Authors: Andreas Geiger and Philip Lenz and Raquel Urtasun
+    - Link: [article](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf)
+
 - Dataset: [here](http://www.cvlibs.net/datasets/kitti/index.php)
 
 ## The Berkeley BBD100K
@@ -91,3 +97,21 @@ This dataset is both for multi-object detection and multi-object tracking.
     - images of size 32x32
 
 - Dataset: [here](https://www.cs.toronto.edu/~kriz/cifar.html)
+
+## VKitti
+
+- Contains:
+    - Based on the Kitti dataset, should contain the same classes
+
+- Size:
+    - 50 high-resolution monocular videos (21,260 frames)
+
+- Other details:
+    - five different virtual worlds in urban settings under different imaging and weather conditions
+    - These photo-realistic synthetic videos are automatically, exactly, and fully annotated for 2D and 3D multi-object tracking and at the pixel level with category, instance, flow, and depth labels
+
+- Article:
+    - Authors: Gaidon A, Wang Q, Cabon Y and Vig E
+    - Link: [article](https://arxiv.org/abs/1605.06457)
+
+- Dataset: [here](https://europe.naverlabs.com/research/computer-vision/proxy-virtual-worlds/)

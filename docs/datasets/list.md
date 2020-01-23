@@ -7,7 +7,7 @@ Still, you should check the website to be sure it wasn't updated with new datase
 
 ## Websites
 
-- [link](http://personal.ie.cuhk.edu.hk/~ccloy/download.html)
+- [Datasets](http://personal.ie.cuhk.edu.hk/~ccloy/download.html)
     - Mostly person related sets (crowd/faces/fashion/...)
     - A bit of car related sets
 

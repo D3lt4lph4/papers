@@ -34,7 +34,7 @@ Here put the results of the network, scores in competitions, ...
 
 ## In Depth
 
-Here, go full description, tricks and all, keep in mind this is to explain the paper, but still a summary.
+Here, go full description, tricks and all, keep in mind this is to explain the paper, but still a summary. Simply remove if the better solution is to read the paper.
 ```
 
 ## Datasets

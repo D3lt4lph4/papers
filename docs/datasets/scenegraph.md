@@ -32,3 +32,22 @@ Here are describe the dataset that can be used when graphs are used as input (gr
     - Link: [article](https://visualgenome.org/static/paper/Visual_Genome.pdf)
 
 - Dataset: [here](https://visualgenome.org/)
+
+## COCO-Stuff
+
+- Contains:
+    - Dense pixel-level annotations
+    - 80 thing classes, 91 stuff classes and 1 class 'unlabeled'
+    - Instance-level annotations for things from COCO
+    - Complex spatial context between stuff and things
+    - 5 captions per image from COCO
+
+- Size:
+    - 164K complex images from COCO
+
+- Article:
+    - Title: COCO-Stuff: Thing and Stuff Classes in Context
+    - Authors: H. Caesar, J. Uijlings, V. Ferrari
+    - Link: [article](https://arxiv.org/abs/1612.03716)
+
+- Dataset: [here](https://github.com/nightrome/cocostuff)
