@@ -30,7 +30,7 @@ These steps are shown in the following graphic:
 
 **Preprocessing**: The preprocessing step mostly standardize the data for the feature extraction.
 
-**Feature extraction**: Various features (listed bellow) are extracted in this step, they will be used for the classification layer.
+**Feature extraction**: Various features (listed below) are extracted in this step, they will be used for the classification layer.
 
 - Area: The number of blocks belonging to the segmented foreground
 - Perimeter length: The total number of blocks lying on the perimeter of the foreground segment
@@ -40,7 +40,7 @@ These steps are shown in the following graphic:
 
 All of these hand crafted features are then used to estimate the number of vehicles on screen.
 
-**Regressions**: Using the aforementioned features, they carry regressions to predict the number of cars on the screen. More specifically, a double classification is first carried to select the best train regressor for a given image (high, medium, low density for the first classifier and border  classes for the second). Once the regressor is selected, the count is calculated and then, an estimated count is calculated through temporal regression (see image bellow).
+**Regressions**: Using the aforementioned features, they carry regressions to predict the number of cars on the screen. More specifically, a double classification is first carried to select the best train regressor for a given image (high, medium, low density for the first classifier and border  classes for the second). Once the regressor is selected, the count is calculated and then, an estimated count is calculated through temporal regression (see image below).
 
 ![Regression Pipeline](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/CompressedDomainHighwayVehicleCountingRegression/regression.png "Regression Pipeline")
 
