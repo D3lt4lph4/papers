@@ -1,6 +1,5 @@
 # City-Wide Traffic Flow Estimation From a Limited Number of Low-Quality Cameras
 
-(will be updated by a git hook on commit)
 _last modified : 11-07-2019_
 
 ## General Information
