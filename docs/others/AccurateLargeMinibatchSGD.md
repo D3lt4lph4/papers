@@ -1,6 +1,5 @@
 # Accurate, Large Minibatch SGD:Training ImageNet in 1 Hour
 
-(will be updated by a git hook on commit)
 _last modified : 11-07-2019_
 
 ## General Information
@@ -17,8 +16,6 @@ _last modified : 11-07-2019_
 This article presents general guidelines to train a network in a distributed framework. They empirically show that the learning rate should be scaled linearly with the augmentation of the minibatch size. They introduce various notions for training in a distributed manner. They also raise some flags for the common pitfalls one could encounter when using the presented method. These two points are detailed in the next section.
 
 When training a ResNet on ImageNet, they show that for minibatch size up to 8k (effectively training the network in 1h), there is almost no loss in the training accuracy.
-
-
 
 ## How Does It Work
 
@@ -41,6 +38,18 @@ The guidelines are specific for each of the examples and not provided here, plea
 
 The image below shows the validation error vs the mini-batch size. We can see that up to 8k images in a batch, there is almost no loss in the accuracy of the network. As stated in the conclusion, using this size of mini-batch is interesting if you do not care so much about accuracy.
 
-![resultsSSSSSSS](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/AccurateLargeMinibatchSGD/results_figure.png "results")
+![results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/AccurateLargeMinibatchSGD/results_figure.png "results")
 
-Finally the table below gives 
+Finally the table below gives the details of accuracy for each of the mini-batch size.
+
+| kn | $eta$ | top-1 error |
+|---|---|---|
+| 256  |  0.1 | 23.60 $\pm$ 0.12  |
+|  512 |  0.2 | 23.48 $\pm$ 0.09   |
+|  1k |  0.4 |  23.53 $\pm$ 0.08  |
+|  2k |  0.8 |  23.49 $\pm$ 0.11  |
+|  4k |  1.6 |  23.56 $\pm$ 0.12  |
+|  8k |  3.2 |  23.74 $\pm$ 0.09  |
+|  16k |  6.4 |  24.79 $\pm$ 0.27  |
+
+More experiments and details are given in the article.
