@@ -13,7 +13,7 @@ _last modified : 11-07-2019_
 
 ## Brief
 
-This article presents a method to segment lidar cloud points. They use CNN coupled with CRF to predict the class of the points in the LIDAR cloud. They also provide with the instance segmentation by adding classical clustering technique.
+This article presents a method to segment lidar cloud points. They use CNN coupled with [CRF](https://en.wikipedia.org/wiki/Conditional_random_field) to predict the class of the points in the LIDAR cloud. They also provide with the instance segmentation by adding classical clustering technique ([DBSCAN](https://en.wikipedia.org/wiki/DBSCAN) clustering).
 
 They train on the Kitti dataset, and, because of the lack of data, they also extract data from a generator, GTA V. Through the generated data, they improve the prediction results. In order to use the generated data, they also provide with some techniques to more closely match the distribution of the real data.
 
