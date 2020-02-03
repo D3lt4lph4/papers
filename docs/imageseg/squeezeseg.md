@@ -1,4 +1,4 @@
-# SqueezeSeg:  Convolutional  Neural  Nets  with  Recurrent  CRF  forReal-Time  Road-Object  Segmentation  from  3D  LiDAR  Point  Cloud
+# SqueezeSeg: Convolutional Neural Nets with Recurrent CRF forReal-Time Road-Object Segmentation from 3D LiDAR Point Cloud
 
 _last modified : 11-07-2019_
 
