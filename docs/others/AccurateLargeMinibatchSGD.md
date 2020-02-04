@@ -40,7 +40,7 @@ The image below shows the validation error vs the mini-batch size. We can see th
 
 ![results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/AccurateLargeMinibatchSGD/results_figure.png "results")
 
-Finally the table below gives the details of accuracy for each of the mini-batch size.
+Finally the table below gives the details of accuracy for each of the mini-batch size (more experiments and details are given in the article).
 
 | kn | $\eta$ | top-1 error |
 |---|---|---|
@@ -51,5 +51,3 @@ Finally the table below gives the details of accuracy for each of the mini-batch
 |  4k |  1.6 |  23.56 $\pm$ 0.12  |
 |  8k |  3.2 |  23.74 $\pm$ 0.09  |
 |  16k |  6.4 |  24.79 $\pm$ 0.27  |
-
-__More experiments and details are given in the article.__
