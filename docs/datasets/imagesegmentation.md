@@ -1,6 +1,6 @@
 # Datasets for image segmentation
 
-_last modified : 19-07-2019_
+_last modified : 04-02-2020_
 
 Here are listed all the datasets that can be used for image segmentation.
 
@@ -131,7 +131,7 @@ Here are listed all the datasets that can be used for image segmentation.
 
 - Dataset: [here](https://download.visinf.tu-darmstadt.de/data/from_games/)
 
-## Vkitti
+## VKitti
 
 - Contains:
     - Vehicles: Cars, Bus, Van, Other

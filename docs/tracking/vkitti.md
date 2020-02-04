@@ -1,7 +1,7 @@
 # Virtual Worlds as Proxy for Multi-Object Tracking Analysis
 
 (will be updated by a git hook on commit)
-_last modified : 11-07-2019_
+_last modified : 04-02-2020_
 
 ## General Information (main fields described, non-exhaustive list)
 
@@ -13,7 +13,7 @@ _last modified : 11-07-2019_
 
 ## Brief
 
-This article presents a new approach to deep learning training. They use generated data to train neural networks and show the impact of weather condition on real dataset. They have four contributions:
+This article presents a new approach to alleviate the cost of annotation for training data. They use generated data to train neural networks and show the impact of weather condition on real dataset. They have four contributions:
 
 - Generation of a generated dataset from an existing one
 - Creation of the Virtual Kitti dataset
@@ -30,7 +30,12 @@ The generation of the virtual world and evaluation of the usefulness follows a f
 - Automatic generation of detailed ground truth annotations (notably segmentation, easier using virtual world)
 - Evaluation of the usefulness by comparing the results obtained on real videos and the cloned ones (network trained on real data)
 
-The measurement of the impact of altered conditions on real datasets is done by evaluating trained methods on generated altered synthetic data (angle change, rain, fog, ...) and comparing with synthetic unaltered images.
+Having a good usefulness means that a network trained on real data will behave the same on generated data. 
+
+If you have a good usefulness, you can reasonably expect the network to behave the same for change of conditions on real and generated data (adding rain for instance). Or at least, if your results drop when you add rain in the generated data, you know that the hypothesis that your network will work well under real rainy images is "an optimistic upper bound at best".
+
+Using this, they can try to measure the impact of altered conditions on real datasets.
+You evaluate the results on the altered generated data and compare with the synthetic one. You then get an expected behavior on the real dataset.
 
 ## Results
 
