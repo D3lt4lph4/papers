@@ -1,6 +1,6 @@
 # Accurate, Large Minibatch SGD:Training ImageNet in 1 Hour
 
-_last modified : 11-07-2019_
+_last modified : 04-02-2020_
 
 ## General Information
 
@@ -19,7 +19,7 @@ When training a ResNet on ImageNet, they show that for minibatch size up to 8k (
 
 ## How Does It Work
 
-Basically, when training a neural network, one can follow the following **Linear Scaling Rule**: When the minibatch size is multiplied byk, multiply the learning rate byk.
+Basically, when training a neural network, one can follow the following **Linear Scaling Rule**: When the minibatch size is multiplied by k, multiply the learning rate by k.
 
 They introduce the notion of **Warmup** to help mitigate the instability of the training during the first epochs. During the 5 first epochs the learning rate is scaled up from the original one to the linearly scaled one.
 
@@ -32,17 +32,17 @@ Finally, they provide with guidelines for the subtleties and pitfalls of distrib
 - Gradient aggregation
 - Data shuffling
 
-The guidelines are specific for each of the examples and not provided here, please refer to the article for more details (this is a quick memo on topics of interest).
+The guidelines are specific for each of the examples and not provided here, please refer to the article for more details.
 
 ## Results
 
-The image below shows the validation error vs the mini-batch size. We can see that up to 8k images in a batch, there is almost no loss in the accuracy of the network. As stated in the conclusion, using this size of mini-batch is interesting if you do not care so much about accuracy.
+The image below shows the validation error vs the mini-batch size. We can see that up to 8k images in a batch, there is almost no loss in the accuracy of the network. As stated in the conclusion, using this size of mini-batch is interesting if you do not care so much about accuracy and more about speed of training.
 
 ![results](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/others/AccurateLargeMinibatchSGD/results_figure.png "results")
 
 Finally the table below gives the details of accuracy for each of the mini-batch size.
 
-| kn | $eta$ | top-1 error |
+| kn | $\eta$ | top-1 error |
 |---|---|---|
 | 256  |  0.1 | 23.60 $\pm$ 0.12  |
 |  512 |  0.2 | 23.48 $\pm$ 0.09   |
@@ -52,4 +52,4 @@ Finally the table below gives the details of accuracy for each of the mini-batch
 |  8k |  3.2 |  23.74 $\pm$ 0.09  |
 |  16k |  6.4 |  24.79 $\pm$ 0.27  |
 
-More experiments and details are given in the article.
+__More experiments and details are given in the article.__
