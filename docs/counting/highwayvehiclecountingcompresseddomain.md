@@ -1,8 +1,8 @@
 # Highway Vehicle Counting in Compressed Domain
 
-_last modified : 11-07-2019_
+_last modified : 04-02-2020_
 
-## General Information (main fields described, non-exhaustive list)
+## General Information
 
 - Title: Highway Vehicle Counting in Compressed Domain
 - Authors: X. Liu and Z. Wang and J. Feng and H. Xi
@@ -48,7 +48,3 @@ Some of the results are shown in the following table. Multiple training strategi
 | Authors (with all features) | 3.389 | **3.214** | **3.193** | **3.063** | **2.813** | 2.736 | 2.593 |
 | [Chan et al.](https://ieeexplore.ieee.org/abstract/document/4587569) | 3.324 | 3.294 | 3.217 | 3.074 | 2.838 | 2.650 | 2.653 |
 | [Ryan et al.](https://www.sciencedirect.com/science/article/pii/S1077314214001611) | **3.301** | 3.242 | 3.196 | 3.181 | 3.035 | **2.586** | **2.543** |
-
-## In Depth
-
-See the article
