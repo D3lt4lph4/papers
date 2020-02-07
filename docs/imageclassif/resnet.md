@@ -1,0 +1,43 @@
+# ResNet
+
+_last modified : 07-02-2020_
+
+## General Information 
+
+- Title: Deep Residual Learning for Image Recognition
+- Authors: Kaiming He, Xiangyu Zhang, Shaoqing Ren and Jian Sun
+- Link: [article](https://arxiv.org/abs/1512.03385)
+- Date of first submission: 10 Dec 2015
+- Implementations: Natively available in most if not all the frameworks
+
+## Brief
+
+In this paper, the authors present a new method to train very deep neural networks more easily. They evaluate on the ImageNet dataset and carry a more detailed study on a smaller dataset: MNIST.
+
+The main contribution is the introduction of the residual layers. Through these layers they are able to train network going up to 152 layers deep.
+
+## How Does It Work
+
+They start the reflection from a simple constatation, a deeper network should, in practice be able to obtain at least the accuracy of a shallower one. Indeed, if one sets all the first weights to one up to the shallow conterpart, the end result should be the same. Yet deeper network tend not to train as well as the shallow counterparts.
+
+In order to improve the results, they introduce the residual connections (c.f image below).
+
+![Connection](https://github.com/D3lt4lph4/papers/blob/master/docs/images/imageclassif/resnet/residual.png?raw=true "Connection")
+
+
+By adding the identity arrow on the left, they give to the network the possibility to very easily have the identity blocks would it require it.
+
+
+## Results
+
+They won many competitions, starting with the ILSVRC 2015 classification task. They also won the 1st places on the tasks of ImageNet detection, ImageNet local-ization, COCO detection, and COCO segmentation.
+
+The ILSVRC top-5 error is presented below. The other results are not, but to summarize them, the deeper the ResNet network, the better. They tested up to 152 layers in their network.
+
+| method | top-5 err. (test) |
+| VGG (ILSVRC’14) | 7.32 |
+| GoogLeNet (ILSVRC’14) | 6.66 |
+| VGG | 6.8 |
+| PReLU-net | 4.94 |
+| BN-inception | 4.82 |
+| ResNet (ILSVRC’15) | 3.57 |
