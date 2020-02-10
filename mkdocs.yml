@@ -27,6 +27,7 @@ pages:
       - RAM: imageclassif/ram.md
       - CapsNet: imageclassif/capsule.md
       - VGG: imageclassif/vgg.md
+      - ResNet: imageclassif/resnet.md
     - Image Detection:
       - Introduction: imagedetection/index.md
       - R-CNN: imagedetection/rcnn.md
