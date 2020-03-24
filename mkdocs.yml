@@ -41,6 +41,7 @@ pages:
       - FSSD: imagedetection/fssd.md
       - RFB: imagedetection/rfb.md
       - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
+      - RetinaNet: imagedetection/focalloss.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
       - SqueezeSeg: imageseg/squeezeseg.md
