@@ -72,6 +72,7 @@ pages:
     - Flow estimation:
       - Introduction: flow/index.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
+      - Highway Traffic Information Extraction fiom Skycam MPEG Video: flow/HighwayTrafficInformationExtractionSkycamMPEGVideo.md
       - Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression: flow/CompressedDomainHighwayVehicleCountingRegression.md
       - Traffic Congestion Estimation Using HMM Models Without Vehicle Tracking: flow/TrafficCongestionEstimationHMMModelsWithoutVehicleTracking.md
       - An algorithm to estimate mean vehicle speed from MPEG Skycam video: flow/EstimateMeanVehicleSpeedMPEGSkycam.md
