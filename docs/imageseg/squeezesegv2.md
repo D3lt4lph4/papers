@@ -1,6 +1,6 @@
 # SqueezeSegV2: Improved Model Structure and Unsupervised DomainAdaptation for Road-Object Segmentation from a LiDAR Point Cloud
 
-_last modified : 10-02-2020_
+_last modified : 24-03-2020_
 
 ## General Information
 
