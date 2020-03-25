@@ -33,7 +33,7 @@ There are also some rules implemented to remove lost tracks and ignore noise det
 
 They present there results on the MOT16 challenge:
 
-![results](  "results")
+![results]( https://github.com/D3lt4lph4/papers/blob/master/docs/images/tracking/deepsort/results.png "results")
 
 - Multi-object tracking accuracy (MOTA): Summary of over-all tracking accuracy in terms of false positives, false nega-tives and identity switches 
 - Multi-object tracking precision (MOTP): Summary of over-all tracking precision in terms of bounding box overlap be-tween ground-truth and reported location
