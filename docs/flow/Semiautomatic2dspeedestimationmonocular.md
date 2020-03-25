@@ -22,7 +22,7 @@ They ranked seventh in the NVIDIA AI City challenge in 2018 and obtained a RMSE 
 
 ## How Does It Work
 
-The three step pipeline used is shown in the image below.
+The three steps pipeline used is shown in the image below.
 
 ![pipeline]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/Semiautomatic2dspeedestimationmonocular/pipeline.png "pipeline")
 
