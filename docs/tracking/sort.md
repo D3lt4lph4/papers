@@ -20,7 +20,7 @@ In this paper the authors tackle real-time object tracking. Most of the existing
 The method is based on a four steps pipeline:
 
 - First all the objects are detected in the image
-- Second, existing tracks positions are update through Kalman filter
+- Second, existing tracks positions are updated using a Kalman filter
 - Then, all the updated positions are matched to the detections using an Hungarian algorithm
 - Finally, un-matched detection are set as new tracks
 
@@ -30,4 +30,4 @@ There are also some rules implemented to remove lost tracks and ignore noise det
 
 They evaluate on MOT benchmark sequences. Hereafter is the graph detailing speed vs accuracy, they provide with a detailled table but do not present the update rate in it, check the paper for more details.
 
-![results]( https://github.com/D3lt4lph4/papers/blob/master/docs/images/tracking/sort/results.png? "results")
+![results]( https://github.com/D3lt4lph4/papers/blob/master/docs/images/tracking/sort/results.png "results")
