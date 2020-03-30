@@ -78,6 +78,7 @@ pages:
       - Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression: flow/CompressedDomainHighwayVehicleCountingRegression.md
       - Traffic Congestion Estimation Using HMM Models Without Vehicle Tracking: flow/TrafficCongestionEstimationHMMModelsWithoutVehicleTracking.md
       - An algorithm to estimate mean vehicle speed from MPEG Skycam video: flow/EstimateMeanVehicleSpeedMPEGSkycam.md
+      - A Semi-Automatic 2D solution for Vehicle Speed Estimation from Monocular Videos: flow/Semiautomatic2dspeedestimationmonocular.md
     - Others:
       - Introduction: others/index.md
       - CoordConv: others/coordconv.md

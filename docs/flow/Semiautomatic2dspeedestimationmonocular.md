@@ -1,7 +1,6 @@
 # A Semi-Automatic 2D solution for Vehicle Speed Estimation from Monocular Videos
 
-(will be updated by a git hook on commit)
-_last modified : 25-03-2020_
+_last modified : 30-03-2020_
 
 ## General Information
 
@@ -30,7 +29,7 @@ The three steps pipeline used is shown in the image below.
 
 **Tracking:** They test two different tracking algorithms, SORT and DeepSORT.
 
-**Velocity Estimation:** The velocity estimation is a two steps pipeline. First an affine rectification is done and then a scale recovery. The affine rectification aims to undo the scales transformations induced by the representation of the real world in a planar image (set the roads straight with a correct scale). This affine transformation is based on the hypothesis that the road is planar, the scale recovery correct the error in case of a non planar road. Then the speed is estimated using the lenght of the white stripes on the road.
+**Velocity Estimation:** The velocity estimation is a two steps pipeline. First an affine rectification is done and then a scale recovery. The affine rectification aims to undo the scales transformations induced by the representation of the real world in a planar image (set the roads straight with a correct scale). This affine transformation is based on the hypothesis that the road is planar, the scale recovery correct the error in case of a non planar road. Then the speed is estimated using the lenght of the white stripes on the road to estimate the distances.
 
 
 ## Results
