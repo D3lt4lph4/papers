@@ -32,7 +32,7 @@ Algorithm (none of the parameters are given):
 
 Figure below shows examples of outputs of the algorithm:
 
-![results](  "results")
+![results]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/estimationandanalysisofurbantrafficflow/results.png "results")
 
 ## Results
 
