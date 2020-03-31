@@ -12,7 +12,7 @@ _last modified : 31-03-2020_
 
 ## Brief
 
-**Problem:**: Recent traffic surveillence systems target complicated tasks. Here we focus on collection of traffic flow information. Currently, information is collected by magnetometers, we wish to use an other method (it is not specified why magnetometers are not satisfactory).
+**Problem:** Recent traffic surveillence systems target complicated tasks. Here we focus on collection of traffic flow information. Currently, information is collected by magnetometers, we wish to use an other method (it is not specified why magnetometers are not satisfactory).
 
 This paper describes a method to extract traffic flows from road  cameras. They show that statistical analysis can be performed on the extracted flow to detect change in the distribution of the traffic.
 
