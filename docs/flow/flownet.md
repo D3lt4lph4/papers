@@ -1,6 +1,6 @@
 # FlowNet: Learning Optical Flow with Convolutional Networks
 
-_last modified : 11-02-2020_
+_last modified : 19-06-2020_
 
 ## General Information
 
@@ -13,21 +13,23 @@ _last modified : 11-02-2020_
 
 ## Brief
 
-This paper introduce the usage of CNNs for the prediction of Optical Flow. They compare two architectures and introduce a new dataset to help training neural networks.
+This paper introduce the usage of CNNs for the prediction of Optical Flow. They compare two architectures and introduce a new dataset (Flying Chairs dataset) to help training neural networks.
 
-They train two architectures, one with standard CNN, the other with explicit convolutions.
+The main task is to predict the Optical Flow, or pixel displacement between two consecutive frames and to do so, they train two architectures: one with standard CNN and another using parallel branches and explicit correlation.
 
-They acheive state of the art results for real time methods.
+They achieve state of the art results for real time methods.
 
 ## How Does It Work
 
 ### Networks
 
-They present two network in the article, a straight forward version and a more complexe one. The straight forward version is made of stacked convolution followed by upconvolutions (following classical FCN). The second version adds an explicit convolution to the network to help it learn the displacement of the objects. The range of the add convolution is limited to limit the calculations. In both of the networks they have skip connections with the upper layers to input more information.
-
-Both of the networks are shown in the following picture:
+The aim is to predict the optical flow between two images. To do so, they develop two architectures shown bellow:
 
 ![network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/FlowNet/network.png "network")
+
+The top network is a classical FCN made of stacked convolution followed by upconvolutions. 
+
+They also design a second network, the bottom one, based on a mix of CNN and correlation. The idea is to explicitly add a part designed to find the displacement between the two images. Skip connexions were also added to this architecture.
 
 ### Dataset: Flying Chairs
 

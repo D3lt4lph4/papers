@@ -73,6 +73,7 @@ pages:
       - ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness: knowingyournetwork/biastowardtextures.md
     - Flow estimation:
       - Introduction: flow/index.md
+      - FlowNet: flow/flownet.md
       - FlowNet2: flow/flownet2.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
       - Highway Traffic Information Extraction fiom Skycam MPEG Video: flow/HighwayTrafficInformationExtractionSkycamMPEGVideo.md
