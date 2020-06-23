@@ -76,6 +76,7 @@ pages:
       - Introduction: flow/index.md
       - FlowNet: flow/flownet.md
       - FlowNet2: flow/flownet2.md
+      - DSTFlow: flow/unsupervisedopticalflow.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
       - Highway Traffic Information Extraction fiom Skycam MPEG Video: flow/HighwayTrafficInformationExtractionSkycamMPEGVideo.md
       - Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression: flow/CompressedDomainHighwayVehicleCountingRegression.md
