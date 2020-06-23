@@ -1,6 +1,6 @@
 # FlowNet: Learning Optical Flow with Convolutional Networks
 
-_last modified : 19-06-2020_
+_last modified : 23-06-2020_
 
 ## General Information
 
@@ -23,7 +23,7 @@ They achieve state of the art results for real time methods.
 
 ### Networks
 
-The aim is to predict the optical flow between two images. To do so, they develop two architectures shown bellow:
+The aim is to predict the optical flow between two images. To do so, they develop two architectures shown below:
 
 ![network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/FlowNet/network.png "network")
 
