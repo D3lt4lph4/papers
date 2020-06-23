@@ -59,6 +59,7 @@ pages:
       - Virtual Worlds as Proxy for Multi-Object Tracking Analysis: tracking/vkitti.md
       - SORT: tracking/sort.md
       - DeepSORT: tracking/deepsort.md
+      - MaskProp: tracking/maskprop.md
     - Counting:
       - Introduction: counting/index.md
       - Highway Vehicle Counting in Compressed Domain: counting/highwayvehiclecountingcompresseddomain.md
