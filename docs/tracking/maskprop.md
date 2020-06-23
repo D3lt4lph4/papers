@@ -24,10 +24,10 @@ _last modified : 23-06-2020_
 
 The proposed method works in two steps:
 
-- first the video is separated in overlapping clips (a clip is a collection of frames from time \[t - T\] to time \[t + T\]), for each of the clips, instances will be predicted
+- first the video is separated in overlapping clips (a clip is a collection of frames from time t - T to time t + T), for each of the clips, instances will be predicted
 - Once all the clips have been processed, a matching algorithm (not learned) based on instance intersection over union is used to unify the matching clip instances into one instance.
 
-The main contribution is in the first step, where the prediction occurs. The aim is to predict the segmentation of each instances in a clip. To predict the instances in a clip, first, a Mask R-CNN is run on the frame \[t\]. Then using the information from this frame and information from the frame at the time we want the prediction, the other instances' segmentation are predicted. This is shown in the figure below:
+The main contribution is in the first step, where the prediction occurs. The aim is to predict the segmentation of each instances in a clip. To predict the instances in a clip, first, a Mask R-CNN is run on the frame t. Then using the information from this frame and information from the frame at the time we want the prediction, the other instances' segmentation are predicted. This is shown in the figure below:
 
 ![image1]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/tracking/maskprop/mask_prop.png "image")
 
@@ -35,9 +35,9 @@ In order to use information from two frames, two feature tensors (one representi
 
 ![image2]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/tracking/maskprop/mask_prop_2.png "image 2")
 
-For each of the predicted instances at time \[t\]:
+For each of the predicted instances at time t:
 
-- Instance Feature Computation: the feature tensor a time \[t\] is masked with the predicted target instance to only keep features theoretically describing the target instance
+- Instance Feature Computation: the feature tensor a time t is masked with the predicted target instance to only keep features theoretically describing the target instance
 - Instance Feature Propagation: Subtraction between the tensors describing the frames allows to get movement information to compute the positions of the Deformable Convolutions
 - Propageted Instance Segmentation: Using the concatenation of the reference feature tensor re-aligned with Deformable Convolutions and the tensor at target time, the new instance is predicted
 
