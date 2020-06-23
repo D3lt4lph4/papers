@@ -1,4 +1,4 @@
-# MaskProp (in-progress)
+# MaskProp (in progress)
 
 _last modified : 23-06-2020_
 
