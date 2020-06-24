@@ -1,6 +1,6 @@
 # FlowNet: Learning Optical Flow with Convolutional Networks
 
-_last modified : 23-06-2020_
+_last modified : 24-06-2020_
 
 ## General Information
 
@@ -13,27 +13,30 @@ _last modified : 23-06-2020_
 
 ## Brief
 
-This paper introduce the usage of CNNs for the prediction of Optical Flow. They compare two architectures and introduce a new dataset (Flying Chairs dataset) to help training neural networks.
+**Problem:** In this article, the authors address the problem of Optical Flow estimation. They focus on the usage of CNN for this task as up until this article their usage for this task was not successful.
 
-The main task is to predict the Optical Flow, or pixel displacement between two consecutive frames and to do so, they train two architectures: one with standard CNN and another using parallel branches and explicit correlation.
+**Solution:** They propose two architectures and introduce a new dataset (Flying Chairs dataset) to help training neural networks.
 
-They achieve state of the art results for real time methods.
+**Evaluated on:** They evaluate on four datasets: Sintel, KITTI, Middlebury and FLying Chairs.
+
+**Results:** They achieve state of the art results for real time methods.
+
 
 ## How Does It Work
 
 ### Networks
 
-The aim is to predict the optical flow between two images. To do so, they develop two architectures shown below:
+The aim is to predict the Optical Flow, or pixel displacement between two consecutive frames and to do so, they train two architectures: one with standard CNN and another using parallel branches and explicit correlation.The two architectures are shown below:
 
 ![network](https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/flow/FlowNet/network.png "network")
 
-The top network is a classical FCN made of stacked convolution followed by upconvolutions. 
+The top network is a classical FCN made of stacked convolution followed by upconvolutions. They use skip connections to improve the accuracy of the upconvolutions.
 
-They also design a second network, the bottom one, based on a mix of CNN and correlation. The idea is to explicitly add a part designed to find the displacement between the two images. Skip connexions were also added to this architecture.
+They also design a second network, the bottom one, based on a mix of CNN and correlation. The idea is to explicitly add a part designed to find the displacement between the two images. Skip connections were also added to this architecture.
 
 ### Dataset: Flying Chairs
 
-Because deep learning requires a lot of data to learn a model, they introduce a new dataset for optical flow estimation. This dataset is made of flying chairs moving on top of Flickr images. The chairs are moving following affine transformations.
+Because deep learning requires a lot of data to learn a model, they introduce a new dataset. This dataset is made of flying chairs moving on top of Flickr images. The chairs are moving following affine transformations.
 
 With this dataset they manage to improve their results. They also added data-augmentation to get the most of their networks (all the data-augmentation parameters are given in the article).
 
