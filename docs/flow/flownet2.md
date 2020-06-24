@@ -1,6 +1,6 @@
 # FlowNet 2.0: Evolution of Optical Flow Estimation with Deep Networks
 
-_last modified : 19-06-2020_
+_last modified : 24-06-2020_
 
 ## General Information
 
@@ -14,13 +14,13 @@ _last modified : 19-06-2020_
 
 ## Brief
 
-In this paper, the authors focus on improving optical flow estimation with deep learning. They work on the previously introduced FlowNet and improve the precision of the network through 3 main improvements:
+In this paper, the authors focus on improving optical flow estimation with deep learning. They work on the previously introduced FlowNet and increase the precision of the network through 3 main improvements:
 
 - Data scheduling: They show that the order of the data when presented to the network has an impact on the final precision
-- Iterative learning: They stack networks to carry some iterative refinement. To simplify the work of the added networks, they use a wrapping operation
+- Iterative learning: They stack networks to carry out iterative refinement. To simplify the work of the added networks, they use wrapping operations
 - Small displacements improvements: They introduce a new dataset and fuse their architecture with a network specialized in small displacement
 
-They also introduce small version of their networks to improve on the speed of prediction while maintaining the precision of FlowNet.
+They also introduce small version of their networks to improve on the speed of prediction while maintaining the precision at the original FlowNet's level.
 
 With the proposed improvements, they outperform the previous FlowNet network and reach precisions that matches the state of the art.
 
