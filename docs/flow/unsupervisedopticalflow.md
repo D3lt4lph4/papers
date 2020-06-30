@@ -1,4 +1,4 @@
-# Unsupervised Deep Learning for Optical Flow  (in progress)
+# Unsupervised Deep Learning for Optical Flow
 
 _last modified : 30-06-2020_
 
