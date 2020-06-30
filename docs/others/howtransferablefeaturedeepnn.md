@@ -9,8 +9,8 @@ _last modified : 30-06-2020_
 - Link: [article](https://arxiv.org/abs/1411.1792)
 - Date of first submission: 6 Nov 2014
 - Implementations: (if any found)
-  - [Keras](http://awesomelink1)
-  - [Caffe](http://awesomelink2)
+    - [Keras](http://awesomelink1)
+    - [Caffe](http://awesomelink2)
 
 ## Brief
 
