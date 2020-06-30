@@ -87,6 +87,7 @@ pages:
       - Introduction: others/index.md
       - CoordConv: others/coordconv.md
       - Accurate, Large Minibatch SGD:Training ImageNet in 1 Hour: others/AccurateLargeMinibatchSGD.md
+      - How transferable are features in deep neural networks?: others/howtransferablefeaturedeepnn.md
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
