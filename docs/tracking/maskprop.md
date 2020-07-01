@@ -1,6 +1,6 @@
-# MaskProp (in progress)
+# MaskProp
 
-_last modified : 23-06-2020_
+_last modified : 01-07-2020_
 
 ## General Information
 
@@ -27,18 +27,18 @@ The proposed method works in two steps:
 - first the video is separated in overlapping clips (a clip is a collection of frames from time t - T to time t + T), for each of the clips, instances will be predicted
 - Once all the clips have been processed, a matching algorithm (not learned) based on instance intersection over union is used to unify the matching clip instances into one instance.
 
-The main contribution is in the first step, where the prediction occurs. The aim is to predict the segmentation of each instances in a clip. To predict the instances in a clip, first, a Mask R-CNN is run on the frame t. Then using the information from this frame and information from the frame at the time we want the prediction, the other instances' segmentation are predicted. This is shown in the figure below:
+The main contribution is in the first step, where the prediction occurs. The aim is to predict the segmentation of each instances in a clip. To predict the instances in a clip, first, a Mask R-CNN is run on the frame at time t. Then using the predicted instances at time t and information from the frame at time t + k, the other instances' segmentation are predicted. This is shown in the figure below:
 
 ![image1]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/tracking/maskprop/mask_prop.png "image")
 
-In order to use information from two frames, two feature tensors (one representing each frame) are concatenated. But as the objects move throughout the video, features corresponding to the same objects would not be aligned in the two tensors. To solve this problem, they use Deformable Convolutions which aim to align information from the reference tensor with the tensor at the time of prediction. This is shown in the following graphic:
+In order to use information from two frames for prediction, two feature tensors (one representing each frame) are concatenated. But as the objects move throughout the video, features corresponding to the same objects would not be aligned in the two tensors. To solve this problem, they use Deformable Convolutions which aim to align information from the reference tensor with the tensor at the time of prediction. This is shown in the following graphic:
 
 ![image2]( https://raw.githubusercontent.com/D3lt4lph4/papers/master/docs/images/tracking/maskprop/mask_prop_2.png "image 2")
 
-For each of the predicted instances at time t:
+For each of the predicted instances at time t (pipeline done for each of the instances):
 
 - Instance Feature Computation: the feature tensor a time t is masked with the predicted target instance to only keep features theoretically describing the target instance
-- Instance Feature Propagation: Subtraction between the tensors describing the frames allows to get movement information to compute the positions of the Deformable Convolutions
+- Instance Feature Propagation: Subtraction between the tensors describing the two frames if interest allows to get movement information to compute the positions of the Deformable Convolutions
 - Propageted Instance Segmentation: Using the concatenation of the reference feature tensor re-aligned with Deformable Convolutions and the tensor at target time, the new instance is predicted
 
 ## Results
