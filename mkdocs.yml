@@ -85,6 +85,7 @@ pages:
       - An algorithm to estimate mean vehicle speed from MPEG Skycam video: flow/EstimateMeanVehicleSpeedMPEGSkycam.md
       - A Semi-Automatic 2D solution for Vehicle Speed Estimation from Monocular Videos: flow/Semiautomatic2dspeedestimationmonocular.md
       - Estimation and Analysis of Urban Traffic Flow: flow/estimationandanalysisofurbantrafficflow.md
+      - Algorithms for Calibrating Roadside Traffic Cameras and Estimating Mean Vehicle Speed: flow/algorithmscalibratingroadsidecamerasandmeanspeed.md
     - Others:
       - Introduction: others/index.md
       - CoordConv: others/coordconv.md
