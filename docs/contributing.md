@@ -8,7 +8,7 @@ Anyone can contribute, please write in proper english and follow this example(ca
 # Title of the paper/network/...
 
 (will be updated by a git hook on commit)
-_last modified : 11-02-2020_
+_last modified : 31-03-2020_
 
 ## General Information (main fields described, non-exhaustive list)
 
@@ -22,7 +22,13 @@ _last modified : 11-02-2020_
 
 ## Brief
 
-Very short description of what it does, advantages, scientific locks, etc
+**Problem:**
+
+**Solution:**
+
+**Evaluated on:**
+
+**Results:**
 
 ## How Does It Work
 

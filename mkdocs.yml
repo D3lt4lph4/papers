@@ -41,6 +41,7 @@ pages:
       - FSSD: imagedetection/fssd.md
       - RFB: imagedetection/rfb.md
       - Deformable Convolutional Networks: imagedetection/deformableconvolutionalnetworks.md
+      - RetinaNet: imagedetection/focalloss.md
     - Image Segmentation:
       - Introduction: imageseg/index.md
       - SqueezeSeg: imageseg/squeezeseg.md
@@ -56,6 +57,9 @@ pages:
       - Introduction: tracking/index.md
       - Online Multi-Target Tracking RNN: tracking/onlinemultitrackingRNN.md
       - Virtual Worlds as Proxy for Multi-Object Tracking Analysis: tracking/vkitti.md
+      - SORT: tracking/sort.md
+      - DeepSORT: tracking/deepsort.md
+      - MaskProp: tracking/maskprop.md
     - Counting:
       - Introduction: counting/index.md
       - Highway Vehicle Counting in Compressed Domain: counting/highwayvehiclecountingcompresseddomain.md
@@ -70,14 +74,23 @@ pages:
       - ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness: knowingyournetwork/biastowardtextures.md
     - Flow estimation:
       - Introduction: flow/index.md
+      - FlowNet: flow/flownet.md
+      - FlowNet2: flow/flownet2.md
+      - DSTFlow: flow/unsupervisedopticalflow.md
+      - Unsupervised Deep Learning for Optical Flow Estimation: flow/unsupervisedopticalflow.md
       - Estimating Velocity Fields on a Freeway From Low-Resolution Videos: flow/EstimatingVelocityFieldsFreewayLowResolution.md
+      - Highway Traffic Information Extraction fiom Skycam MPEG Video: flow/HighwayTrafficInformationExtractionSkycamMPEGVideo.md
       - Compressed-Domain Highway Vehicle Counting by Spatial and Temporal Regression: flow/CompressedDomainHighwayVehicleCountingRegression.md
       - Traffic Congestion Estimation Using HMM Models Without Vehicle Tracking: flow/TrafficCongestionEstimationHMMModelsWithoutVehicleTracking.md
       - An algorithm to estimate mean vehicle speed from MPEG Skycam video: flow/EstimateMeanVehicleSpeedMPEGSkycam.md
+      - A Semi-Automatic 2D solution for Vehicle Speed Estimation from Monocular Videos: flow/Semiautomatic2dspeedestimationmonocular.md
+      - Estimation and Analysis of Urban Traffic Flow: flow/estimationandanalysisofurbantrafficflow.md
+      - Algorithms for Calibrating Roadside Traffic Cameras and Estimating Mean Vehicle Speed: flow/algorithmscalibratingroadsidecamerasandmeanspeed.md
     - Others:
       - Introduction: others/index.md
       - CoordConv: others/coordconv.md
       - Accurate, Large Minibatch SGD:Training ImageNet in 1 Hour: others/AccurateLargeMinibatchSGD.md
+      - How transferable are features in deep neural networks?: others/howtransferablefeaturedeepnn.md
     - Optimizers:
       - Introduction: optimization/index.md
       - Stochastic gradient descent: optimization/sgd.md
